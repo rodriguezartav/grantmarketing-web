@@ -29,7 +29,7 @@ export default function Home() {
                 <div className="mt-1">
                   <div className="mt-0 sm:max-w-xl">
                     <p className="mt-0 text-3xl text-gray-500">
-                      Hand build integrations that make your business grow
+                      Hand build integrations for data oriented companies
                     </p>
                   </div>
 
@@ -248,13 +248,13 @@ export default function Home() {
                     <p className="text-lg">
                       A Company that relies on technology has it's data
                       distributed in 10 or more internet plataforms & services.
-                      In theory, each platform does their best to create basic
-                      data connections with each other.
+                      Platforms create one-size-fits-all connections between
+                      themselfs.
                     </p>
                     <p className="text-base leading-7">
-                      In practice, to get a measureable impact from technology,
-                      everything needs to be perfectly aligned. Not just
-                      basically aligned.
+                      When yoy are ready to get a measureable impact from
+                      technology, we'll hand build custom data integrations to
+                      enable your most profitable proccesses.
                     </p>
                   </div>
                 </div>
@@ -271,13 +271,13 @@ export default function Home() {
                   </h2>
                   <p className="mt-6 max-w-3xl text-lg leading-7 text-gray-500">
                     Most companies see data as a commodity and accept that it
-                    arrives when and how platforms decide.
+                    arrives when and how platforms decides.
                   </p>
 
                   <p className="mt-6 max-w-3xl text-lg leading-7 text-gray-500">
                     Competitive organizations that expect to grow 5, 10 or 20
-                    points year-over-year understand that can't be done without
-                    getting the precious data exactly when, how and where it's
+                    points year-over-year understand that you can't grow without
+                    getting that precious data exactly when, how and where it's
                     needed.
                   </p>
 
@@ -399,9 +399,10 @@ export default function Home() {
                 <div className="relative">
                   <div className="sm:text-center">
                     <h2 className="text-3xl font-extrabold text-white tracking-tight sm:text-4xl">
-                      We build integrations by hand using code
-                      <br /> run them in our own cloud platform <br /> and
-                      monitor each execution.
+                      Salesforce & AWS architects build your custom integrations
+                      by hand,
+                      <br /> and run them in the cloud <br />, it's the best of
+                      both worlds
                     </h2>
                     <p className="mt-6 mx-auto max-w-2xl text-lg text-rose-100">
                       We'll work with your technology consultants to build your
