@@ -33,6 +33,15 @@ export default function Home() {
                     </p>
                   </div>
 
+                  <div className="mt-4 sm:mt-0 sm:ml-3">
+                    <a
+                      href="https://app.jungledynamics.com"
+                      className="block w-full rounded-md border border-transparent px-5 py-3 bg-rose-500 text-base font-medium text-white shadow hover:bg-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 sm:px-10"
+                    >
+                      Consultant Login
+                    </a>
+                  </div>
+
                   <div className="mt-6">
                     <div className="inline-flex items-center divide-x divide-gray-300">
                       <div className="flex-shrink-0 flex pr-5">
