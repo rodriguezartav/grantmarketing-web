@@ -80,13 +80,10 @@ require('@tailwindcss/aspect-ratio'),
                         </span>
                       </h1>
                       <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                        Use JD when you have discovered a way to increase your
-                        productivity, but you can't integrated the platforms
-                        with existing tools.
+                        Make the most out of your software platforms
                       </p>
-                      <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                        Choose from our extensive directory of integration
-                        scripts, or we'll build one just for you.
+                      <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-md lg:text-md xl:text-lg">
+                        With JD you can make them work the way you need.
                       </p>
                       <div className="mt-10 sm:mt-12">
                         <form
@@ -145,16 +142,16 @@ require('@tailwindcss/aspect-ratio'),
               <div className="mx-auto max-w-md px-4 text-center sm:px-6 sm:max-w-3xl lg:px-8 lg:max-w-7xl">
                 <div>
                   <h2 className="text-base font-semibold tracking-wider text-cyan-600 uppercase">
-                    Unlimited Everything
+                    Would your business improve?
                   </h2>
-                  <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-                    Connect all your platforms in one place
+                  <p className="mt-2  text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
+                    If only your software platforms work the way you need them
+                    to?
                   </p>
                   <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
-                    Choose from hundreds of platforms and select the script and
-                    how often you'd like for it to run. If we haven't built an
-                    integration or don't have the script you need - we'll build
-                    it.
+                    Use JD as a customizable layer between your software
+                    platforms. Let us know what you need and we'll make sure
+                    it's done.
                   </p>
                 </div>
                 <div className="mt-12 -mb-10 sm:-mb-24 lg:-mb-80">
