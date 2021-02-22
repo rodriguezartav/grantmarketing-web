@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
             <a href="/">
-              <img className="h-10" src="logo.png" alt="Company name" />
+              <img className="h-20 pb-3" src="logo.png" alt="Company name" />
               <p className="text-gray-500 text-base">
                 Inspired by nature, JD was created to bridge the busines model
                 of plataforms and custom operations.

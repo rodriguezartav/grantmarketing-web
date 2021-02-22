@@ -3,7 +3,7 @@ import React from "react";
 export default function Header() {
   return (
     <header className="relative">
-      <div className="bg-gray-900 pt-6">
+      <div className="bg-gray-900 pt-2 pb-2">
         <nav
           className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
           aria-label="Global"
@@ -11,8 +11,11 @@ export default function Header() {
           <div className="flex items-center flex-1">
             <div className="flex items-center justify-between w-full md:w-auto">
               <a href="#">
-                <span className="sr-only">Workflow</span>
-                <img className="h-8 w-auto sm:h-10" src="logo.png" alt="" />
+                <img
+                  className=" h-8 w-auto sm:h-10"
+                  src="white_textlogo_transparent_background.png"
+                  alt=""
+                />
               </a>
               <div className="-mr-2 flex items-center md:hidden">
                 <button
@@ -45,7 +48,7 @@ export default function Header() {
           <div className="hidden md:flex md:items-center md:space-x-6">
             <a
               href="#"
-              className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"
+              className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700"
             >
               Login
             </a>
@@ -68,7 +71,7 @@ To: "opacity-0 scale-95"
             <div>
               <img
                 className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/workflow-mark-teal-500-cyan-600.svg"
+                src="white_textlogo_transparent_background.svg"
                 alt=""
               />
             </div>
