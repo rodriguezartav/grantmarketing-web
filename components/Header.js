@@ -12,11 +12,7 @@ export default function Header() {
             <div className="flex items-center justify-between w-full md:w-auto">
               <a href="#">
                 <span className="sr-only">Workflow</span>
-                <img
-                  className="h-8 w-auto sm:h-10"
-                  src="https://tailwindui.com/img/logos/workflow-mark-teal-200-cyan-400.svg"
-                  alt=""
-                />
+                <img className="h-8 w-auto sm:h-10" src="logo.png" alt="" />
               </a>
               <div className="-mr-2 flex items-center md:hidden">
                 <button

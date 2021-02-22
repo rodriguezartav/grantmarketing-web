@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       colors: {
         teal: colors.teal,
-        cyan: colors.cyan,
+        cyan: colors.green,
       },
     },
   },
