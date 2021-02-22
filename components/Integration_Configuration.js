@@ -1,16 +1,38 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Transition } from "@headlessui/react";
 import useSWR from "swr";
-
-const fetcher = (url) => fetch(url).then((res) => res.json());
+import { useFetch } from "../helpers/useFetch";
 
 export default function Integration_Configuration(props) {
-  const { data, error } = useSWR("/api/integration?id=" + props.id, fetcher);
+  const integrationMutation = useFetch(`/api/update_integration`);
+  const integrationDestroy = useFetch(`/api/destroy_integration`);
 
-  if (error) return <div>failed to load</div>;
-  if (!data) return <div>loading...</div>;
+  const [integration, setIntegration] = useState({});
+  useEffect(() => {
+    if (props.provider && props.provider.integration)
+      setIntegration(props.provider.integration || {});
+  }, []);
 
-  function onFormChange(type) {}
+  function onFormChange(type) {
+    return (e) => {
+      setIntegration({ ...integration, [type]: e.currentTarget.value });
+    };
+  }
+
+  async function connect() {
+    const url = `${process.env.API_URL}/connect/${window.localStorage.getItem(
+      "company_id"
+    )}/${props.provider.name}`;
+
+    await integrationMutation.mutate(integration);
+    window.open(url);
+    props.refresh();
+  }
+
+  async function disconnect() {
+    await integrationDestroy.mutate(integration);
+    props.refresh();
+  }
 
   return (
     <div className="fixed z-10 inset-0 overflow-y-auto">
@@ -51,16 +73,44 @@ Leaving: "ease-in duration-200"
           aria-modal="true"
           aria-labelledby="modal-headline"
         >
-          <Password onChange={onFormChange} />
+          {props.provider.type == "user_password" && (
+            <Password integration={integration} onChange={onFormChange} />
+          )}
+
+          {props.provider.type == "api_key" && (
+            <API
+              integration={integration}
+              onChange={onFormChange}
+              provider={props.provider}
+            />
+          )}
+
+          {props.provider.type == "oauth" && (
+            <Oauth
+              integration={integration}
+              onChange={onFormChange}
+              provider={props.provider}
+            />
+          )}
+
+          {props.provider.type == "privata_oauth" && (
+            <Private
+              integration={integration}
+              onChange={onFormChange}
+              provider={props.provider}
+            />
+          )}
 
           <div className="mt-5 sm:mt-6 sm:grid sm:grid-cols-2 sm:gap-3 sm:grid-flow-row-dense">
             <button
+              onClick={connect}
               type="button"
               className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:text-sm"
             >
               Connect
             </button>
             <button
+              onClick={() => props.setIsConfigurationOpen(false)}
               type="button"
               className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:col-start-1 sm:text-sm"
             >
@@ -97,6 +147,7 @@ function Password(props) {
               </label>
               <div className="mt-1">
                 <input
+                  value={props.integration.client_id}
                   onChange={props.onChange("client_id")}
                   type="text"
                   name="street_address"
@@ -115,6 +166,7 @@ function Password(props) {
               </label>
               <div className="mt-1">
                 <input
+                  value={props.integration.client_secret}
                   onChange={props.onChange("client_secret")}
                   type="text"
                   name="street_address"
@@ -138,6 +190,25 @@ function Oauth(props) {
         <div className="pt-8">
           <div>
             <h3 className="text-lg leading-6 font-medium text-gray-900">
+              Oauth Connection
+            </h3>
+            <p className="mt-1 text-sm text-gray-500">
+              Click on the connect button to take you to the approval screen.
+            </p>
+          </div>
+        </div>
+      </div>
+    </form>
+  );
+}
+
+function Private(props) {
+  return (
+    <form className="space-y-8 divide-y divide-gray-200">
+      <div className="space-y-8 divide-y divide-gray-200">
+        <div className="pt-8">
+          <div>
+            <h3 className="text-lg leading-6 font-medium text-gray-900">
               Oauth Configuration
             </h3>
             <p className="mt-1 text-sm text-gray-500">
@@ -155,6 +226,7 @@ function Oauth(props) {
               </label>
               <div className="mt-1">
                 <input
+                  value={props.integration.client_id}
                   onChange={props.onChange("client_id")}
                   type="text"
                   name="street_address"
@@ -173,6 +245,7 @@ function Oauth(props) {
               </label>
               <div className="mt-1">
                 <input
+                  value={props.integration.client_secret}
                   onChange={props.onChange("client_secret")}
                   type="text"
                   name="street_address"
@@ -191,6 +264,7 @@ function Oauth(props) {
               </label>
               <div className="mt-1">
                 <input
+                  value={props.integration.application_id}
                   onChange={props.onChange("application_id")}
                   type="text"
                   name="street_address"
@@ -231,6 +305,7 @@ function API(props) {
               </label>
               <div className="mt-1">
                 <input
+                  value={props.integration.api_key}
                   onChange={props.onChange("api_key")}
                   type="text"
                   name="street_address"

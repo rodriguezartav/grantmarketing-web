@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>JungleDynamics</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -164,10 +164,10 @@ require('@tailwindcss/aspect-ratio'),
                         className="inline-flex items-center text-white bg-black rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200"
                       >
                         <span className="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full">
-                          We're hiring
+                          Made in the Rainforest
                         </span>
                         <span className="ml-4 text-sm">
-                          Visit our careers page
+                          with 100% Clean Energy
                         </span>
                         {/* Heroicon name: solid/chevron-right */}
                         <svg
@@ -191,9 +191,13 @@ require('@tailwindcss/aspect-ratio'),
                         </span>
                       </h1>
                       <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                        Anim aute id magna aliqua ad ad non deserunt sunt. Qui
-                        irure qui Lorem cupidatat commodo. Elit sunt amet fugiat
-                        veniam occaecat fugiat.
+                        Use JD when you have discovered a way to increase your
+                        productivity, but you can't integrated the platforms
+                        with existing tools.
+                      </p>
+                      <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                        Choose from our extensive directory of integration
+                        scripts, or we'll build one just for you.
                       </p>
                       <div className="mt-10 sm:mt-12">
                         <form
@@ -252,21 +256,22 @@ require('@tailwindcss/aspect-ratio'),
               <div className="mx-auto max-w-md px-4 text-center sm:px-6 sm:max-w-3xl lg:px-8 lg:max-w-7xl">
                 <div>
                   <h2 className="text-base font-semibold tracking-wider text-cyan-600 uppercase">
-                    Serverless
+                    Unlimited Everything
                   </h2>
                   <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-                    No server? No problem.
+                    Connect all your platforms in one place
                   </p>
                   <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
-                    Phasellus lorem quam molestie id quisque diam aenean nulla
-                    in. Accumsan in quis quis nunc, ullamcorper malesuada.
-                    Eleifend condimentum id viverra nulla.
+                    Choose from hundreds of platforms and select the script and
+                    how often you'd like for it to run. If we haven't built an
+                    integration or don't have the script you need - we'll build
+                    it.
                   </p>
                 </div>
                 <div className="mt-12 -mb-10 sm:-mb-24 lg:-mb-80">
                   <img
                     className="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5"
-                    src="https://tailwindui.com/img/component-images/green-project-app-screenshot.jpg"
+                    src="screenshoot1.png"
                     alt=""
                   />
                 </div>
@@ -276,15 +281,15 @@ require('@tailwindcss/aspect-ratio'),
             <div className="relative bg-white py-16 sm:py-24 lg:py-32">
               <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
                 <h2 className="text-base font-semibold tracking-wider text-cyan-600 uppercase">
-                  Deploy faster
+                  The best of both worlds
                 </h2>
                 <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-                  Everything you need to deploy your app
+                  Finally a way to take advantage of technology
                 </p>
                 <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
-                  Phasellus lorem quam molestie id quisque diam aenean nulla in.
-                  Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend
-                  condimentum id viverra nulla.
+                  Overcome the inevitable tradeof caused when millions of
+                  companies use the same software platform by extending it via
+                  integrations and custom code.
                 </p>
                 <div className="mt-12">
                   <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -312,11 +317,12 @@ require('@tailwindcss/aspect-ratio'),
                             </span>
                           </div>
                           <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                            Push to Deploy
+                            Unlimited Platforms
                           </h3>
                           <p className="mt-5 text-base text-gray-500">
-                            Ac tincidunt sapien vehicula erat auctor
-                            pellentesque rhoncus. Et magna sit morbi lobortis.
+                            Connect with all the platforms that you use, and use
+                            JD to pull and push data into them in a way that
+                            makes your company more efficient and profitable.
                           </p>
                         </div>
                       </div>
@@ -345,11 +351,13 @@ require('@tailwindcss/aspect-ratio'),
                             </span>
                           </div>
                           <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                            SSL Certificates
+                            Cloud Databases
                           </h3>
                           <p className="mt-5 text-base text-gray-500">
-                            Ac tincidunt sapien vehicula erat auctor
-                            pellentesque rhoncus. Et magna sit morbi lobortis.
+                            Centralizar data from different platforms in your
+                            own database and use it as a command center, a
+                            reporting tool or as a get-out-of-platform free card
+                            to avoid startup lockin tactics.
                           </p>
                         </div>
                       </div>
@@ -378,11 +386,11 @@ require('@tailwindcss/aspect-ratio'),
                             </span>
                           </div>
                           <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                            Simple Queues
+                            InHouse Databases
                           </h3>
                           <p className="mt-5 text-base text-gray-500">
-                            Ac tincidunt sapien vehicula erat auctor
-                            pellentesque rhoncus. Et magna sit morbi lobortis.
+                            Use your inhouse database and simply connect them to
+                            modern platforms in an intuitive way.
                           </p>
                         </div>
                       </div>
@@ -411,11 +419,13 @@ require('@tailwindcss/aspect-ratio'),
                             </span>
                           </div>
                           <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                            Advanced Security
+                            Public Scripts
                           </h3>
                           <p className="mt-5 text-base text-gray-500">
-                            Ac tincidunt sapien vehicula erat auctor
-                            pellentesque rhoncus. Et magna sit morbi lobortis.
+                            Use our growing directory of scripts that cover all
+                            standard platform communications and integrations.
+                            Every script we build, even if it's custom ends up
+                            being public.
                           </p>
                         </div>
                       </div>
@@ -450,11 +460,11 @@ require('@tailwindcss/aspect-ratio'),
                             </span>
                           </div>
                           <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                            Powerful API
+                            Custom Scripts
                           </h3>
                           <p className="mt-5 text-base text-gray-500">
-                            Ac tincidunt sapien vehicula erat auctor
-                            pellentesque rhoncus. Et magna sit morbi lobortis.
+                            We'll build your customized integration script -
+                            first come first serve.
                           </p>
                         </div>
                       </div>
@@ -483,11 +493,13 @@ require('@tailwindcss/aspect-ratio'),
                             </span>
                           </div>
                           <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                            Database Backups
+                            Free Monitoring
                           </h3>
                           <p className="mt-5 text-base text-gray-500">
-                            Ac tincidunt sapien vehicula erat auctor
-                            pellentesque rhoncus. Et magna sit morbi lobortis.
+                            We'll monitor, fix and/or send you SMS notifications
+                            when a script fails or a platform becomes
+                            disconnected by unforseen events ( like when a user
+                            account is deleted on the platform )
                           </p>
                         </div>
                       </div>
@@ -527,17 +539,18 @@ require('@tailwindcss/aspect-ratio'),
                           <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                         </svg>
                         <p className="mt-6 text-2xl font-medium text-white">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Sed urna nulla vitae laoreet augue. Amet feugiat
-                          est integer dolor auctor adipiscing nunc urna, sit.
+                          We use Shopify, Salesforce, Xero, CustomerIO, Facebook
+                          and Google for operations, sales and marketing. With
+                          JD we can choose where to centralize information and
+                          keep everything in sync.
                         </p>
                       </div>
                       <footer className="mt-6">
                         <p className="text-base font-medium text-white">
-                          Judith Black
+                          Veronica Solis
                         </p>
                         <p className="text-base font-medium text-cyan-100">
-                          CEO at PureInsights
+                          CMO , Rodco
                         </p>
                       </footer>
                     </blockquote>
@@ -564,24 +577,24 @@ require('@tailwindcss/aspect-ratio'),
               <div className="relative mx-auto max-w-md px-4 py-12 sm:max-w-7xl sm:px-6 sm:py-20 md:py-28 lg:px-8 lg:py-32">
                 <div className="md:ml-auto md:w-1/2 md:pl-10">
                   <h2 className="text-base font-semibold uppercase tracking-wider text-gray-300">
-                    Award winning support
+                    Much more than a reseller program
                   </h2>
                   <p className="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl">
-                    We’re here to help
+                    Build for Counsultants
                   </p>
                   <p className="mt-3 text-lg text-gray-300">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
-                    egestas tempus tellus etiam sed. Quam a scelerisque amet
-                    ullamcorper eu enim et fermentum, augue. Aliquet amet
-                    volutpat quisque ut interdum tincidunt duis.
+                    JD was build for consultants and agencies in mind, our
+                    program allows you agency to brand JD and offer it to your
+                    customers as if it was your own integration tool with out
+                    having to deal with code, monitoring and platform relations.
                   </p>
                   <div className="mt-8">
                     <div className="inline-flex rounded-md shadow">
                       <a
-                        href="#"
+                        href="mailto:sales@jungledynamics.com"
                         className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50"
                       >
-                        Visit the help center
+                        Email our sales department
                         {/* Heroicon name: solid/external-link */}
                         <svg
                           className="-mr-1 ml-3 h-5 w-5 text-gray-400"
@@ -613,8 +626,8 @@ require('@tailwindcss/aspect-ratio'),
                     alt="Company name"
                   />
                   <p className="text-gray-500 text-base">
-                    Making the world a better place through constructing elegant
-                    hierarchies.
+                    Inspired by nature, JD was created to bridge the busines
+                    model of plataforms and custom operations.
                   </p>
                   <div className="flex space-x-6">
                     <a href="#" className="text-gray-400 hover:text-gray-500">
@@ -673,21 +686,6 @@ require('@tailwindcss/aspect-ratio'),
                         />
                       </svg>
                     </a>
-                    <a href="#" className="text-gray-400 hover:text-gray-500">
-                      <span className="sr-only">Dribbble</span>
-                      <svg
-                        className="h-6 w-6"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </a>
                   </div>
                 </div>
                 <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
@@ -702,7 +700,7 @@ require('@tailwindcss/aspect-ratio'),
                             href="#"
                             className="text-base text-gray-500 hover:text-gray-900"
                           >
-                            Marketing
+                            Marketing (Soon)
                           </a>
                         </li>
                         <li>
@@ -710,7 +708,7 @@ require('@tailwindcss/aspect-ratio'),
                             href="#"
                             className="text-base text-gray-500 hover:text-gray-900"
                           >
-                            Analytics
+                            Analytics (Soon)
                           </a>
                         </li>
                         <li>
@@ -718,7 +716,7 @@ require('@tailwindcss/aspect-ratio'),
                             href="#"
                             className="text-base text-gray-500 hover:text-gray-900"
                           >
-                            Commerce
+                            Commerce (Soon)
                           </a>
                         </li>
                         <li>
@@ -726,7 +724,7 @@ require('@tailwindcss/aspect-ratio'),
                             href="#"
                             className="text-base text-gray-500 hover:text-gray-900"
                           >
-                            Insights
+                            Insights (Soon)
                           </a>
                         </li>
                       </ul>
@@ -741,7 +739,7 @@ require('@tailwindcss/aspect-ratio'),
                             href="#"
                             className="text-base text-gray-500 hover:text-gray-900"
                           >
-                            Pricing
+                            Pricing (Soon)
                           </a>
                         </li>
                         <li>
@@ -749,7 +747,7 @@ require('@tailwindcss/aspect-ratio'),
                             href="#"
                             className="text-base text-gray-500 hover:text-gray-900"
                           >
-                            Documentation
+                            Documentation (Soon)
                           </a>
                         </li>
                         <li>
@@ -757,7 +755,7 @@ require('@tailwindcss/aspect-ratio'),
                             href="#"
                             className="text-base text-gray-500 hover:text-gray-900"
                           >
-                            Guides
+                            Guides (Soon)
                           </a>
                         </li>
                         <li>
@@ -765,7 +763,7 @@ require('@tailwindcss/aspect-ratio'),
                             href="#"
                             className="text-base text-gray-500 hover:text-gray-900"
                           >
-                            API Status
+                            API Status (Soon)
                           </a>
                         </li>
                       </ul>
@@ -782,7 +780,7 @@ require('@tailwindcss/aspect-ratio'),
                             href="#"
                             className="text-base text-gray-500 hover:text-gray-900"
                           >
-                            About
+                            About (Soon)
                           </a>
                         </li>
                         <li>
@@ -790,7 +788,7 @@ require('@tailwindcss/aspect-ratio'),
                             href="#"
                             className="text-base text-gray-500 hover:text-gray-900"
                           >
-                            Blog
+                            Blog (Soon)
                           </a>
                         </li>
                         <li>
@@ -798,7 +796,7 @@ require('@tailwindcss/aspect-ratio'),
                             href="#"
                             className="text-base text-gray-500 hover:text-gray-900"
                           >
-                            Jobs
+                            Jobs (Soon)
                           </a>
                         </li>
                         <li>
@@ -806,7 +804,7 @@ require('@tailwindcss/aspect-ratio'),
                             href="#"
                             className="text-base text-gray-500 hover:text-gray-900"
                           >
-                            Press
+                            Press (Soon)
                           </a>
                         </li>
                         <li>
@@ -829,7 +827,7 @@ require('@tailwindcss/aspect-ratio'),
                             href="#"
                             className="text-base text-gray-500 hover:text-gray-900"
                           >
-                            Claim
+                            Claim (Soon)
                           </a>
                         </li>
                         <li>
@@ -842,7 +840,7 @@ require('@tailwindcss/aspect-ratio'),
                         </li>
                         <li>
                           <a
-                            href="#"
+                            href="https://jungledynamics.com/privacy"
                             className="text-base text-gray-500 hover:text-gray-900"
                           >
                             Terms
@@ -855,7 +853,7 @@ require('@tailwindcss/aspect-ratio'),
               </div>
               <div className="mt-12 border-t border-gray-200 py-8">
                 <p className="text-base text-gray-400 xl:text-center">
-                  © 2020 Workflow, Inc. All rights reserved.
+                  © 2021 eFactura Inc. All rights reserved.
                 </p>
               </div>
             </div>
