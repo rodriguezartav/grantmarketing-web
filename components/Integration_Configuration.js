@@ -5,7 +5,6 @@ import { useFetch } from "../helpers/useFetch";
 
 export default function Integration_Configuration(props) {
   const integrationMutation = useFetch(`/api/update_integration`);
-  const integrationDestroy = useFetch(`/api/destroy_integration`);
 
   const [integration, setIntegration] = useState({});
   useEffect(() => {
@@ -25,13 +24,9 @@ export default function Integration_Configuration(props) {
     )}/${props.provider.name}`;
 
     await integrationMutation.mutate(integration);
-    window.open(url);
-    props.refresh();
-  }
 
-  async function disconnect() {
-    await integrationDestroy.mutate(integration);
-    props.refresh();
+    props.onSave();
+    window.open(url);
   }
 
   return (

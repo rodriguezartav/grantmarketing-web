@@ -4,15 +4,22 @@ import useSWR from "swr";
 import { Transition } from "@headlessui/react";
 import Integration_Configuration from "./Integration_Configuration";
 import fetcher from "../helpers/fetcher";
-import { useMutate } from "../helpers/useFetch";
+import { useMutate, useFetch } from "../helpers/useFetch";
 
 export default function Integrations() {
-  const { data, error } = useSWR("/api/providers", fetcher);
-
+  const { data, error, mutate } = useSWR("/api/providers", fetcher);
+  const integrationDestroy = useFetch(`/api/destroy_integration`);
   if (error) return <div>failed to load</div>;
   if (!data) return <div>loading...</div>;
 
-  function removeIntegration(integration) {}
+  async function removeIntegration(integration) {
+    await integrationDestroy(integration);
+    mutate([], true);
+  }
+
+  function onSave() {
+    mutate([], true);
+  }
 
   return (
     <React.Fragment>
@@ -24,6 +31,7 @@ export default function Integrations() {
           {data.map((item, index) => {
             return (
               <IntegrationItem
+                onSave={onSave}
                 removeIntegration={removeIntegration}
                 key={item.id}
                 item={item}
@@ -72,6 +80,7 @@ function IntegrationItem(props) {
     <React.Fragment>
       {isConfigurationOpen ? (
         <Integration_Configuration
+          onSave={props.onSave}
           provider={selectedProvider}
           isConfigurationOpen={isConfigurationOpen}
           setIsConfigurationOpen={setIsConfigurationOpen}

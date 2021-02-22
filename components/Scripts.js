@@ -7,7 +7,7 @@ import Schedule_Configuration from "./Schedule_Configuration";
 import fetcher from "../helpers/fetcher";
 
 export default function Scripts() {
-  const { data, error } = useSWR("/api/scripts", fetcher);
+  const { data, error, mutate } = useSWR("/api/scripts", fetcher);
   const scheduleMutation = useMutate(`/api/schedule_enable`);
   const scheduleDestroy = useMutate(`/api/schedule_disable`);
   const [isConfigurationOpen, setIsConfigurationOpen] = useState(false);
@@ -22,6 +22,8 @@ export default function Scripts() {
 
   async function onSave(item) {
     await scheduleMutation.mutate(item);
+    setIsConfigurationOpen(false);
+    mutate([], true);
   }
 
   async function run() {}

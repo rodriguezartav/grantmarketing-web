@@ -58,7 +58,7 @@ export default function Sidebar() {
             <div className="flex-shrink-0 flex items-center px-4">
               <img
                 className="h-32 w-auto"
-                src="/color1_logo_transparent_background copy.png"
+                src="/logo-green-text.png"
                 alt="Workflow"
               />
             </div>
@@ -169,10 +169,10 @@ export default function Sidebar() {
       {/* Static sidebar for desktop */}
       <div className="hidden lg:flex lg:flex-shrink-0">
         <div className="flex flex-col w-64 border-r border-gray-200 pt-5 pb-4 bg-gray-100">
-          <div className="flex items-center flex-shrink-0 px-6">
+          <div className="flex bg-green-800 py-3 items-center flex-shrink-0 px-6">
             <img
-              className="h-32 w-auto"
-              src="/color1_logo_transparent_background.png"
+              className="h-10 w-auto"
+              src="white_textlogo_transparent_background.png"
               alt="Workflow"
             />
           </div>
