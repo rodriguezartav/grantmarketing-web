@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Logo from "./Logo";
+import Router from "next/router";
 
 export default function Header() {
   return (
@@ -11,11 +13,7 @@ export default function Header() {
           <div className="flex items-center flex-1">
             <div className="flex items-center justify-between w-full md:w-auto">
               <a href="#">
-                <img
-                  className=" h-8 w-auto sm:h-10"
-                  src="white_textlogo_transparent_background.png"
-                  alt=""
-                />
+                <Logo />
               </a>
               <div className="-mr-2 flex items-center md:hidden">
                 <button
@@ -47,8 +45,10 @@ export default function Header() {
           </div>
           <div className="hidden md:flex md:items-center md:space-x-6">
             <a
-              href="#"
-              className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700"
+              onClick={() => {
+                Router.replace("/login");
+              }}
+              className=" cursor-pointer inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700"
             >
               Login
             </a>
@@ -69,11 +69,7 @@ To: "opacity-0 scale-95"
         <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
           <div className="px-5 pt-4 flex items-center justify-between">
             <div>
-              <img
-                className="h-8 w-auto"
-                src="white_textlogo_transparent_background.svg"
-                alt=""
-              />
+              <Logo />
             </div>
             <div className="-mr-2">
               <button

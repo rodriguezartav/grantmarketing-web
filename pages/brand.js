@@ -1,32 +1,14 @@
 import Head from "next/head";
-import React, { useEffect } from "react";
+import React from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Router from "next/router";
 
 export default function Home() {
-  const [phone, setPhone] = React.useState("");
-  const [error, setError] = React.useState("");
-
-  useEffect(() => {
-    if (window.location.host.indexOf("localhost") > -1)
-      Router.replace("/brand");
-    else if (window.location.host.indexOf("rodco") > -1)
-      Router.replace("/brand");
-    else if (window.location.host.indexOf("signalon") > -1)
-      Router.replace("/brand");
-  }, []);
-
-  async function onCreateAccount() {
-    if (phone.length < 8) return setError("10 digit phone number is required");
-
-    Router.replace("/signin?phone=" + phone);
-  }
-
   return (
     <div>
       <Head>
-        <title>JungleDynamics</title>
+        <title>Integration Platform</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -88,28 +70,10 @@ export default function Home() {
                               <label htmlFor="email" className="sr-only">
                                 Mobile Number
                               </label>
-                              <input
-                                value={phone}
-                                onChange={(e) =>
-                                  setPhone(e.currentTarget.value)
-                                }
-                                type="number"
-                                placeholder="Enter your mobile number"
-                                className="block w-full px-4 py-3 rounded-md border-0 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900"
-                              />
                             </div>
-                            <div className="mt-3 sm:mt-0 sm:ml-3">
-                              <a
-                                onClick={onCreateAccount}
-                                className="block w-full py-3 px-4 rounded-md shadow bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-medium hover:from-teal-600 hover:to-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900"
-                              >
-                                Start free account
-                              </a>
-                            </div>
+                            <div className="mt-3 sm:mt-0 sm:ml-3"></div>
                           </div>
-                          <p className="mt-3 text-md text-red-800 sm:mt-4">
-                            {error}
-                          </p>
+
                           <p className="mt-3 text-sm text-gray-300 sm:mt-4">
                             Your free account allows you to connect with "1"
                             platform and get CSV exports via email. <br />
