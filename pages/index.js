@@ -85,7 +85,7 @@ require('@tailwindcss/aspect-ratio'),
                       </p>
 
                       <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-sm xl:text-sm">
-                        Code that's especific for your business needs, is then
+                        Code that's especific for your business, is then
                         deployed into your JD account where it runs securely
                         while being monitored and maintened by our engineers.
                       </p>
