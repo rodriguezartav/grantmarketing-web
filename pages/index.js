@@ -1,43 +1,25 @@
 import Head from "next/head";
-
+import React from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Router from "next/router";
 
 export default function Home() {
+  const [phone, setPhone] = React.useState("");
+  const [error, setError] = React.useState("");
+
+  async function onCreateAccount() {
+    if (phone.length < 8) return setError("10 digit phone number is required");
+
+    Router.replace("/signin?phone=" + phone);
+  }
+
   return (
     <div>
       <Head>
         <title>JungleDynamics</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      {/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  const colors = require('tailwindcss/colors')
-  
-  module.exports = {
-    // ...
-    theme: {
-extend: {
-  colors: {
-    teal: colors.teal,
-    cyan: colors.cyan,
-  }
-}
-    },
-    plugins: [
-// ...
-require('@tailwindcss/forms'),
-require('@tailwindcss/aspect-ratio'),
-    ]
-  }
-  ```
-*/}
 
       <div className="bg-white">
         <div className="relative overflow-hidden">
@@ -91,36 +73,39 @@ require('@tailwindcss/aspect-ratio'),
                       </p>
 
                       <div className="mt-10 sm:mt-12">
-                        <form
-                          action="#"
-                          className="sm:max-w-xl sm:mx-auto lg:mx-0"
-                        >
+                        <form className="sm:max-w-xl sm:mx-auto lg:mx-0">
                           <div className="sm:flex">
                             <div className="min-w-0 flex-1">
                               <label htmlFor="email" className="sr-only">
                                 Mobile Number
                               </label>
                               <input
-                                id="phone"
-                                type="phone"
+                                value={phone}
+                                onChange={(e) =>
+                                  setPhone(e.currentTarget.value)
+                                }
+                                type="number"
                                 placeholder="Enter your mobile number"
                                 className="block w-full px-4 py-3 rounded-md border-0 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900"
                               />
                             </div>
                             <div className="mt-3 sm:mt-0 sm:ml-3">
-                              <button
-                                type="submit"
+                              <a
+                                onClick={onCreateAccount}
                                 className="block w-full py-3 px-4 rounded-md shadow bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-medium hover:from-teal-600 hover:to-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900"
                               >
-                                Start free trial
-                              </button>
+                                Start free account
+                              </a>
                             </div>
                           </div>
+                          <p className="mt-3 text-md text-red-800 sm:mt-4">
+                            {error}
+                          </p>
                           <p className="mt-3 text-sm text-gray-300 sm:mt-4">
-                            Your free trial allows you to connect with "1"
+                            Your free account allows you to connect with "1"
                             platform and get CSV exports via email. <br />
-                            By providing your phone, you agree to our{" "}
-                            <a href="#" className="font-medium text-white">
+                            By providing your phone, you agree to our
+                            <a href="/terms" className="font-medium text-white">
                               terms or service
                             </a>
                             .

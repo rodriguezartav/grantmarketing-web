@@ -2,15 +2,25 @@ import Head from "next/head";
 import { useState, useEffect } from "react";
 import { useMutate } from "../helpers/useFetch";
 import Router from "next/router";
+import { useRouter } from "next/router";
 
 export default function Login() {
   const [view, setView] = useState("PHONE");
   const [phone, setPhone] = useState("");
   const [code, setCode] = useState("");
+  const router = useRouter();
 
   const { response, mutate, loading, error } = useMutate("/api/login");
 
   const codeMutate = useMutate("/api/code", { method: "PUT" });
+
+  useEffect(() => {
+    const { phone } = router.query;
+    if (phone && phone.length > 0) {
+      setPhone(phone);
+      setView("CODE");
+    }
+  }, []);
 
   useEffect(() => {
     if (!response) return;
@@ -28,7 +38,7 @@ export default function Login() {
   }, [codeMutate.response]);
 
   function onLoginClick() {
-    mutate({ phone: phone });
+    mutate({ phone: "+" + phone });
   }
 
   function onCodeClick() {
@@ -53,7 +63,7 @@ export default function Login() {
               onChange={(e) => setPhone(e.currentTarget.value)}
               id="mobile-phone"
               name="phone"
-              type="phone"
+              type="number"
               autoComplete="phone"
               required
               className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
@@ -101,6 +111,9 @@ export default function Login() {
   function renderCode() {
     return (
       <form className="mt-8 space-y-6" action="#" method="POST">
+        <p className="mt-2 text-center text-sm text-gray-600">
+          Code was sent via SMS to {phone}
+        </p>
         <input type="hidden" name="remember" defaultValue="true" />
         <div className="rounded-md shadow-sm -space-y-px">
           <div>
@@ -175,17 +188,21 @@ export default function Login() {
               alt="Workflow"
             />
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-              Log in to your account
+              {view == "CODE"
+                ? "Security Code Challenge"
+                : "Log in to your account"}
             </h2>
-            <p className="mt-2 text-center text-sm text-gray-600">
-              or
-              <a
-                href="/signin"
-                className="font-medium ml-1 text-indigo-600 hover:text-indigo-500"
-              >
-                Create an account
-              </a>
-            </p>
+            {view == "PHONE" && (
+              <p className="mt-2 text-center text-sm text-gray-600">
+                or
+                <a
+                  href="/signin"
+                  className="font-medium ml-1 text-indigo-600 hover:text-indigo-500"
+                >
+                  Create an account
+                </a>
+              </p>
+            )}
           </div>
 
           {view == "CODE" ? renderCode() : renderPhone()}

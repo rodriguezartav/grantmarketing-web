@@ -684,7 +684,7 @@ require('@tailwindcss/typography'),
 
                             <p>
                               We don't audit, examine or access data from
-                              itegrations in any way.
+                              integrations in any way.
                             </p>
 
                             <h1>Links to Other Websites</h1>
