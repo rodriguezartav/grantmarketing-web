@@ -80,9 +80,8 @@ require('@tailwindcss/aspect-ratio'),
                         </span>
                       </h1>
                       <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                        JD engineers write code that connect with you all your
-                        software platforms and get them to do what your business
-                        needs.
+                        JD engineers write code that connect with all software
+                        platforms and get them to do what your business needs.
                       </p>
 
                       <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-sm xl:text-sm">
