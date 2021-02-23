@@ -74,17 +74,16 @@ require('@tailwindcss/aspect-ratio'),
                         </svg>
                       </a>
                       <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                        <span className="block">Connecting Data</span>
+                        <span className="block">Business data</span>
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-200 to-cyan-400 block">
-                          your way
+                          connected in your own way
                         </span>
                       </h1>
                       <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                        Make the most out of your software platforms
+                        Make the most out of your software platforms using JD to
+                        customize how data is shared between them.
                       </p>
-                      <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-md lg:text-md xl:text-lg">
-                        With JD you can make them work the way you need.
-                      </p>
+
                       <div className="mt-10 sm:mt-12">
                         <form
                           action="#"
@@ -137,21 +136,31 @@ require('@tailwindcss/aspect-ratio'),
                 </div>
               </div>
             </div>
+
             {/* Feature section with screenshot */}
             <div className="relative bg-gray-50 pt-16 sm:pt-24 lg:pt-32">
               <div className="mx-auto max-w-md px-4 text-center sm:px-6 sm:max-w-3xl lg:px-8 lg:max-w-7xl">
                 <div>
-                  <h2 className="text-base font-semibold tracking-wider text-cyan-600 uppercase">
-                    Would your business improve?
+                  <h2 className="text-base mt-5 font-semibold tracking-wider text-cyan-600 uppercase">
+                    JD is sort of a business wonderland, a place made of code
+                    where everything is posible.
                   </h2>
                   <p className="mt-2  text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-                    If only your software platforms work the way you need them
-                    to?
+                    Your software is supposed to be modeled around your
+                    business, but it seems you are always adapting your business
+                    into "one size fit's all" software platforms.
                   </p>
+
                   <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
-                    Use JD as a customizable layer between your software
-                    platforms. Let us know what you need and we'll make sure
-                    it's done.
+                    Every platform has a "data socket" called an API. Instead of
+                    dealing with each platform, JD's engineers hand code scripts
+                    that make them work to your specs with fewer limitations.
+                  </p>
+
+                  <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
+                    JD's simple service
+                    <br /> has the power to make platforms
+                    <br /> adapt to your business
                   </p>
                 </div>
                 <div className="mt-12 -mb-10 sm:-mb-24 lg:-mb-80">
@@ -163,6 +172,64 @@ require('@tailwindcss/aspect-ratio'),
                 </div>
               </div>
             </div>
+
+            {/* Testimonial section */}
+            <div className="pb-16 bg-gradient-to-r from-teal-500 to-cyan-600 lg:pb-0 lg:z-10 lg:relative">
+              <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-8">
+                <div className="relative lg:-my-8">
+                  <div
+                    aria-hidden="true"
+                    className="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"
+                  />
+                  <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:p-0 lg:h-full">
+                    <div className="aspect-w-10 aspect-h-6 rounded-xl shadow-xl overflow-hidden sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
+                      <img
+                        className="object-cover lg:h-full lg:w-full"
+                        src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixqx=1JO2mPl47d&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-12 lg:m-0 lg:col-span-2 lg:pl-8">
+                  <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:px-0 lg:py-20 lg:max-w-none">
+                    <blockquote>
+                      <div>
+                        <svg
+                          className="h-12 w-12 text-white opacity-25"
+                          fill="currentColor"
+                          viewBox="0 0 32 32"
+                          aria-hidden="true"
+                        >
+                          <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                        </svg>
+                        <p className="mt-6 text-2xl font-medium text-white">
+                          We use Shopify, Salesforce, Xero, CustomerIO, Facebook
+                          and Google for operations, sales and marketing. With
+                          JD we choose which platform controls prices and
+                          inventories and we can make pricelists for platforms
+                          that don't support them.
+                        </p>
+                        <p className="mt-6 text-2xl font-medium text-white">
+                          We choose how leads, contacts and accounts work among
+                          several marketing channels and where all touch points
+                          are centralized for reporting.
+                        </p>
+                      </div>
+                      <footer className="mt-6">
+                        <p className="text-base font-medium text-white">
+                          Veronica Solis
+                        </p>
+                        <p className="text-base font-medium text-cyan-100">
+                          CMO , Rodco
+                        </p>
+                      </footer>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Feature section with grid */}
             <div className="relative bg-white py-16 sm:py-24 lg:py-32">
               <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
@@ -170,13 +237,9 @@ require('@tailwindcss/aspect-ratio'),
                   The best of both worlds
                 </h2>
                 <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-                  Finally a way to take advantage of technology
+                  A way to make the most of your investment in technology
                 </p>
-                <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
-                  Overcome the inevitable tradeof caused when millions of
-                  companies use the same software platform by extending it via
-                  integrations and custom code.
-                </p>
+
                 <div className="mt-12">
                   <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                     <div className="pt-6">
@@ -240,10 +303,10 @@ require('@tailwindcss/aspect-ratio'),
                             Cloud Databases
                           </h3>
                           <p className="mt-5 text-base text-gray-500">
-                            Centralizar data from different platforms in your
-                            own database and use it as a command center, a
-                            reporting tool or as a get-out-of-platform free card
-                            to avoid startup lockin tactics.
+                            Centralize data from different platforms in your own
+                            database and use it as a command center, a reporting
+                            tool or as a get-out-of-platform free card to avoid
+                            startup lockin tactics.
                           </p>
                         </div>
                       </div>
@@ -394,56 +457,7 @@ require('@tailwindcss/aspect-ratio'),
                 </div>
               </div>
             </div>
-            {/* Testimonial section */}
-            <div className="pb-16 bg-gradient-to-r from-teal-500 to-cyan-600 lg:pb-0 lg:z-10 lg:relative">
-              <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-8">
-                <div className="relative lg:-my-8">
-                  <div
-                    aria-hidden="true"
-                    className="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"
-                  />
-                  <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:p-0 lg:h-full">
-                    <div className="aspect-w-10 aspect-h-6 rounded-xl shadow-xl overflow-hidden sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
-                      <img
-                        className="object-cover lg:h-full lg:w-full"
-                        src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixqx=1JO2mPl47d&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="mt-12 lg:m-0 lg:col-span-2 lg:pl-8">
-                  <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:px-0 lg:py-20 lg:max-w-none">
-                    <blockquote>
-                      <div>
-                        <svg
-                          className="h-12 w-12 text-white opacity-25"
-                          fill="currentColor"
-                          viewBox="0 0 32 32"
-                          aria-hidden="true"
-                        >
-                          <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
-                        </svg>
-                        <p className="mt-6 text-2xl font-medium text-white">
-                          We use Shopify, Salesforce, Xero, CustomerIO, Facebook
-                          and Google for operations, sales and marketing. With
-                          JD we can choose where to centralize information and
-                          keep everything in sync.
-                        </p>
-                      </div>
-                      <footer className="mt-6">
-                        <p className="text-base font-medium text-white">
-                          Veronica Solis
-                        </p>
-                        <p className="text-base font-medium text-cyan-100">
-                          CMO , Rodco
-                        </p>
-                      </footer>
-                    </blockquote>
-                  </div>
-                </div>
-              </div>
-            </div>
+
             {/* Blog section */}
 
             {/* CTA Section */}
@@ -463,16 +477,17 @@ require('@tailwindcss/aspect-ratio'),
               <div className="relative mx-auto max-w-md px-4 py-12 sm:max-w-7xl sm:px-6 sm:py-20 md:py-28 lg:px-8 lg:py-32">
                 <div className="md:ml-auto md:w-1/2 md:pl-10">
                   <h2 className="text-base font-semibold uppercase tracking-wider text-gray-300">
-                    Much more than a reseller program
+                    JD for Agencies
                   </h2>
                   <p className="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl">
                     Build for Counsultants
                   </p>
                   <p className="mt-3 text-lg text-gray-300">
                     JD was build for consultants and agencies in mind, our
-                    program allows you agency to brand JD and offer it to your
-                    customers as if it was your own integration tool with out
-                    having to deal with code, monitoring and platform relations.
+                    program allows your agency to brand JD and offer it to your
+                    customers as if it was your own integration tool without
+                    having to deal with code, monitoring and platform security
+                    reviews.
                   </p>
                   <div className="mt-8">
                     <div className="inline-flex rounded-md shadow">
