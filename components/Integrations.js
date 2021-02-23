@@ -8,12 +8,12 @@ import { useMutate, useFetch } from "../helpers/useFetch";
 
 export default function Integrations() {
   const { data, error, mutate } = useSWR("/api/providers", fetcher);
-  const integrationDestroy = useFetch(`/api/destroy_integration`);
+  const integrationDestroy = useMutate(`/api/destroy_integration`);
   if (error) return <div>failed to load</div>;
   if (!data) return <div>loading...</div>;
 
   async function removeIntegration(integration) {
-    await integrationDestroy(integration);
+    await integrationDestroy.mutate(integration);
     mutate([], true);
   }
 
@@ -92,7 +92,9 @@ function IntegrationItem(props) {
       >
         <div
           className={`flex-shrink-0 flex items-center justify-center w-16 bg-${
-            props.item.integration ? "green" : "gray"
+            props.item.integration && props.item.integration.expiry_date
+              ? "green"
+              : "gray"
           }-600 text-white text-sm font-medium rounded-l-md`}
         >
           {props.item.id}

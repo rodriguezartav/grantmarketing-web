@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Transition } from "@headlessui/react";
 import useSWR from "swr";
-import { useFetch } from "../helpers/useFetch";
+import { useMutate } from "../helpers/useFetch";
 
 export default function Integration_Configuration(props) {
-  const integrationMutation = useFetch(`/api/update_integration`);
+  const integrationMutation = useMutate(`/api/update_integration`);
 
   const [integration, setIntegration] = useState({});
   useEffect(() => {
@@ -26,7 +26,8 @@ export default function Integration_Configuration(props) {
     await integrationMutation.mutate(integration);
 
     props.onSave();
-    window.open(url);
+    if (props.provider.type.toLowerCase().indexOf("oauth") > -1)
+      window.open(url);
   }
 
   return (

@@ -115,7 +115,6 @@ require('@tailwindcss/typography'),
                       <article className="entry" id="post-2757">
                         <div className="entry-content">
                           <div>
-                            <h1>Privacy Policy</h1>
                             <p>Last updated: February 22, 2021</p>
                             <p>
                               This Privacy Policy describes Our policies and
@@ -129,7 +128,7 @@ require('@tailwindcss/typography'),
                               the Service. By using the Service, You agree to
                               the collection and use of information in
                               accordance with this Privacy Policy. This Privacy
-                              Policy has been created with the help of the{" "}
+                              Policy has been created with the help of the
                               <a
                                 href="https://www.privacypolicies.com/privacy-policy-generator/"
                                 target="_blank"
@@ -553,31 +552,6 @@ require('@tailwindcss/typography'),
                                 control or that are under common control with
                                 Us.
                               </li>
-                              <li>
-                                <strong>With business partners:</strong> We may
-                                share Your information with Our business
-                                partners to offer You certain products, services
-                                or promotions.
-                              </li>
-                              <li>
-                                <strong>With other users:</strong> when You
-                                share personal information or otherwise interact
-                                in the public areas with other users, such
-                                information may be viewed by all users and may
-                                be publicly distributed outside. If You interact
-                                with other users or register through a
-                                Third-Party Social Media Service, Your contacts
-                                on the Third-Party Social Media Service may see
-                                Your name, profile, pictures and description of
-                                Your activity. Similarly, other users will be
-                                able to view descriptions of Your activity,
-                                communicate with You and view Your profile.
-                              </li>
-                              <li>
-                                <strong>With Your consent</strong>: We may
-                                disclose Your personal information for any other
-                                purpose with Your consent.
-                              </li>
                             </ul>
                             <h2>Retention of Your Personal Data</h2>
                             <p>
@@ -695,6 +669,24 @@ require('@tailwindcss/typography'),
                               Your parent's consent before We collect and use
                               that information.
                             </p>
+                            <h1>Data obtained via OAUTH</h1>
+                            <p>
+                              Our services offers OAUTH connections with Google,
+                              Salesforce and other platforms. Information from
+                              those platforms is transfered via our platform,
+                              but a copy or the data itself is not stored in
+                              memory or any other form by JungleDynamics.
+                            </p>
+                            <p>
+                              Such data is always transfered according to your
+                              instructions provided via Scripts
+                            </p>
+
+                            <p>
+                              We don't audit, examine or access data from
+                              itegrations in any way.
+                            </p>
+
                             <h1>Links to Other Websites</h1>
                             <p>
                               Our Service may contain links to other websites
