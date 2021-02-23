@@ -74,14 +74,21 @@ require('@tailwindcss/aspect-ratio'),
                         </svg>
                       </a>
                       <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                        <span className="block">Business data</span>
+                        <span className="block">Make software do </span>
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-200 to-cyan-400 block">
-                          connected in your own way
+                          what business needs
                         </span>
                       </h1>
                       <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                        Make the most out of your software platforms using JD to
-                        customize how data is shared between them.
+                        JD engineers write code that connect with you all your
+                        software platforms and get them to do what your business
+                        needs.
+                      </p>
+
+                      <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-sm xl:text-sm">
+                        Code that's especific for your business needs, is then
+                        deployed into your JD account where it runs securely
+                        while being monitored and maintened by our engineers.
                       </p>
 
                       <div className="mt-10 sm:mt-12">
@@ -148,7 +155,7 @@ require('@tailwindcss/aspect-ratio'),
                   <p className="mt-2  text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
                     Your software is supposed to be modeled around your
                     business, but it seems you are always adapting your business
-                    into "one size fit's all" software platforms.
+                    into "one size fits all" software platforms.
                   </p>
 
                   <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
