@@ -47,9 +47,9 @@ export default function Home() {
                         </svg>
                       </a>
                       <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                        <span className="block">Make software do </span>
+                        <span className="block">Integration </span>
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-200 to-cyan-400 block">
-                          what business needs
+                          Platform
                         </span>
                       </h1>
                       <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
@@ -73,16 +73,6 @@ export default function Home() {
                             </div>
                             <div className="mt-3 sm:mt-0 sm:ml-3"></div>
                           </div>
-
-                          <p className="mt-3 text-sm text-gray-300 sm:mt-4">
-                            Your free account allows you to connect with "1"
-                            platform and get CSV exports via email. <br />
-                            By providing your phone, you agree to our
-                            <a href="/terms" className="font-medium text-white">
-                              terms or service
-                            </a>
-                            .
-                          </p>
                         </form>
                       </div>
                     </div>
