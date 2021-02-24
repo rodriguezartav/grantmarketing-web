@@ -30,7 +30,7 @@ export default function Scripts() {
 
   function onDisable(item) {
     return async () => {
-      await scheduleDestroy.mutate(item);
+      await scheduleDestroy.mutate({ id: item.schedule.id });
     };
   }
 

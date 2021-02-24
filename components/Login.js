@@ -32,6 +32,10 @@ export default function Login(props) {
     window.localStorage.setItem("user_id", codeMutate.response.id);
     window.localStorage.setItem("user_name", codeMutate.response.name);
     window.localStorage.setItem("customer_id", codeMutate.response.customer_id);
+    window.localStorage.setItem(
+      "customer_name",
+      codeMutate.response.customer_name
+    );
     window.localStorage.setItem("token", codeMutate.response.token);
     Router.replace("/dashboard");
   }, [codeMutate.response]);

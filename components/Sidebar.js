@@ -1,10 +1,22 @@
 import React, { useState, useEffect } from "react";
+import { Transition } from "@headlessui/react";
+import Router from "next/router";
 
 export default function Sidebar() {
   const [username, setUsername] = useState("");
+  const [company, setCompany] = useState("");
+
+  const [isOpen, setIsOpen] = useState(false);
+
   useEffect(() => {
     setUsername(window.localStorage.getItem("user_name"));
+    setCompany(window.localStorage.getItem("customer_name"));
   }, []);
+
+  function onLogout() {
+    window.localStorage.clear();
+    Router.replace("/");
+  }
 
   return (
     <React.Fragment>
@@ -183,6 +195,7 @@ export default function Sidebar() {
               {/* Dropdown menu toggle, controlling the show/hide state of dropdown menu. */}
               <div>
                 <button
+                  onClick={() => setIsOpen(!isOpen)}
                   type="button"
                   className="group w-full bg-gray-100 rounded-md px-3.5 py-2 text-sm font-medium text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-purple-500"
                   id="options-menu"
@@ -214,71 +227,42 @@ export default function Sidebar() {
                   </span>
                 </button>
               </div>
-              {/*
-      Dropdown panel, show/hide based on dropdown state.
 
-      Entering: "transition ease-out duration-100"
-        From: "transform opacity-0 scale-95"
-        To: "transform opacity-100 scale-100"
-      Leaving: "transition ease-in duration-75"
-        From: "transform opacity-100 scale-100"
-        To: "transform opacity-0 scale-95"
-    */}
-              <div
-                className="z-10 mx-3 origin-top absolute right-0 opacity-0 left-0 mt-1 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-200"
-                role="menu"
-                aria-orientation="vertical"
-                aria-labelledby="options-menu"
+              <Transition
+                show={isOpen}
+                enter="transition ease-out duration-100"
+                enterFrom="transform opacity-0 scale-95"
+                enterTo="transform opacity-100 scale-100"
+                leave="transition ease-in duration-75"
+                leaveFrom="transform opacity-100 scale-100"
+                leaveTo="transform opacity-0 scale-95"
               >
-                <div className="py-1">
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                    role="menuitem"
-                  >
-                    View profile
-                  </a>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                    role="menuitem"
-                  >
-                    Settings
-                  </a>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                    role="menuitem"
-                  >
-                    Notifications
-                  </a>
+                <div
+                  className="z-10 mx-3 origin-top absolute right-0 opacity-100 left-0 mt-1 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-200"
+                  role="menu"
+                  aria-orientation="vertical"
+                  aria-labelledby="options-menu"
+                >
+                  <div className="py-1">
+                    <a
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                      role="menuitem"
+                    >
+                      {company}
+                    </a>
+                  </div>
+
+                  <div className="py-1">
+                    <a
+                      onClick={onLogout}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                      role="menuitem"
+                    >
+                      Logout
+                    </a>
+                  </div>
                 </div>
-                <div className="py-1">
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                    role="menuitem"
-                  >
-                    Get desktop app
-                  </a>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                    role="menuitem"
-                  >
-                    Support
-                  </a>
-                </div>
-                <div className="py-1">
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                    role="menuitem"
-                  >
-                    Logout
-                  </a>
-                </div>
-              </div>
+              </Transition>
             </div>
             {/* Sidebar Search */}
             <div className="px-3 mt-5">
