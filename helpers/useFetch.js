@@ -13,8 +13,7 @@ export function useFetch(url, options) {
             "Content-Type": "application/json",
             customer_id: window.localStorage.getItem("customer_id") || "",
             user_id: window.localStorage.getItem("user_id") || "",
-            authorization:
-              "bearer " + window.localStorage.getItem("token") || "",
+            authorization: window.localStorage.getItem("token") || "",
             ...options,
           },
         });
@@ -49,7 +48,7 @@ export function useMutate(
           "Content-Type": "application/json",
           customer_id: window.localStorage.getItem("customer_id") || "",
           user_id: window.localStorage.getItem("user_id") || "",
-          authorization: "bearer " + window.localStorage.getItem("token") || "",
+          authorization: window.localStorage.getItem("token") || "",
         },
         ...options,
       });
