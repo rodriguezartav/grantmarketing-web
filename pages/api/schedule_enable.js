@@ -1,6 +1,7 @@
 import request from "superagent";
 
 export default async (req, res) => {
+  console.log(req.headers);
   try {
     if (req.body.id)
       await request
