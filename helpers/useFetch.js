@@ -50,7 +50,6 @@ export function useMutate(
       setResponse(json);
       setIsLoading(false);
     } catch (error) {
-      debugger;
       setError(error);
     }
   };
