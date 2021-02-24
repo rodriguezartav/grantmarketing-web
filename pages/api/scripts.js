@@ -1,6 +1,8 @@
 import request from "superagent";
 
 export default async (req, res) => {
+  console.log(process.env);
+
   try {
     const scripts = await request
       .post(process.env.API_URL + "/api/scripts/getList")

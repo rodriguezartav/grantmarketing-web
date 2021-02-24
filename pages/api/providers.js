@@ -1,7 +1,7 @@
 import request from "superagent";
 
 export default async (req, res) => {
-  console.log(process.env.API_URL + "/api/providers/getList");
+  console.log(process.env.API_URL);
 
   try {
     const providers = await request
