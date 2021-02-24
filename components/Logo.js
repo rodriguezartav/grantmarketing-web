@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Logo() {
   const [logo, setLogo] = React.useState("jd");
-
+  //
   React.useEffect(() => {
     if (window.location.host.indexOf("localhost") > -1) setLogo("jd");
     else if (window.location.host.indexOf("jungledynamics") > -1) setLogo("jd");
