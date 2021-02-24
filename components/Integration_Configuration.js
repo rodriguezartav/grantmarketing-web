@@ -27,7 +27,6 @@ export default function Integration_Configuration(props) {
 
     props.onSave();
 
-    debugger;
     if (props.provider.type.toLowerCase().indexOf("oauth") > -1)
       window.open(url);
   }

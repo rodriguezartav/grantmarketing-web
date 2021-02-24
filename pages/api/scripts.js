@@ -1,6 +1,7 @@
 import request from "superagent";
 
 export default async (req, res) => {
+  console.log(process.env.API_URL);
   console.log(process.env);
 
   try {
