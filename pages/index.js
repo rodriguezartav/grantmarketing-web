@@ -9,17 +9,13 @@ export default function Home() {
   const [error, setError] = React.useState("");
 
   useEffect(() => {
-    if (window.location.host.indexOf("localhost") > -1)
-      Router.replace("/brand");
-    else if (window.location.host.indexOf("rodco") > -1)
-      Router.replace("/brand");
+    if (window.location.host.indexOf("rodco") > -1) Router.replace("/brand");
     else if (window.location.host.indexOf("signalon") > -1)
       Router.replace("/brand");
   }, []);
 
   async function onCreateAccount() {
     if (phone.length < 8) return setError("10 digit phone number is required");
-
     Router.replace("/signin?phone=" + phone);
   }
 
