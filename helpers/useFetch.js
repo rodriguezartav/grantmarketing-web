@@ -8,7 +8,16 @@ export function useFetch(url, options) {
     const fetchData = async () => {
       setIsLoading(true);
       try {
-        const res = await fetch(process.env.API_URL + url, options);
+        const res = await fetch(process.env.API_URL + url, {
+          headers: {
+            "Content-Type": "application/json",
+            customer_id: window.localStorage.getItem("customer_id") || "",
+            user_id: window.localStorage.getItem("user_id") || "",
+            authorization:
+              "bearer " + window.localStorage.getItem("token") || "",
+            ...options,
+          },
+        });
         const json = await res.json();
         setResponse(json);
         setIsLoading(false);
@@ -38,7 +47,9 @@ export function useMutate(
         body: JSON.stringify(body),
         headers: {
           "Content-Type": "application/json",
-          Authorization: "bearer " + window.localStorage.getItem("token") || "",
+          customer_id: window.localStorage.getItem("customer_id") || "",
+          user_id: window.localStorage.getItem("user_id") || "",
+          authorization: "bearer " + window.localStorage.getItem("token") || "",
         },
         ...options,
       });

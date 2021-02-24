@@ -1,9 +1,11 @@
 const fetcher = async (url) => {
   const res = await fetch(url, {
     headers: {
+      authentication: "bearer " + window.localStorage.token || "",
+
+      "Content-Type": "application/json",
       customer_id: window.localStorage.getItem("customer_id") || "",
       user_id: window.localStorage.getItem("user_id") || "",
-      authentication: window.localStorage.token || "",
     },
   });
   if (!res.ok) {
