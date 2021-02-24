@@ -14,13 +14,17 @@ export default function Scripts() {
   const [selectedScript, setSelectedScript] = useState();
 
   function onEdit(item) {
-    return async () => {
+    return () => {
       setSelectedScript(item);
-      setIsConfigurationOpen(true);
     };
   }
 
+  React.useEffect(() => {
+    if (selectedScript) setIsConfigurationOpen(true);
+  }, [selectedScript]);
+
   async function onSave(item) {
+    setSelectedScript(null);
     await scheduleMutation.mutate(item);
     setIsConfigurationOpen(false);
     mutate([], true);
@@ -43,7 +47,7 @@ export default function Scripts() {
         <Schedule_Configuration
           onSave={onSave}
           setIsConfigurationOpen={setIsConfigurationOpen}
-          schedule={selectedScript.schedule}
+          schedule={selectedScript ? selectedScript.schedule : {}}
         />
       ) : null}
 

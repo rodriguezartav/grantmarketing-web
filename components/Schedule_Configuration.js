@@ -4,7 +4,7 @@ export default function Integration_Configuration(props) {
   const [schedule, setSchedule] = useState({});
 
   useEffect(() => {
-    if (props.schedule) setSchedule(props.schedule || {});
+    if (props.schedule) setSchedule(props.schedule);
   }, []);
 
   function onFormChange(key, type) {

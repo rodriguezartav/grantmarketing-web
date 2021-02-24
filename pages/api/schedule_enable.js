@@ -11,10 +11,12 @@ export default async (req, res) => {
         .send({ ...req.body, customer_id: parseInt(req.headers.customer_id) });
     else
       await request
-        .post(process.env.API_URL + "/api/schedules/")
+        .post(process.env.API_URL + "/api/schedules")
         .set("Accept", "application/json")
         .auth("LINK", { type: "bearer" })
-        .send({ ...req.body, customer_id: parseInt(req.headers.customer_id) });
+        .send({
+          data: { ...req.body, customer_id: parseInt(req.headers.customer_id) },
+        });
 
     res.status(200).json({});
   } catch (e) {
