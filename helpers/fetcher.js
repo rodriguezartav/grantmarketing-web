@@ -1,7 +1,7 @@
 const fetcher = async (url) => {
   const res = await fetch(url, {
     headers: {
-      authentication: window.localStorage.token || "",
+      authorization: window.localStorage.token || "",
 
       "Content-Type": "application/json",
       customer_id: window.localStorage.getItem("customer_id") || "",
