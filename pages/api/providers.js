@@ -1,24 +1,30 @@
 import request from "superagent";
 
 export default async (req, res) => {
-  console.log(process.env);
-  const providers = await request
-    .post(process.env.API_URL + "/api/providers/getList")
-    .set("Accept", "application/json")
-    .auth("LINK", { type: "bearer" })
-    .send({});
+  console.log(process.env.API_URL + "/api/providers/getList");
 
-  const integrations = await request
-    .post(process.env.API_URL + "/api/integrations/getList")
-    .set("Accept", "application/json")
-    .auth("LINK", { type: "bearer" })
-    .send({ filter: { customer_id: parseInt(req.headers.customer_id) } });
+  try {
+    const providers = await request
+      .post(process.env.API_URL + "/api/providers/getList")
+      .set("Accept", "application/json")
+      .auth("LINK", { type: "bearer" })
+      .send({});
 
-  providers.body.results.forEach((provider) => {
-    provider.integration = integrations.body.results.filter((integration) => {
-      return integration.provider_id === provider.id;
-    })[0];
-  });
+    const integrations = await request
+      .post(process.env.API_URL + "/api/integrations/getList")
+      .set("Accept", "application/json")
+      .auth("LINK", { type: "bearer" })
+      .send({ filter: { customer_id: parseInt(req.headers.customer_id) } });
 
-  res.status(200).json(providers.body.results);
+    providers.body.results.forEach((provider) => {
+      provider.integration = integrations.body.results.filter((integration) => {
+        return integration.provider_id === provider.id;
+      })[0];
+    });
+
+    res.status(200).json(providers.body.results);
+  } catch (e) {
+    console.log(e);
+    res.status(500).json({ error: e.message });
+  }
 };
