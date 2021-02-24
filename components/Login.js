@@ -37,7 +37,7 @@ export default function Login(props) {
   }, [codeMutate.response]);
 
   function onLoginClick() {
-    mutate({ phone: "+" + phone });
+    mutate({ phone: phone });
   }
 
   function onCodeClick() {
