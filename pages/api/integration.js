@@ -9,7 +9,7 @@ export default async (req, res) => {
     const integration = await request
       .get(process.env.API_URL + "/api/integrations/" + req.query.id)
       .set("Accept", "application/json")
-      .auth(req.headers.authorization, { type: "bearer" });
+      .set("authorization", req.headers.authorization);
 
     res.status(200).json(integration.body);
   } catch (e) {

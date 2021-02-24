@@ -7,13 +7,13 @@ export default async (req, res) => {
       await request
         .put(process.env.API_URL + "/api/integrations/" + req.body.id)
         .set("Accept", "application/json")
-        .auth(req.headers.authorization, { type: "bearer" })
+        .set("authorization", req.headers.authorization)
         .send({ ...req.body, expiry_date: moment() });
     else
       await request
         .post(process.env.API_URL + "/api/integrations/")
         .set("Accept", "application/json")
-        .auth(req.headers.authorization, { type: "bearer" })
+        .set("authorization", req.headers.authorization)
         .send({ data: { ...req.body, expiry_date: moment() } });
 
     res.status(200).json({});

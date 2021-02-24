@@ -7,13 +7,13 @@ export default async (req, res) => {
     const providers = await request
       .post(process.env.API_URL + "/api/providers/getList")
       .set("Accept", "application/json")
-      .auth(req.headers.authorization, { type: "bearer" })
+      .set("authorization", req.headers.authorization)
       .send({});
 
     const integrations = await request
       .post(process.env.API_URL + "/api/integrations/getList")
       .set("Accept", "application/json")
-      .auth(req.headers.authorization, { type: "bearer" })
+      .set("authorization", req.headers.authorization)
       .send({ filter: { customer_id: parseInt(req.headers.customer_id) } });
 
     providers.body.results.forEach((provider) => {
