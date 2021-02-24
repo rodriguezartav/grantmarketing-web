@@ -1,5 +1,5 @@
 const fetcher = async (url) => {
-  const res = fetch(url, {
+  const res = await fetch(url, {
     headers: {
       customer_id: window.localStorage.getItem("customer_id") || "",
       user_id: window.localStorage.getItem("user_id") || "",
