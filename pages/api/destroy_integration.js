@@ -5,7 +5,7 @@ export default async (req, res) => {
     await request
       .put(process.env.API_URL + "/api/integrations/" + req.body.id)
       .set("Accept", "application/json")
-      .auth("LINK", { type: "bearer" })
+      .auth(req.headers.authorization, { type: "bearer" })
       .send({
         api_key: "",
         client_id: "",

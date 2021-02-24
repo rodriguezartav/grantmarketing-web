@@ -7,13 +7,13 @@ export default async (req, res) => {
       await request
         .put(process.env.API_URL + "/api/schedules/" + req.body.id)
         .set("Accept", "application/json")
-        .auth("LINK", { type: "bearer" })
+        .auth(req.headers.authorization, { type: "bearer" })
         .send({ ...req.body, customer_id: parseInt(req.headers.customer_id) });
     else
       await request
         .post(process.env.API_URL + "/api/schedules")
         .set("Accept", "application/json")
-        .auth("LINK", { type: "bearer" })
+        .auth(req.headers.authorization, { type: "bearer" })
         .send({
           data: { ...req.body, customer_id: parseInt(req.headers.customer_id) },
         });

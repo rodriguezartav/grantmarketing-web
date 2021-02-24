@@ -25,7 +25,7 @@ export default function Scripts() {
 
   async function onSave(item) {
     setSelectedScript(null);
-    await scheduleMutation.mutate(item);
+    await scheduleMutation.mutate({ ...item, script_id: selectedScript.id });
     setIsConfigurationOpen(false);
     mutate([], true);
   }
