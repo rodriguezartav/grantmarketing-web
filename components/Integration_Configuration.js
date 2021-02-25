@@ -21,9 +21,7 @@ export default function Integration_Configuration(props) {
   }
 
   async function connect() {
-    const url = `${process.env.API_URL}/connect/${window.localStorage.getItem(
-      "customer_id"
-    )}/${props.provider.name}`;
+    const url = `${process.env.WEB_URL}/connect?provider=${props.provider.name}`;
 
     await integrationMutation.mutate({
       ...integration,
