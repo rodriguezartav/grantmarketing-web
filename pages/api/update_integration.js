@@ -18,7 +18,7 @@ export default async (req, res) => {
           data: {
             ...req.body,
             expiry_date: moment(),
-            customer_id: req.headers.customer_id,
+            customer_id: parseInt(req.headers.customer_id),
           },
         });
 
