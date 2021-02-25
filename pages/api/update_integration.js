@@ -14,7 +14,13 @@ export default async (req, res) => {
         .post(process.env.API_URL + "/api/integrations/")
         .set("Accept", "application/json")
         .set("authorization", req.headers.authorization)
-        .send({ data: { ...req.body, expiry_date: moment() } });
+        .send({
+          data: {
+            ...req.body,
+            expiry_date: moment(),
+            customer_id: req.headers.customer_id,
+          },
+        });
 
     res.status(200).json({});
   } catch (e) {
