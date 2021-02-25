@@ -1,3 +1,5 @@
+import Router from "next/router";
+
 const fetcher = async (url) => {
   const res = await fetch(url, {
     headers: {
@@ -8,6 +10,10 @@ const fetcher = async (url) => {
       user_id: window.localStorage.getItem("user_id") || "",
     },
   });
+  if (res.status == 403) {
+    window.localStorage.clear();
+    return Router.replace("/");
+  }
   if (!res.ok) {
     const error = new Error("Server error");
     // Attach extra info to the error object.
