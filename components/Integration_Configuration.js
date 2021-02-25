@@ -189,6 +189,26 @@ function Oauth(props) {
             <h3 className="text-lg leading-6 font-medium text-gray-900">
               Oauth Connection
             </h3>
+
+            <div className="sm:col-span-6">
+              <label
+                htmlFor="application_id"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Account or Instance URI ( Optional )
+              </label>
+              <div className="mt-1">
+                <input
+                  value={props.integration.application_id}
+                  onChange={props.onChange("application_id")}
+                  type="text"
+                  name="application_id"
+                  id="applicatoon_id"
+                  className="shadow-sm focus:ring-green-500 focus:border-green-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                />
+              </div>
+            </div>
+
             <p className="mt-1 text-sm text-gray-500">
               Click on the connect button to take you to the approval screen.
             </p>
@@ -226,16 +246,15 @@ function Private(props) {
                   value={props.integration.client_id}
                   onChange={props.onChange("client_id")}
                   type="text"
-                  name="street_address"
-                  id="street_address"
-                  autoComplete="street-address"
+                  name="client_id"
+                  id="client_id"
                   className="shadow-sm focus:ring-green-500 focus:border-green-500 block w-full sm:text-sm border-gray-300 rounded-md"
                 />
               </div>
             </div>
             <div className="sm:col-span-6">
               <label
-                htmlFor="street_address"
+                htmlFor="client_secret"
                 className="block text-sm font-medium text-gray-700"
               >
                 Client Secret
@@ -245,16 +264,15 @@ function Private(props) {
                   value={props.integration.client_secret}
                   onChange={props.onChange("client_secret")}
                   type="text"
-                  name="street_address"
-                  id="street_address"
-                  autoComplete="street-address"
+                  name="client_secret"
+                  id="client_sectret"
                   className="shadow-sm focus:ring-green-500 focus:border-green-500 block w-full sm:text-sm border-gray-300 rounded-md"
                 />
               </div>
             </div>
             <div className="sm:col-span-6">
               <label
-                htmlFor="street_address"
+                htmlFor="application_id"
                 className="block text-sm font-medium text-gray-700"
               >
                 Account or Instance URI ( Optional )
@@ -264,9 +282,8 @@ function Private(props) {
                   value={props.integration.application_id}
                   onChange={props.onChange("application_id")}
                   type="text"
-                  name="street_address"
-                  id="street_address"
-                  autoComplete="street-address"
+                  name="application_id"
+                  id="application_id"
                   className="shadow-sm focus:ring-green-500 focus:border-green-500 block w-full sm:text-sm border-gray-300 rounded-md"
                 />
               </div>
