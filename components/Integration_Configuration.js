@@ -9,7 +9,9 @@ export default function Integration_Configuration(props) {
   const [integration, setIntegration] = useState({});
   useEffect(() => {
     if (props.provider && props.provider.integration)
-      setIntegration(props.provider.integration || {});
+      setIntegration(
+        props.provider.integration || { provider_id: props.provider.id }
+      );
   }, []);
 
   function onFormChange(type) {
