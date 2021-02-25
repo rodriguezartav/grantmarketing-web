@@ -45,6 +45,7 @@ export default async (req, res) => {
     res.status(200).json(myScripts);
   } catch (e) {
     console.log(e);
-    res.status(500).json({ error: e.message });
+
+    res.status(e.status || 500).json({ error: e.message });
   }
 };
