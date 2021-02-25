@@ -25,7 +25,10 @@ export default function Integration_Configuration(props) {
       "customer_id"
     )}/${props.provider.name}`;
 
-    await integrationMutation.mutate(integration);
+    await integrationMutation.mutate({
+      ...integration,
+      provider_id: props.provider.id,
+    });
 
     props.onSave();
 
