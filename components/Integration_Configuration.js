@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Transition } from "@headlessui/react";
 import useSWR from "swr";
 import { useMutate } from "../helpers/useFetch";
+import Router from "next/router";
 
 export default function Integration_Configuration(props) {
   const integrationMutation = useMutate(`/api/update_integration`);
@@ -31,7 +32,7 @@ export default function Integration_Configuration(props) {
     props.onSave();
 
     if (props.provider.type.toLowerCase().indexOf("oauth") > -1)
-      window.open(url);
+      Router.replace(url);
   }
 
   return (
