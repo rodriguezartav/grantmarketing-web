@@ -10,7 +10,7 @@ export default function LoginPage() {
   return (
     <div>
       <Head>
-        <title>Jungledynamics Login</title>
+        <title>Jungledynamics Connect</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

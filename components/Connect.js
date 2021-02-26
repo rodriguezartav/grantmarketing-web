@@ -1,10 +1,10 @@
 import React from "react";
-const router = useRouter();
+import { useRouter } from "next/router";
 
 export default function Connect() {
   const [customerId, setCustomerId] = useState("");
   const [providerName, setProviderName] = useState("");
-
+  const router = useRouter();
   useEffect(() => {
     const { provider } = router.query;
     setProviderName(provider);
