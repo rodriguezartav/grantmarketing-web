@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from "react";
+import { useMutate } from "../helpers/useFetch";
+import { options } from "superagent";
 
 export default function Integration_Configuration(props) {
-  const [schedule, setSchedule] = useState({});
+  const [schedule, setSchedule] = useState({ script_options: {} });
+  const scriptOptions = useMutate(`/api/script_options`);
 
   useEffect(() => {
-    if (props.schedule) setSchedule(props.schedule);
+    if (props.schedule)
+      setSchedule({
+        ...props.schedule,
+        script_options: props.schedule.scriptOptions || {},
+      });
+    scriptOptions.mutate({ location: props.script.location });
   }, []);
 
   function onFormChange(key, type) {
@@ -15,8 +23,57 @@ export default function Integration_Configuration(props) {
     };
   }
 
+  function onFormOptionsChange(key, type) {
+    return (e) => {
+      let value = e.currentTarget.value;
+      if (type == "integer") value = parseInt(value);
+      setSchedule({
+        ...schedule,
+        script_options: { ...(schedule.scriptOptions || {}), [key]: value },
+      });
+    };
+  }
+
   async function onSave() {
     props.onSave(schedule);
+  }
+
+  function renderOptions() {
+    if (!scriptOptions.response) {
+      return null;
+    }
+
+    const keys = Object.keys(scriptOptions.response.options.properties);
+    return keys.map((key) => {
+      const option = scriptOptions.response.options.properties[key];
+      return (
+        <div key={key} className="pt-2 pb-8">
+          <div>
+            <p className="mt-1 text-sm text-gray-500">{option.descriptoon}</p>
+          </div>
+          <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+            <div className="sm:col-span-6">
+              <label
+                htmlFor={key}
+                className="block text-sm font-medium text-gray-700"
+              >
+                {option.label}
+              </label>
+              <div className="mt-1">
+                <input
+                  value={schedule.script_options[key]}
+                  onChange={onFormOptionsChange(key, options.type)}
+                  type={option.type == "string" ? "text" : options.type}
+                  name={key}
+                  id={key}
+                  className="shadow-sm focus:ring-green-500 focus:border-green-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    });
   }
 
   return (
@@ -60,6 +117,8 @@ Leaving: "ease-in duration-200"
         >
           <Period schedule={schedule} onChange={onFormChange} />
 
+          {renderOptions()}
+
           <div className="mt-5 sm:mt-6 sm:grid sm:grid-cols-2 sm:gap-3 sm:grid-flow-row-dense">
             <button
               onClick={onSave}
@@ -69,7 +128,7 @@ Leaving: "ease-in duration-200"
               Save
             </button>
             <button
-              onClick={() => props.setIsConfigurationOpen(false)}
+              onClick={() => props.onClose(false)}
               type="button"
               className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:mt-0 sm:col-start-1 sm:text-sm"
             >

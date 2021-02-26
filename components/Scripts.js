@@ -46,7 +46,11 @@ export default function Scripts() {
       {isConfigurationOpen ? (
         <Schedule_Configuration
           onSave={onSave}
-          setIsConfigurationOpen={setIsConfigurationOpen}
+          script={selectedScript}
+          onClose={() => {
+            setIsConfigurationOpen(false);
+            setSelectedScript(null);
+          }}
           schedule={selectedScript ? selectedScript.schedule : {}}
         />
       ) : null}
