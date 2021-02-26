@@ -3,6 +3,14 @@ import Logo from "./Logo";
 import Router from "next/router";
 
 export default function Header() {
+  const [isLogin, setIsLogin] = React.useState(false);
+
+  useEffect(() => {
+    if (window.localStorage.getItem("token")) {
+      setIsLogin(true);
+    }
+  }, []);
+
   return (
     <header className="relative">
       <div className="bg-gray-900 pt-2 pb-2">
@@ -44,14 +52,26 @@ export default function Header() {
             <div className="hidden space-x-8 md:flex md:ml-10"></div>
           </div>
           <div className="hidden md:flex md:items-center md:space-x-6">
-            <a
-              onClick={() => {
-                Router.replace("/login");
-              }}
-              className=" cursor-pointer inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700"
-            >
-              Login
-            </a>
+            {isLogin && (
+              <a
+                onClick={() => {
+                  Router.replace("/dashboard");
+                }}
+                className=" cursor-pointer inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700"
+              >
+                Dashboard
+              </a>
+            )}
+            {!isLogin && (
+              <a
+                onClick={() => {
+                  Router.replace("/login");
+                }}
+                className=" cursor-pointer inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700"
+              >
+                Login
+              </a>
+            )}
           </div>
         </nav>
       </div>
