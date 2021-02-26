@@ -12,6 +12,9 @@ export default function Home() {
     if (window.location.host.indexOf("rodco") > -1) Router.replace("/brand");
     else if (window.location.host.indexOf("signalon") > -1)
       Router.replace("/brand");
+    else if (window.localStorage.getItem("token")) {
+      Router.replace("/dashboard");
+    }
   }, []);
 
   async function onCreateAccount() {
