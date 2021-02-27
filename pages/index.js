@@ -254,7 +254,7 @@ export default function Home() {
                             JD is able to connect with any platform, database,
                             service or appliance with internet connection using
                             secure encrypted channels. JD does not store, audit
-                            or share our custoemrs data.
+                            or share our customers data.
                           </p>
                         </div>
                       </div>
