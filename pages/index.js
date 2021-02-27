@@ -77,7 +77,7 @@ export default function Home() {
                           <div className="sm:flex">
                             <div className="min-w-0 flex-1">
                               <label htmlFor="email" className="sr-only">
-                                Tell use your idea
+                                Tell us your idea
                               </label>
                               <textarea
                                 value={phone}
