@@ -62,7 +62,7 @@ export default function Home() {
                       </a>
                       <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-8 sm:text-4xl lg:mt-6 xl:text-5xl">
                         <span className="block">
-                          When your teams comes up with a great idea
+                          When your team comes up with a great idea
                         </span>
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-200 to-cyan-400 block">
                           but software stops them
