@@ -62,14 +62,14 @@ export default function Home() {
                       </a>
                       <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-8 sm:text-4xl lg:mt-6 xl:text-5xl">
                         <span className="block">
-                          When teams come up with great ideas
+                          When your teams comes up with a great idea
                         </span>
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-200 to-cyan-400 block">
                           but software stops them
                         </span>
                       </h1>
-                      <p className="mt-3  text-base text-gray-300 sm:mt-7 sm:text-xl lg:text-lg xl:text-xl">
-                        Order a JD custom program, that makes it possible!
+                      <p className="mt-3 text-2xl text-gray-300 sm:mt-7 sm:text-2xl lg:text-3xl xl:text-3xl">
+                        Order a JD custom program to make it possible!
                       </p>
 
                       <div className="mt-10 sm:mt-12">
