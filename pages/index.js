@@ -60,21 +60,16 @@ export default function Home() {
                           />
                         </svg>
                       </a>
-                      <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                        <span className="block">Make software do </span>
+                      <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-8 sm:text-4xl lg:mt-6 xl:text-5xl">
+                        <span className="block">
+                          When teams come up with great ideas
+                        </span>
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-200 to-cyan-400 block">
-                          what business needs
+                          but software stops them
                         </span>
                       </h1>
-                      <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                        JD engineers write code that connect with all software
-                        platforms and get them to do what your business needs.
-                      </p>
-
-                      <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-sm xl:text-sm">
-                        Code that's especific for your business, is then
-                        deployed into your JD account where it runs securely
-                        while being monitored and maintened by our engineers.
+                      <p className="mt-3  text-base text-gray-300 sm:mt-7 sm:text-xl lg:text-lg xl:text-xl">
+                        Order a JD custom program, that makes it possible!
                       </p>
 
                       <div className="mt-10 sm:mt-12">
@@ -82,38 +77,35 @@ export default function Home() {
                           <div className="sm:flex">
                             <div className="min-w-0 flex-1">
                               <label htmlFor="email" className="sr-only">
-                                Mobile Number
+                                Tell use your idea
                               </label>
-                              <input
+                              <textarea
                                 value={phone}
                                 onChange={(e) =>
                                   setPhone(e.currentTarget.value)
                                 }
                                 type="number"
-                                placeholder="Enter your mobile number"
+                                placeholder="Tell use your idea"
                                 className="block w-full px-4 py-3 rounded-md border-0 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900"
-                              />
+                              ></textarea>
+                              <p className="mt-3 text-sm text-gray-300 sm:mt-4">
+                                A JD Program is able to do tasks with data,
+                                platforms and appliances that are connected to
+                                the internet.
+                              </p>
                             </div>
                             <div className="mt-3 sm:mt-0 sm:ml-3">
                               <a
                                 onClick={onCreateAccount}
                                 className="block w-full py-3 px-4 rounded-md shadow bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-medium hover:from-teal-600 hover:to-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900"
                               >
-                                Start free account
+                                Start
                               </a>
                             </div>
                           </div>
+
                           <p className="mt-3 text-md text-red-800 sm:mt-4">
                             {error}
-                          </p>
-                          <p className="mt-3 text-sm text-gray-300 sm:mt-4">
-                            Your free account allows you to connect with "1"
-                            platform and get CSV exports via email. <br />
-                            By providing your phone, you agree to our
-                            <a href="/terms" className="font-medium text-white">
-                              terms or service
-                            </a>
-                            .
                           </p>
                         </form>
                       </div>
@@ -134,31 +126,25 @@ export default function Home() {
             </div>
 
             {/* Feature section with screenshot */}
-            <div className="relative bg-gray-50 pt-16 sm:pt-24 lg:pt-32">
+            <div className="relative bg-gray-50 pt-8 sm:pt-15 lg:pt-20">
               <div className="mx-auto max-w-md px-4 text-center sm:px-6 sm:max-w-3xl lg:px-8 lg:max-w-7xl">
                 <div>
-                  <h2 className="text-base mt-5 font-semibold tracking-wider text-cyan-600 uppercase">
-                    JD is sort of a business wonderland, a place made of code
-                    where everything is posible.
+                  <p className="mt-5 max-w-xl mx-auto text-3xl text-gray-500">
+                    Companies run on platforms like Salesforce, Google and
+                    Microsoft along with services like Twilio, Stripe and
+                    Shopify.
+                  </p>
+                  <h2 className="text-xl max-w-sm mx-auto mt-10 font-semibold tracking-wider text-cyan-600 uppercase">
+                    But sometimes platforms won't run their teams best idea
                   </h2>
-                  <p className="mt-2  text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-                    Your software is supposed to be modeled around your
-                    business, but it seems you are always adapting your business
-                    into "one size fits all" software platforms.
-                  </p>
 
-                  <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
-                    Every platform has a "data socket" called an API. Instead of
-                    dealing with each platform, JD's engineers hand code scripts
-                    that make them work to your specs with fewer limitations.
-                  </p>
-
-                  <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
-                    JD's simple service
-                    <br /> has the power to make platforms
-                    <br /> adapt to your business
+                  <p className="mt-5 max-w-xl mx-auto text-2xl text-gray-500">
+                    JD engineers turn the idea into platform independent code, a
+                    program with no limitations that is constantly connecting
+                    between services.
                   </p>
                 </div>
+
                 <div className="mt-12 -mb-10 sm:-mb-24 lg:-mb-80">
                   <img
                     className="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5"
@@ -233,7 +219,7 @@ export default function Home() {
                   The best of both worlds
                 </h2>
                 <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-                  A way to make the most of your investment in technology
+                  JD is a hybrid between agency and platform
                 </p>
 
                 <div className="mt-12">
@@ -262,12 +248,13 @@ export default function Home() {
                             </span>
                           </div>
                           <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                            Unlimited Platforms
+                            Platform Connections
                           </h3>
                           <p className="mt-5 text-base text-gray-500">
-                            Connect with all the platforms that you use, and use
-                            JD to pull and push data into them in a way that
-                            makes your company more efficient and profitable.
+                            JD is able to connect with any platform, database,
+                            service or appliance with internet connection using
+                            secure encrypted channels. JD does not store, audit
+                            or share our custoemrs data.
                           </p>
                         </div>
                       </div>
@@ -296,13 +283,11 @@ export default function Home() {
                             </span>
                           </div>
                           <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                            Cloud Databases
+                            Program Development
                           </h3>
                           <p className="mt-5 text-base text-gray-500">
-                            Centralize data from different platforms in your own
-                            database and use it as a command center, a reporting
-                            tool or as a get-out-of-platform free card to avoid
-                            startup lockin tactics.
+                            JD engineers create code that turn our customer
+                            ideas into programs without platform limitations.
                           </p>
                         </div>
                       </div>
@@ -331,11 +316,13 @@ export default function Home() {
                             </span>
                           </div>
                           <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                            InHouse Databases
+                            Self Service Platform
                           </h3>
                           <p className="mt-5 text-base text-gray-500">
-                            Use your inhouse database and simply connect them to
-                            modern platforms in an intuitive way.
+                            JD is a platform where all customer programs run.
+                            Customers use it to establish connections with
+                            platforms without sharing passwords, monitor program
+                            executions, even audit the code of their programs.
                           </p>
                         </div>
                       </div>
@@ -364,13 +351,14 @@ export default function Home() {
                             </span>
                           </div>
                           <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                            Public Scripts
+                            Monitoring and Maintenance
                           </h3>
                           <p className="mt-5 text-base text-gray-500">
-                            Use our growing directory of scripts that cover all
-                            standard platform communications and integrations.
-                            Every script we build, even if it's custom ends up
-                            being public.
+                            The same team of engineers the develops and monitors
+                            the JD Platform, monitors and maintains every
+                            customer program using advanced dev-ops tools and
+                            AI. In case of any service outage or error, we'll
+                            attemp to fix it and notify of any action requests.
                           </p>
                         </div>
                       </div>
@@ -405,11 +393,13 @@ export default function Home() {
                             </span>
                           </div>
                           <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                            Custom Scripts
+                            Security Reviews
                           </h3>
                           <p className="mt-5 text-base text-gray-500">
-                            We'll build your customized integration script -
-                            first come first serve.
+                            In most cases ( Salesforce, Google, Xero, Shopify,
+                            Slack, etc ) platforms perform extensive security
+                            reviews before allowing JD to connect in behalf of a
+                            customer. This is an important security benefit.
                           </p>
                         </div>
                       </div>
@@ -438,13 +428,12 @@ export default function Home() {
                             </span>
                           </div>
                           <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                            Free Monitoring
+                            Program Marketplace
                           </h3>
                           <p className="mt-5 text-base text-gray-500">
-                            We'll monitor, fix and/or send you SMS notifications
-                            when a script fails or a platform becomes
-                            disconnected by unforseen events ( like when a user
-                            account is deleted on the platform )
+                            Our engineers and partners create and publish open
+                            source programs that can be used by everyone for
+                            free.
                           </p>
                         </div>
                       </div>
