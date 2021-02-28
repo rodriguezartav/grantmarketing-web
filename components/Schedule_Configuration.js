@@ -43,7 +43,11 @@ export default function Integration_Configuration(props) {
       return null;
     }
 
-    const keys = Object.keys(scriptOptions.response.options.properties);
+    const keys = Object.keys(
+      scriptOptions.response.options.properties
+        ? scriptOptions.response.options.properties
+        : {}
+    );
     return keys.map((key) => {
       const option = scriptOptions.response.options.properties[key];
       return (
