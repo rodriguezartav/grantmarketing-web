@@ -92,7 +92,7 @@ export default function Home() {
               <div className="mx-auto max-w-md px-4 text-center sm:px-6 sm:max-w-3xl lg:px-8 lg:max-w-7xl">
                 <div>
                   <p className="mt-5 max-w-3xl mx-auto text-3xl text-gray-500">
-                    In 2021 best ROI% on software is achieved by running your
+                    Today, the best ROI% on software is achieved by running your
                     business on cloud platforms like Salesforce, Google &
                     Microsoft - while connecting those with an ever increasing
                     catalog of smaller softwares as service
