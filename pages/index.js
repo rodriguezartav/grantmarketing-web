@@ -9,6 +9,8 @@ export default function Home() {
   const [error, setError] = React.useState("");
 
   useEffect(() => {
+    window.Paddle.Setup({ vendor: 40637 });
+
     if (window.location.host.indexOf("rodco") > -1) Router.replace("/brand");
     else if (window.location.host.indexOf("signalon") > -1)
       Router.replace("/brand");
@@ -24,6 +26,7 @@ export default function Home() {
       <Head>
         <title>JungleDynamics</title>
         <link rel="icon" href="/favicon.ico" />
+        <script src="https://cdn.paddle.com/paddle/paddle.js"></script>
       </Head>
 
       <div className="bg-white">
@@ -416,21 +419,20 @@ export default function Home() {
                       <span className="text-gray-900">
                         Everything you need for
                       </span>
-                      <span className="text-green-600 ml-1">
-                        {" "}
-                        $2500 a month
-                      </span>
+                      <span className="text-green-600 ml-1">$2500 a month</span>
                     </h1>
                     <p className="mt-5 text-xl text-gray-500">
                       Unlimited everything - 15 days trial - 1 month paid trial
                       - annual contracts there after
                     </p>
                   </div>
+
                   <a
+                    data-product={647597}
                     href="#"
-                    className="mt-8 w-full bg-green-600 border border-transparent px-5 py-3 inline-flex items-center justify-center text-base font-medium rounded-md text-white hover:bg-green-700 sm:mt-10 sm:w-auto xl:mt-0"
+                    className="paddle_button mt-8 w-full bg-green-600 border border-transparent px-5 py-3 inline-flex items-center justify-center text-base font-medium rounded-md text-white hover:bg-green-700 sm:mt-10 sm:w-auto xl:mt-0"
                   >
-                    Get started today
+                    Buy now
                   </a>
                 </div>
                 <div className="border-t border-gray-200 pt-16 xl:grid xl:grid-cols-3 xl:gap-x-8">
