@@ -71,9 +71,6 @@ export default function Home() {
                           but software stops them
                         </span>
                       </h1>
-                      <p className="mt-3 text-2xl text-gray-300 sm:mt-7 sm:text-2xl lg:text-3xl xl:text-3xl">
-                        Order a JD program to make it possible!
-                      </p>
                     </div>
                   </div>
                   <div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
@@ -94,19 +91,100 @@ export default function Home() {
             <div className="relative bg-gray-50 pt-8 sm:pt-15 lg:pt-20">
               <div className="mx-auto max-w-md px-4 text-center sm:px-6 sm:max-w-3xl lg:px-8 lg:max-w-7xl">
                 <div>
-                  <p className="mt-5 max-w-xl mx-auto text-3xl text-gray-500">
-                    Companies run on platforms like Salesforce, Google and
-                    Microsoft along with services like Twilio, Stripe and
-                    Shopify.
+                  <p className="mt-5 max-w-3xl mx-auto text-3xl text-gray-500">
+                    In 2021 best ROI% on software is achieved by running your
+                    business on cloud platforms like Salesforce, Google &
+                    Microsoft - while connecting those with an ever increasing
+                    catalog of smaller softwares as service
                   </p>
-                  <h2 className="text-xl max-w-sm mx-auto mt-10 font-semibold tracking-wider text-cyan-600 uppercase">
-                    But sometimes platforms won't run their teams best idea
+
+                  <div className="mt-20">
+                    <ul className="mt-3 opacity-50 grid grid-cols-1 gap-5 sm:gap-6 sm:grid-cols-4 lg:grid-cols-10">
+                      <li className="col-span-1  flex shadow-sm rounded-md">
+                        <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
+                          <div className="flex-1 px-4 py-2 text-sm truncate">
+                            <img src="/jd/intercom.svg" />
+                          </div>
+                        </div>
+                      </li>
+                      <li className="col-span-1 flex shadow-sm rounded-md">
+                        <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
+                          <div className="flex-1 px-4 py-2 text-sm truncate">
+                            <img src="/jd/hubspot.svg" />
+                          </div>
+                        </div>
+                      </li>
+                      <li className="col-span-1 flex shadow-sm rounded-md">
+                        <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
+                          <div className="flex-1 px-4 py-2 text-sm truncate">
+                            <img src="/jd/google.svg" />
+                          </div>
+                        </div>
+                      </li>
+                      <li className="col-span-1 flex shadow-sm rounded-md">
+                        <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
+                          <div className="flex-1 px-4 py-2 text-sm truncate">
+                            <img src="/jd/s3.svg" />
+                          </div>
+                        </div>
+                      </li>
+                      <li className="col-span-1 flex shadow-sm rounded-md">
+                        <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
+                          <div className="flex-1 px-4 py-2 text-sm truncate">
+                            <img src="/jd/salesforce.svg" />
+                          </div>
+                        </div>
+                      </li>
+                      <li className="col-span-1 flex shadow-sm rounded-md">
+                        <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
+                          <div className="flex-1 px-4 py-2 text-sm truncate">
+                            <img src="/jd/mailchimp.svg" />
+                          </div>
+                        </div>
+                      </li>
+                      <li className="col-span-1 flex shadow-sm rounded-md">
+                        <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
+                          <div className="flex-1 px-4 py-2 text-sm truncate">
+                            <img src="/jd/mixpanel.svg" />
+                          </div>
+                        </div>
+                      </li>
+                      <li className="col-span-1 flex shadow-sm rounded-md">
+                        <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
+                          <div className="flex-1 px-4 py-2 text-sm truncate">
+                            <img src="/jd/tablue.svg" />
+                          </div>
+                        </div>
+                      </li>
+                      <li className="col-span-1 flex shadow-sm rounded-md">
+                        <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
+                          <div className="flex-1 px-4 py-2 text-sm truncate">
+                            <img src="/jd/twilio.svg" />
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <h2 className="text-xl max-w-sm mx-auto mt-14 font-semibold tracking-wider text-cyan-600 uppercase">
+                    But sometimes platforms alone won't run your best ideas
                   </h2>
 
-                  <p className="mt-5 max-w-xl mx-auto text-2xl text-gray-500">
-                    JD engineers turn the idea into platform independent code, a
-                    program with no limitations that is constantly connecting
-                    between services.
+                  <p className="mt-10 max-w-3xl mx-auto text-2xl text-gray-500">
+                    After decades of consulting and succesfull products in
+                    Sillicon Valley - architect{" "}
+                    <a
+                      target="_blank"
+                      href="https://www.linkedin.com/in/rodriguezartav/"
+                    >
+                      Roberto Rodriguez
+                    </a>{" "}
+                    realized the final solution is to{" "}
+                    <span className="text-green-900">
+                      create custom programs
+                    </span>{" "}
+                    that fit between the gaps of your ideas and mayor software
+                    platforms
                   </p>
                 </div>
 
@@ -119,6 +197,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+            {/* This example requires Tailwind CSS v2.0+ */}
 
             {/* Testimonial section */}
             <div className="pb-16 bg-gradient-to-r from-teal-500 to-cyan-600 lg:pb-0 lg:z-10 lg:relative">
@@ -187,6 +267,11 @@ export default function Home() {
                   JD is a hybrid between agency and platform
                 </p>
 
+                <p className="mt-3 mb-40 max-w-3xl mx-auto text-xl text-gray-500">
+                  Programs are hand made by Roberto Rodriguez, specific for each
+                  customer use case and run on the cloud platform he created
+                  from his jungle retreat: JungleDynamics
+                </p>
                 <div className="mt-12">
                   <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                     <div className="pt-6">
@@ -212,14 +297,20 @@ export default function Home() {
                               </svg>
                             </span>
                           </div>
-                          <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                            Platform Connections
+                          <h3 className="mt-8 text-lg font-medium text-gray-900  tracking-tight">
+                            Business Process Integration
                           </h3>
-                          <p className="mt-5 text-base text-gray-500">
-                            JD is able to connect with any platform, database,
-                            service or appliance with internet connection using
-                            secure encrypted channels. JD does not store, audit
-                            or share our customers data.
+                          <p className="mt-5 text-base text-left text-gray-500">
+                            Connect customers, accounts, invoices, everything!
+                            The idea is to distribute business processes between
+                            platform as they make more sense, while keeping data
+                            fresh everywhere. This practice increses ROI
+                            exponentially.{" "}
+                          </p>
+                          <p className="text-green-700">
+                            {
+                              "Sales<>Marketing<>Billing<>Inventory<>e-commerce<>POS"
+                            }
                           </p>
                         </div>
                       </div>
@@ -248,11 +339,15 @@ export default function Home() {
                             </span>
                           </div>
                           <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                            Program Development
+                            Customer Success
                           </h3>
                           <p className="mt-5 text-base text-gray-500">
-                            JD engineers create code that turn our customer
-                            ideas into programs without platform limitations.
+                            Use platforms like Segment, CustomerIO and Google to
+                            collect customer data from several points ( website,
+                            in-store, ads, emails, phone calls ) then make
+                            realtime desitions and execute actions or alerts
+                            downstream. Send discounts, emails, schedule visits,
+                            phone calls, surveys - anything you can think of.
                           </p>
                         </div>
                       </div>
@@ -281,13 +376,14 @@ export default function Home() {
                             </span>
                           </div>
                           <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                            Self Service Platform
+                            Multi-Channel Call Centers
                           </h3>
                           <p className="mt-5 text-base text-gray-500">
-                            JD is a platform where all customer programs run.
-                            Customers use it to establish connections with
-                            platforms without sharing passwords, monitor program
-                            executions, even audit the code of their programs.
+                            Go beyond emails & ads, and connect with customers
+                            via voice, sms, whatsapp & messanger. Jungledynamics
+                            + Twilio open the door to simple communications all
+                            the way to fully integrated corporate grade call
+                            centers.
                           </p>
                         </div>
                       </div>
@@ -316,14 +412,17 @@ export default function Home() {
                             </span>
                           </div>
                           <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                            Monitoring and Maintenance
+                            Business Intelligence and Alerting
                           </h3>
                           <p className="mt-5 text-base text-gray-500">
-                            The same team of engineers the develops and monitors
-                            the JD Platform, monitors and maintains every
-                            customer program using advanced dev-ops tools and
-                            AI. In case of any service outage or error, we'll
-                            attemp to fix it and notify of any action requests.
+                            One of the most recurring request is to bring data
+                            from different sources and transform it in a way
+                            that can be analized using a visual business
+                            inteligence plataform, or even just export it to
+                            Excel. Add realtime notifications and alerts ( like
+                            a feed of all online purchases, or VIP account
+                            support requests ) into your teams chat such as
+                            Slack.
                           </p>
                         </div>
                       </div>
@@ -358,13 +457,14 @@ export default function Home() {
                             </span>
                           </div>
                           <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                            Security Reviews
+                            True Marketing Automation
                           </h3>
                           <p className="mt-5 text-base text-gray-500">
-                            In most cases ( Salesforce, Google, Xero, Shopify,
-                            Slack, etc ) platforms perform extensive security
-                            reviews before allowing JD to connect in behalf of a
-                            customer. This is an important security benefit.
+                            Marketing Automation is trendy - but most of the
+                            times the cherry on top of the pie to truly lock the
+                            profit escapes throught the cracks of no-code
+                            platforms. JD is the perfect complement for those
+                            high-yield ideas.
                           </p>
                         </div>
                       </div>
@@ -393,12 +493,14 @@ export default function Home() {
                             </span>
                           </div>
                           <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                            Program Marketplace
+                            Reduce Salesforce and Microsoft Complexities
                           </h3>
                           <p className="mt-5 text-base text-gray-500">
-                            Our engineers and partners create and publish open
-                            source programs that can be used by everyone for
-                            free.
+                            Large platforms are extremly complex, good quality
+                            developers are 5x more expensive and hard to
+                            recruit. After years building highly succesfull
+                            salesforce apps, Roberto realized is much more cost
+                            effective to use the approach he built into JD.
                           </p>
                         </div>
                       </div>
@@ -418,21 +520,21 @@ export default function Home() {
                     <h1 className="text-4xl font-extrabold sm:text-5xl sm:tracking-tight">
                       <span className="text-gray-900">
                         Everything you need for
-                      </span>
-                      <span className="text-green-600 ml-1">$2500 a month</span>
+                      </span>{" "}
+                      <span className="text-green-600 ml-1">$2500/month</span>
                     </h1>
                     <p className="mt-5 text-xl text-gray-500">
-                      Unlimited everything - 15 days trial - 1 month paid trial
-                      - annual contracts there after
+                      JungleDynamics is limited to 10 paying customers, we
+                      onboard 1 customer per month.
                     </p>
                   </div>
 
                   <a
                     data-product={647597}
                     href="#"
-                    className="paddle_button mt-8 w-full bg-green-600 border border-transparent px-5 py-3 inline-flex items-center justify-center text-base font-medium rounded-md text-white hover:bg-green-700 sm:mt-10 sm:w-auto xl:mt-0"
+                    className=" mt-8 w-full bg-green-600 border border-transparent px-5 py-3 inline-flex items-center justify-center text-base font-medium rounded-md text-white hover:bg-green-700 sm:mt-10 sm:w-auto xl:mt-0"
                   >
-                    Buy now
+                    Buy now 1 Available May 2021 Slot
                   </a>
                 </div>
                 <div className="border-t border-gray-200 pt-16 xl:grid xl:grid-cols-3 xl:gap-x-8">
@@ -510,7 +612,7 @@ export default function Home() {
                           />
                         </svg>
                         <span className="ml-3 text-base text-gray-500">
-                          1 program development per month
+                          unlimited program development per month
                         </span>
                       </li>
                       <li className="py-4 flex">
@@ -575,7 +677,7 @@ export default function Home() {
                           />
                         </svg>
                         <span className="ml-3 text-base text-gray-500">
-                          1 hour/month zoom with Founder/CEO
+                          One 3-hour consulting session per month
                         </span>
                       </li>
                       <li className="py-4 flex">
@@ -638,7 +740,7 @@ export default function Home() {
                           />
                         </svg>
                         <span className="ml-3 text-base text-gray-500">
-                          1 email, web, sms, video template / month
+                          unlimited email, web, sms, video templates
                         </span>
                       </li>
                       <li className="py-4 flex">
