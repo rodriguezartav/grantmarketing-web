@@ -11,6 +11,14 @@ export default function Home() {
   useEffect(() => {
     window.Paddle.Setup({ vendor: 40637 });
 
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-MNTM6MGLXC");
+
     if (window.location.host.indexOf("rodco") > -1) Router.replace("/brand");
     else if (window.location.host.indexOf("signalon") > -1)
       Router.replace("/brand");
@@ -27,6 +35,11 @@ export default function Home() {
         <title>JungleDynamics</title>
         <link rel="icon" href="/favicon.ico" />
         <script src="https://cdn.paddle.com/paddle/paddle.js"></script>
+        {/* Global site tag (gtag.js) - Google Analytics */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-MNTM6MGLXC"
+        ></script>
       </Head>
 
       <div className="bg-white">
