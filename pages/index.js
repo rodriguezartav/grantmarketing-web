@@ -231,7 +231,7 @@ export default function Home() {
 
                   <p className="mt-10 max-w-3xl mx-auto text-2xl text-gray-500">
                     After decades of consulting and succesfull products in
-                    Sillicon Valley - architect{" "}
+                    Silicon Valley; architect{" "}
                     <a
                       target="_blank"
                       href="https://www.linkedin.com/in/rodriguezartav/"
@@ -323,16 +323,26 @@ export default function Home() {
                   The best of both worlds
                 </h2>
                 <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-                  JD is a hybrid between agency and platform
+                  JD is the hybrid between developer and platform
                 </p>
 
-                <p className="mt-3 mb-40 max-w-3xl mx-auto text-xl text-gray-500">
-                  Programs are hand made by Roberto Rodriguez, specific for each
-                  customer use case and run on the cloud platform he created
-                  from his jungle retreat: JungleDynamics
+                <p className="mt-3 max-w-3xl mx-auto text-xl text-gray-500">
+                  Ideas are turned into independent programs that coordinate and
+                  transform information between platforms and delivers them in
+                  whichever form and place it's required.
+                  <p />
+                  <p className="mt-3  max-w-3xl mx-auto text-xl text-gray-500"></p>
+                  Programs are hand made by Roberto Rodriguez for each customer,
+                  look at it as a business App Store where each app is build
+                  specific for each user.
                 </p>
+
+                <h2 className="text-base mt-10 font-semibold tracking-wider text-cyan-600 uppercase">
+                  Some examples...
+                </h2>
+
                 <div className="mt-12">
-                  <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                  <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
                     <div className="pt-6">
                       <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
                         <div className="-mt-6">
@@ -357,19 +367,15 @@ export default function Home() {
                             </span>
                           </div>
                           <h3 className="mt-8 text-lg font-medium text-gray-900  tracking-tight">
-                            Business Process Integration
+                            Platform Integrations
                           </h3>
                           <p className="mt-5 text-base text-left text-gray-500">
-                            Connect customers, accounts, invoices, everything!
-                            The idea is to distribute business processes between
-                            platform as they make more sense, while keeping data
-                            fresh everywhere. This practice increses ROI
-                            exponentially.{" "}
-                          </p>
-                          <p className="text-green-700">
-                            {
-                              "Sales<>Marketing<>Billing<>Inventory<>e-commerce<>POS"
-                            }
+                            The most typical use case. A company has some
+                            information on platform A (Salesforce Leads) and
+                            other information on Platform B (Shopify Sales) and
+                            they want to have both platforms syncronized with
+                            specific business rules so that Shopify prices are
+                            set in Saleforce for example.
                           </p>
                         </div>
                       </div>
@@ -831,19 +837,35 @@ export default function Home() {
 
             {/* CTA Section */}
             <div className="relative bg-gray-900">
-              <div className="relative h-56 bg-green-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
-                <img
-                  className="w-full h-full object-cover"
-                  src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixqx=1JO2mPl47d&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&sat=-100"
-                  alt=""
-                />
+              <div className=" overflow-hidden relative h-56 bg-green-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
+                <video
+                  style={{
+                    top: "50%",
+                    left: "50%",
+                    minWidth: "100%",
+                    minHeight: "100%",
+                    width: "auto",
+                    height: "auto",
+                    zIndex: "-100",
+                  }}
+                  autoPlay
+                  loop
+                  muted
+                  id="background"
+                >
+                  <source
+                    src="https://s3-us-west-2.amazonaws.com/converterpoint-22/encodings/f243965512eb733294bc6ef0356c2dd9.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+
                 <div
                   aria-hidden="true"
                   className="absolute inset-0 bg-gradient-to-r from-teal-500 to-cyan-600"
                   style={{ mixBlendMode: "multiply" }}
                 />
               </div>
-              <div className="relative mx-auto max-w-md px-4 py-12 sm:max-w-7xl sm:px-6 sm:py-20 md:py-28 lg:px-8 lg:py-32">
+              <div className="relative mx-auto max-w-md px-4 py-12 sm:max-w-7xl sm:px-6 sm:py-20 md:py-28 lg:px-8 lg:py-20">
                 <div className="md:ml-auto md:w-1/2 md:pl-10">
                   <h2 className="text-base font-semibold uppercase tracking-wider text-gray-300">
                     Indie Architect Developer & Inventor
@@ -852,11 +874,10 @@ export default function Home() {
                     About me (Roberto Rodriguez)
                   </p>
                   <p className="mt-3 text-lg text-gray-300">
-                    After 2 decades working in enterprise and media projects,
-                    building and producing the most succesfull Salesforce App in
-                    Silicon Valley, and speaking in conferences worldwide I took
-                    a step back from the "race" and retired to my jungle retreat
-                    in Costa Rica.
+                    After 2 decades in software, building and producing the most
+                    succesfull Salesforce App in Silicon Valley, and speaking in
+                    conferences worldwide; I took a step back from the "race"
+                    and retired to my jungle retreat in Costa Rica.
                   </p>
                   <p className="mt-3 text-lg text-gray-300">
                     I created JungleDynamics after several business friends
@@ -866,10 +887,6 @@ export default function Home() {
                     spots left.
                   </p>
 
-                  <p className="mt-3 text-lg text-gray-300">
-                    I designed the platform as a boutique business model for 10
-                    customers and currently there are 6 spots left.
-                  </p>
                   <div className="mt-8">
                     <div className="inline-flex rounded-md shadow">
                       <a
