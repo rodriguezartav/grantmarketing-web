@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Router from "next/router";
+import Image from "next/image";
 
 export default function Home() {
   const [phone, setPhone] = React.useState("");
@@ -50,10 +51,10 @@ export default function Home() {
               <div className="mx-auto max-w-7xl lg:px-8">
                 <div className="lg:grid lg:grid-cols-2 lg:gap-8">
                   <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
-                    <div className="lg:py-24">
+                    <div className="lg:py-24 ">
                       <a
                         href="#"
-                        className="inline-flex items-center text-white bg-black rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200"
+                        className="hidden  md:visible sm:inline-flex items-center text-white bg-black rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200"
                       >
                         <span className="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-gradient-to-r from-teal-500 to-green-600 rounded-full">
                           Made in the Rainforest
@@ -77,11 +78,11 @@ export default function Home() {
                         </svg>
                       </a>
                       <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-8 sm:text-4xl lg:mt-6 xl:text-5xl">
-                        <span className="block">
-                          When your team comes up with a great idea
+                        <span className="">
+                          Call me when your team comes up with a great idea
                         </span>
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-200 to-cyan-400 block">
-                          but software stops them
+                          but your software stops them
                         </span>
                       </h1>
                     </div>
@@ -111,68 +112,113 @@ export default function Home() {
                     catalog of smaller softwares as service
                   </p>
 
-                  <div className="mt-20">
-                    <ul className="mt-3 opacity-50 grid grid-cols-1 gap-5 sm:gap-6 sm:grid-cols-4 lg:grid-cols-10">
-                      <li className="col-span-1  flex shadow-sm rounded-md">
+                  <div className="mt-10 sm:mt-20">
+                    <ul className="mt-3 opacity-50 sm:opacity-30 grid grid-cols-4 gap-3 sm:gap-6 sm:grid-cols-4 lg:grid-cols-10">
+                      <li className="col-span-1 flex shadow-sm rounded-md">
                         <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
                           <div className="flex-1 px-4 py-2 text-sm truncate">
-                            <img src="/jd/intercom.svg" />
+                            <Image
+                              src="/jd/intercom.png"
+                              alt="intercom"
+                              width={135}
+                              height={50}
+                            />
                           </div>
                         </div>
                       </li>
                       <li className="col-span-1 flex shadow-sm rounded-md">
                         <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
                           <div className="flex-1 px-4 py-2 text-sm truncate">
-                            <img src="/jd/hubspot.svg" />
+                            <Image
+                              src="/jd/hubspot.png"
+                              alt="hubspot"
+                              width={135}
+                              height={50}
+                            />
                           </div>
                         </div>
                       </li>
                       <li className="col-span-1 flex shadow-sm rounded-md">
                         <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
                           <div className="flex-1 px-4 py-2 text-sm truncate">
-                            <img src="/jd/google.svg" />
+                            <Image
+                              src="/jd/google.png"
+                              alt="google"
+                              width={135}
+                              height={50}
+                            />
                           </div>
                         </div>
                       </li>
                       <li className="col-span-1 flex shadow-sm rounded-md">
                         <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
                           <div className="flex-1 px-4 py-2 text-sm truncate">
-                            <img src="/jd/s3.svg" />
+                            <Image
+                              src="/jd/s3.png"
+                              alt="s3"
+                              width={135}
+                              height={50}
+                            />
                           </div>
                         </div>
                       </li>
                       <li className="col-span-1 flex shadow-sm rounded-md">
                         <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
                           <div className="flex-1 px-4 py-2 text-sm truncate">
-                            <img src="/jd/salesforce.svg" />
+                            <Image
+                              src="/jd/salesforce.png"
+                              alt="salesforce"
+                              width={135}
+                              height={50}
+                            />
                           </div>
                         </div>
                       </li>
                       <li className="col-span-1 flex shadow-sm rounded-md">
                         <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
                           <div className="flex-1 px-4 py-2 text-sm truncate">
-                            <img src="/jd/mailchimp.svg" />
+                            <Image
+                              src="/jd/mailchimp.png"
+                              alt="mailchimp"
+                              width={135}
+                              height={50}
+                            />
                           </div>
                         </div>
                       </li>
                       <li className="col-span-1 flex shadow-sm rounded-md">
                         <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
                           <div className="flex-1 px-4 py-2 text-sm truncate">
-                            <img src="/jd/mixpanel.svg" />
+                            <Image
+                              src="/jd/mixpanel.png"
+                              alt="mixpanel"
+                              width={135}
+                              height={50}
+                            />
                           </div>
                         </div>
                       </li>
                       <li className="col-span-1 flex shadow-sm rounded-md">
                         <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
                           <div className="flex-1 px-4 py-2 text-sm truncate">
-                            <img src="/jd/tablue.svg" />
+                            <Image
+                              src="/jd/tablue.png"
+                              alt="tablue"
+                              width={135}
+                              height={50}
+                            />
                           </div>
                         </div>
                       </li>
                       <li className="col-span-1 flex shadow-sm rounded-md">
                         <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
                           <div className="flex-1 px-4 py-2 text-sm truncate">
-                            <img src="/jd/twilio.svg" />
+                            <Image
+                              src="/jd/twilio.png"
+                              alt="twilio"
+                              width={135}
+                              height={50}
+                            />
                           </div>
                         </div>
                       </li>
@@ -800,17 +846,29 @@ export default function Home() {
               <div className="relative mx-auto max-w-md px-4 py-12 sm:max-w-7xl sm:px-6 sm:py-20 md:py-28 lg:px-8 lg:py-32">
                 <div className="md:ml-auto md:w-1/2 md:pl-10">
                   <h2 className="text-base font-semibold uppercase tracking-wider text-gray-300">
-                    JD for Agencies
+                    Indie Architect Developer & Inventor
                   </h2>
                   <p className="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl">
-                    Build for Counsultants
+                    About me (Roberto Rodriguez)
                   </p>
                   <p className="mt-3 text-lg text-gray-300">
-                    JD was build for consultants and agencies in mind, our
-                    program allows your agency to brand JD and offer it to your
-                    customers as if it was your own integration tool without
-                    having to deal with code, monitoring and platform security
-                    reviews.
+                    After 2 decades working in enterprise and media projects,
+                    building and producing the most succesfull Salesforce App in
+                    Silicon Valley, and speaking in conferences worldwide I took
+                    a step back from the "race" and retired to my jungle retreat
+                    in Costa Rica.
+                  </p>
+                  <p className="mt-3 text-lg text-gray-300">
+                    I created JungleDynamics after several business friends
+                    approached me with the same problem,which is something I've
+                    been wanting to do for a long time. I built the platform and
+                    business model for 10 customers and currently there are 6
+                    spots left.
+                  </p>
+
+                  <p className="mt-3 text-lg text-gray-300">
+                    I designed the platform as a boutique business model for 10
+                    customers and currently there are 6 spots left.
                   </p>
                   <div className="mt-8">
                     <div className="inline-flex rounded-md shadow">
@@ -818,7 +876,7 @@ export default function Home() {
                         href="mailto:sales@jungledynamics.com"
                         className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50"
                       >
-                        Email our sales department
+                        Let's video chat online!
                         {/* Heroicon name: solid/external-link */}
                         <svg
                           className="-mr-1 ml-3 h-5 w-5 text-gray-400"
