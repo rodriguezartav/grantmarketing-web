@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Transition } from "@headlessui/react";
 import Router from "next/router";
 
-export default function Sidebar() {
+export default function Sidebar(props) {
   const [username, setUsername] = useState("");
   const [company, setCompany] = useState("");
 
@@ -45,8 +45,8 @@ export default function Sidebar() {
     From: "translate-x-0"
     To: "-translate-x-full"
 */}
-          <div className="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-white">
-            <div className="absolute top-0 right-0 -mr-12 pt-2">
+          <div className="relative flex-1 flex flex-col max-w-xs w-full  pb-4 bg-white">
+            <div className="absolute top-0 right-0 -mr-12  ">
               <button className="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                 <span className="sr-only">Close sidebar</span>
                 {/* Heroicon name: outline/x */}
@@ -79,8 +79,10 @@ export default function Sidebar() {
                 <div className="space-y-1">
                   {/* Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:text-gray-900 hover:bg-gray-50" */}
                   <a
-                    href="#"
-                    className="bg-gray-100 text-gray-900 group flex items-center px-2 py-2 text-base leading-5 font-medium rounded-md"
+                    href="/dashboard"
+                    className={`${
+                      props.current == "dashboard" ? "bg-gray-900" : ""
+                    } text-gray-900 group flex items-center px-2 py-2 text-base leading-5 font-medium rounded-md`}
                     aria-current="page"
                   >
                     {/* Current: "text-gray-500", Default: "text-gray-400 group-hover:text-gray-500" */}
@@ -103,7 +105,10 @@ export default function Sidebar() {
                     Home
                   </a>
                   <a
-                    href="#"
+                    href="/settings"
+                    className={`${
+                      props.current == "settings" ? "bg-gray-100" : ""
+                    } text-gray-900 group flex items-center px-2 py-2 text-base leading-5 font-medium rounded-md`}
                     className="text-gray-600 hover:text-gray-900 hover:bg-gray-50 group flex items-center px-2 py-2 text-base leading-5 font-medium rounded-md"
                   >
                     {/* Heroicon name: outline/view-list */}
@@ -122,7 +127,7 @@ export default function Sidebar() {
                         d="M4 6h16M4 10h16M4 14h16M4 18h16"
                       />
                     </svg>
-                    My tasks
+                    Settings
                   </a>
                 </div>
                 <div className="mt-8">
@@ -180,7 +185,7 @@ export default function Sidebar() {
 
       {/* Static sidebar for desktop */}
       <div className="hidden lg:flex lg:flex-shrink-0">
-        <div className="flex flex-col w-64 border-r border-gray-200 pt-5 pb-4 bg-gray-100">
+        <div className="flex flex-col w-64 border-r border-gray-200   pb-4 bg-gray-100">
           <div className="flex bg-green-800 py-3 items-center flex-shrink-0 px-6">
             <img
               className="h-10 w-auto"
@@ -303,8 +308,10 @@ export default function Sidebar() {
               <div className="space-y-1">
                 {/* Current: "bg-gray-200 text-gray-900", Default: "text-gray-700 hover:text-gray-900 hover:bg-gray-50" */}
                 <a
-                  href="#"
-                  className="bg-gray-200 text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                  href="/dashboard"
+                  className={`${
+                    props.current == "dashboard" ? "bg-gray-200" : ""
+                  } text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md`}
                 >
                   {/* Current: "text-gray-500", Default: "text-gray-400 group-hover:text-gray-500" */}
                   {/* Heroicon name: outline/home */}
@@ -326,8 +333,10 @@ export default function Sidebar() {
                   Home
                 </a>
                 <a
-                  href="#"
-                  className="text-gray-700 hover:text-gray-900 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                  href="/settings"
+                  className={`${
+                    props.current == "settings" ? "bg-gray-200" : ""
+                  } text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md`}
                 >
                   {/* Heroicon name: outline/view-list */}
                   <svg
@@ -345,7 +354,7 @@ export default function Sidebar() {
                       d="M4 6h16M4 10h16M4 14h16M4 18h16"
                     />
                   </svg>
-                  My tasks
+                  Settings
                 </a>
               </div>
               <div className="mt-8">

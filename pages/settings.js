@@ -1,15 +1,33 @@
+import React, { useState } from "react";
+
 import Head from "next/head";
-import Test from "../components/Test";
-import Integrations from "../components/Integrations";
-import Scripts from "../components/Scripts";
+import Settings from "../components/Settings";
 import Sidebar from "../components/Sidebar";
 import Title from "../components/Title";
 import SearchHeader from "../components/SearchHeader";
 import { useEffect } from "react";
 import Router from "next/router";
 
-export default function Dashboard() {
+export default function SettingsPage() {
+  const [onComplete, setOnComplete] = React.useState(null);
+
   useEffect(() => {
+    if (process.env.PADDLE.indexOf("S") > -1)
+      window.Paddle.Environment.set("sandbox");
+
+    window.Paddle.Setup({
+      vendor: parseInt(process.env.PADDLE.replace("S", "")),
+      eventCallback: function (data) {
+        // The data.event will specify the event type
+        if (data.event === "Checkout.Complete") {
+          setOnComplete(data.eventData);
+          console.log(data.eventData); // Data specifics on the event
+        } else if (data.event === "Checkout.Close") {
+          console.log(data.eventData); // Data specifics on the event
+        }
+      },
+    });
+
     if (!window.localStorage.getItem("token")) {
       Router.replace("/login");
     }
@@ -20,6 +38,7 @@ export default function Dashboard() {
       <Head>
         <title>Jungledynamics Dashboard</title>
         <link rel="icon" href="/favicon.ico" />
+        <script src="https://cdn.paddle.com/paddle/paddle.js"></script>
       </Head>
 
       {/*
@@ -41,21 +60,15 @@ export default function Dashboard() {
       <div className="h-screen flex overflow-hidden bg-white">
         {/* Off-canvas menu for mobile, show/hide based on off-canvas menu state. */}
 
-        <Sidebar current="dashboard" />
+        <Sidebar current="settings" />
 
         {/* Main column */}
-        <div className="flex flex-col w-0 flex-1 overflow-hidden">
+        <div className="flex flex-col w-0 flex-1 ">
           {/* Search header */}
           <SearchHeader />
-          <main
-            className="flex-1 relative z-0 overflow-y-auto focus:outline-none"
-            tabIndex={0}
-          >
-            {/* Page title & actions */}
-            <Title />
+          <main className="max-w-7xl mx-auto pb-10 lg:py-12 lg:px-8">
             {/* Pinned projects */}
-            <Integrations />
-            <Scripts />
+            <Settings onComplete={onComplete} />
           </main>
         </div>
       </div>

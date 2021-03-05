@@ -10,8 +10,6 @@ export default function Home() {
   const [error, setError] = React.useState("");
 
   useEffect(() => {
-    window.Paddle.Setup({ vendor: 40637 });
-
     window.dataLayer = window.dataLayer || [];
     function gtag() {
       dataLayer.push(arguments);
@@ -35,7 +33,7 @@ export default function Home() {
       <Head>
         <title>JungleDynamics</title>
         <link rel="icon" href="/favicon.ico" />
-        <script src="https://cdn.paddle.com/paddle/paddle.js"></script>
+
         {/* Global site tag (gtag.js) - Google Analytics */}
         <script
           async
@@ -890,7 +888,7 @@ export default function Home() {
                   <div className="mt-8">
                     <div className="inline-flex rounded-md shadow">
                       <a
-                        href="mailto:sales@jungledynamics.com"
+                        href="mailto:roberto@jungledynamics.com"
                         className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50"
                       >
                         Let's video chat online!
