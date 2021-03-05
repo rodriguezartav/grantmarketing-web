@@ -79,12 +79,18 @@ export default function Home() {
                       </a>
                       <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-8 sm:text-4xl lg:mt-6 xl:text-5xl">
                         <span className="">
-                          Call when your team comes up with a great idea
+                          Is your software <br />
+                          stoping your team
                         </span>
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-200 to-cyan-400 block">
-                          but your software stops them
+                          from executing
+                          <br /> their best ideas?
                         </span>
                       </h1>
+
+                      <p className="mt-4 text-xl tracking-tight font-extrabold text-white sm:mt-8  lg:mt-6 ">
+                        JD = Jungledynamics = Developer as a Service
+                      </p>
                     </div>
                   </div>
                   <div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
@@ -109,7 +115,13 @@ export default function Home() {
                     Today, the best ROI% on software is achieved by running your
                     business on cloud platforms like Salesforce, Google &
                     Microsoft - while connecting those with an ever increasing
-                    catalog of smaller softwares as service
+                    catalog of dedicated software services
+                    <br />
+                    <small className="text-sm">
+                      {" "}
+                      #sales #finance #marketing #billing #payroll #inventory
+                      #ecommerce #analytics #comms
+                    </small>
                   </p>
 
                   <div className="mt-10 sm:mt-20">
@@ -225,25 +237,21 @@ export default function Home() {
                     </ul>
                   </div>
 
-                  <h2 className="text-xl max-w-sm mx-auto mt-14 font-semibold tracking-wider text-cyan-600 uppercase">
-                    But sometimes platforms alone won't run your best ideas
+                  <h2 className="text-xl max-w-3xl mx-auto mt-14 font-semibold tracking-wider text-cyan-600 uppercase">
+                    Platforms alone won't execute your best ideas
                   </h2>
 
-                  <p className="mt-10 max-w-3xl mx-auto text-2xl text-gray-500">
-                    After decades of consulting and succesfull products in
-                    Silicon Valley; architect{" "}
+                  <p className="mt-2 max-w-3xl mx-auto text-2xl text-gray-500">
+                    After decades of consulting and succesful products in
+                    silicon valley; architect{" "}
                     <a
                       target="_blank"
                       href="https://www.linkedin.com/in/rodriguezartav/"
                     >
                       Roberto Rodriguez
                     </a>{" "}
-                    realized the final solution is to{" "}
-                    <span className="text-green-900">
-                      create custom programs
-                    </span>{" "}
-                    that fit between the gaps of your ideas and mayor software
-                    platforms
+                    identified a gap in the cloud preventing companies from
+                    benefiting from their cloud software services
                   </p>
                 </div>
 
@@ -323,18 +331,24 @@ export default function Home() {
                   The best of both worlds
                 </h2>
                 <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-                  JD is the hybrid between developer and platform
+                  JD is your platform developer as a service
                 </p>
 
                 <p className="mt-3 max-w-3xl mx-auto text-xl text-gray-500">
-                  Ideas are turned into independent programs that coordinate and
-                  transform information between platforms and delivers them in
-                  whichever form and place it's required.
-                  <p />
-                  <p className="mt-3  max-w-3xl mx-auto text-xl text-gray-500"></p>
-                  Programs are hand made by Roberto Rodriguez for each customer,
-                  look at it as a business App Store where each app is build
-                  specific for each user.
+                  The Cloud theory is about reducing costs by sharing resources.
+                  Software and how it works is then shared between companies
+                  with different needs. This is the gap.
+                </p>
+                <p className="mt-3  max-w-3xl mx-auto text-xl text-red-400">
+                  Cloud providers hide the gap with propietary code or no-code
+                  click solutions
+                </p>
+
+                <p className="mt-10 max-w-3xl mx-auto text-2xl text-gray-600">
+                  Roberto Rodriguez codes ideas <br />
+                  into indepent programs
+                  <br /> specific for each customer
+                  <br /> at a fixed montly rate
                 </p>
 
                 <h2 className="text-base mt-10 font-semibold tracking-wider text-cyan-600 uppercase">
@@ -590,15 +604,12 @@ export default function Home() {
                     </h1>
                     <p className="mt-5 text-xl text-gray-500">
                       JungleDynamics is a boutique platform with capacity for 5
-                      customers, there are 2 spots left.
+                      customers, there are 3 spots left.
                     </p>
                   </div>
 
-                  <a
-                    data-product={647597}
-                    className=" mt-8 w-full bg-green-600 border border-transparent px-5 py-3 inline-flex items-center justify-center text-base font-medium rounded-md text-white hover:bg-green-700 sm:mt-10 sm:w-auto xl:mt-0"
-                  >
-                    Reserve your spot today
+                  <a className=" mt-8 w-full bg-green-600 border border-transparent px-5 py-3 inline-flex items-center justify-center text-base font-medium rounded-md text-white hover:bg-green-700 sm:mt-10 sm:w-auto xl:mt-0">
+                    Next onboarding in May 2021
                   </a>
                 </div>
                 <div className="border-t border-gray-200 pt-16 xl:grid xl:grid-cols-3 xl:gap-x-8">
@@ -655,7 +666,7 @@ export default function Home() {
                           />
                         </svg>
                         <span className="ml-3 text-base text-gray-500">
-                          Unlimited Program executions
+                          Unlimited program development
                         </span>
                       </li>
                       <li className="py-4 flex">
@@ -676,54 +687,11 @@ export default function Home() {
                           />
                         </svg>
                         <span className="ml-3 text-base text-gray-500">
-                          unlimited program development per month
+                          Unlimited channels ( webpage, email, sms, video,
+                          googleDocs )
                         </span>
                       </li>
                       <li className="py-4 flex">
-                        {/* Heroicon name: outline/check */}
-                        <svg
-                          className="flex-shrink-0 h-6 w-6 text-green-500"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                        <span className="ml-3 text-base text-gray-500">
-                          Unlimited notifications and alerts
-                        </span>
-                      </li>
-                      <li className="py-4 flex">
-                        {/* Heroicon name: outline/check */}
-                        <svg
-                          className="flex-shrink-0 h-6 w-6 text-green-500"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                        <span className="ml-3 text-base text-gray-500">
-                          Free monitoring and maintenance
-                        </span>
-                      </li>
-                    </ul>
-                    <ul className="border-t border-gray-200 divide-y divide-gray-200 md:border-t-0">
-                      <li className="py-4 flex md:border-t-0 md:py-0 md:pb-4">
                         {/* Heroicon name: outline/check */}
                         <svg
                           className="flex-shrink-0 h-6 w-6 text-green-500"
@@ -762,7 +730,64 @@ export default function Home() {
                           />
                         </svg>
                         <span className="ml-3 text-base text-gray-500">
-                          Access to Free Program Marketplace
+                          24/7 monitoring and maintenance
+                        </span>
+                      </li>
+                    </ul>
+                    <ul className="border-t border-gray-200 divide-y divide-gray-200 md:border-t-0">
+                      <li className="py-4 flex md:border-t-0 md:py-0 md:pb-4">
+                        {/* Heroicon name: outline/check */}
+                        <svg
+                          className="flex-shrink-0 h-6 w-6 text-red-500"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+
+                        <span className="ml-3 text-base text-gray-500">
+                          Graphic Design
+                        </span>
+                      </li>
+                      <li className="py-4 flex">
+                        {/* Heroicon name: outline/check */}
+                        <svg
+                          className="flex-shrink-0 h-6 w-6 text-red-500"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        <span className="ml-3 text-base text-gray-500">
+                          Platform Support or Development
+                        </span>
+                      </li>
+                      <li className="py-4 flex">
+                        {/* Heroicon name: outline/check */}
+                        <svg
+                          className="flex-shrink-0 h-6 w-6 text-red-500"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        <span className="ml-3 text-base text-gray-500">
+                          Apps ( mobile, web, portals )
                         </span>
                       </li>
                       <li className="py-4 flex">
@@ -783,49 +808,25 @@ export default function Home() {
                           />
                         </svg>
                         <span className="ml-3 text-base text-gray-500">
-                          Unlimited Users
+                          Join your teams Slack, Trello, etc
                         </span>
                       </li>
                       <li className="py-4 flex">
                         {/* Heroicon name: outline/check */}
                         <svg
-                          className="flex-shrink-0 h-6 w-6 text-green-500"
+                          className="flex-shrink-0 h-6 w-6 text-red-500"
                           xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          aria-hidden="true"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
                         >
                           <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 13l4 4L19 7"
+                            fillRule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clipRule="evenodd"
                           />
                         </svg>
                         <span className="ml-3 text-base text-gray-500">
-                          unlimited email, web, sms, video templates
-                        </span>
-                      </li>
-                      <li className="py-4 flex">
-                        {/* Heroicon name: outline/check */}
-                        <svg
-                          className="flex-shrink-0 h-6 w-6 text-green-500"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                        <span className="ml-3 text-base text-gray-500">
-                          Excelent service aimed at long term contracts
+                          24/7 Counsulting & Support
                         </span>
                       </li>
                     </ul>
@@ -880,10 +881,10 @@ export default function Home() {
                   </p>
                   <p className="mt-3 text-lg text-gray-300">
                     I created JungleDynamics after several business friends
-                    approached me with the same problem,which is something I've
-                    been wanting to do for a long time. I built the platform and
-                    business model for 10 customers and currently there are 6
-                    spots left.
+                    approached me with the same problem, which is something I've
+                    been wanting to do for a long time. Then I built the
+                    platform and business model for 5 customers and currently
+                    there are 3 spots left.
                   </p>
 
                   <div className="mt-8">
