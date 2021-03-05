@@ -7,6 +7,9 @@ export default function Login(props) {
   const [view, setView] = useState("PHONE");
   const [phone, setPhone] = useState("");
   const [code, setCode] = useState("");
+  const [countryCode, setCountryCode] = useState("+1");
+  const [localError, setLocalError] = useState(null);
+
   const router = useRouter();
 
   const { response, mutate, loading, error } = useMutate("/api/login");
@@ -41,11 +44,13 @@ export default function Login(props) {
   }, [codeMutate.response]);
 
   function onLoginClick() {
-    mutate({ phone: phone });
+    setLocalError(null);
+
+    mutate({ countryCode: countryCode, phone: phone });
   }
 
   function onCodeClick() {
-    codeMutate.mutate({ code: code, phone: phone });
+    codeMutate.mutate({ code: code, countryCode: countryCode, phone: phone });
   }
 
   function onCodeBackClick() {
@@ -56,30 +61,61 @@ export default function Login(props) {
     return (
       <form className="mt-8 space-y-6" action="#" method="POST">
         <input type="hidden" name="remember" defaultValue="true" />
-        <div className="rounded-md shadow-sm -space-y-px">
-          <div>
-            <label htmlFor="email-address" className="sr-only">
-              Mobile Phone Number
+
+        <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+          <div className="sm:col-span-2">
+            <label
+              htmlFor="first_name"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Country Code
             </label>
-            <input
-              value={phone}
-              onChange={(e) => setPhone(e.currentTarget.value)}
-              id="mobile-phone"
-              name="phone"
-              type="number"
-              autoComplete="phone"
-              required
-              className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
-              placeholder="Mobile Phone"
-            />
+            <div className="mt-1">
+              <select
+                value={countryCode}
+                onChange={(e) => setCountryCode(e.currentTarget.value)}
+                id="country"
+                name="country"
+                autoComplete="country"
+                className="focus:ring-indigo-500 focus:border-indigo-500 w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+              >
+                <option>+1</option>
+                <option>+506</option>
+              </select>
+            </div>
+          </div>
+          <div className="sm:col-span-4">
+            <label
+              htmlFor="phone"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Mobile phone
+            </label>
+            <div className="mt-1">
+              <input
+                value={phone}
+                onChange={(e) => {
+                  const newValue = e.currentTarget.value;
+                  console.log(newValue);
+                  setPhone(newValue);
+                }}
+                id="phone"
+                name="phone"
+                type="number"
+                autoComplete="phone"
+                required
+                className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              />
+            </div>
           </div>
         </div>
+
         <div className="flex items-center justify-between">
           <div className="text-sm">
-            {error
-              ? error.message
-              : "We'll send an SMS to your mobile phone with your login code"}
+            {error &&
+              "Your phone was not found, please try again or create an account"}
           </div>
+          <div className="text-sm">{localError && localError}</div>
         </div>
         <div>
           {loading ? null : (
@@ -117,7 +153,6 @@ export default function Login(props) {
         <p className="mt-2 text-center text-sm text-gray-600">
           Code was sent via SMS to {phone}
         </p>
-        <input type="hidden" name="remember" defaultValue="true" />
         <div className="rounded-md shadow-sm -space-y-px">
           <div>
             <label htmlFor="email-address" className="sr-only">

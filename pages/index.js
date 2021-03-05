@@ -589,17 +589,16 @@ export default function Home() {
                       <span className="text-green-600 ml-1">$2500/month</span>
                     </h1>
                     <p className="mt-5 text-xl text-gray-500">
-                      JungleDynamics is limited to 10 paying customers, we
-                      onboard 1 customer per month.
+                      JungleDynamics is a boutique platform with capacity for 5
+                      customers, there are 2 spots left.
                     </p>
                   </div>
 
                   <a
                     data-product={647597}
-                    href="#"
                     className=" mt-8 w-full bg-green-600 border border-transparent px-5 py-3 inline-flex items-center justify-center text-base font-medium rounded-md text-white hover:bg-green-700 sm:mt-10 sm:w-auto xl:mt-0"
                   >
-                    Buy now 1 Available May 2021 Slot
+                    Reserve your spot today
                   </a>
                 </div>
                 <div className="border-t border-gray-200 pt-16 xl:grid xl:grid-cols-3 xl:gap-x-8">

@@ -4,7 +4,7 @@ export default async (req, res) => {
   try {
     const users = await request
       .post(process.env.API_URL + "/api/userLogin/getCode")
-      .send({ phone: req.body.phone })
+      .send({ countryCode: req.body.countryCode, phone: req.body.phone })
       .set("Accept", "application/json")
       .auth("LINK", { type: "bearer" });
 

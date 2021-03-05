@@ -5,7 +5,11 @@ export default async (req, res) => {
   try {
     users = await request
       .post(process.env.API_URL + "/api/userLogin/autenticate")
-      .send({ code: req.body.code, phone: req.body.phone })
+      .send({
+        countryCode: req.body.countryCode,
+        code: req.body.code,
+        phone: req.body.phone,
+      })
       .set("Accept", "application/json")
       .auth("LINK", { type: "bearer" });
 
