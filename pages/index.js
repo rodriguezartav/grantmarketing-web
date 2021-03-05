@@ -79,7 +79,7 @@ export default function Home() {
                       </a>
                       <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-8 sm:text-4xl lg:mt-6 xl:text-5xl">
                         <span className="">
-                          Call me when your team comes up with a great idea
+                          Call when your team comes up with a great idea
                         </span>
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-200 to-cyan-400 block">
                           but your software stops them
@@ -837,7 +837,7 @@ export default function Home() {
 
             {/* CTA Section */}
             <div className="relative bg-gray-900">
-              <div className=" overflow-hidden relative h-56 bg-green-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
+              <div className=" hidden md:block overflow-hidden relative h-56 bg-green-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
                 <video
                   style={{
                     top: "50%",
