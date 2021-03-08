@@ -37,7 +37,6 @@ export default async (req, res) => {
             return myPrivateScript.script_id == script.id;
           }
         );
-        console.log(myPrivateScripts);
         if (myPrivateScripts.length > 0) return true;
         return false;
       });

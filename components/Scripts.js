@@ -5,6 +5,7 @@ import useSWR from "swr";
 import { useMutate } from "../helpers/useFetch";
 import Schedule_Configuration from "./Schedule_Configuration";
 import fetcher from "../helpers/fetcher";
+import moment from "moment";
 
 export default function Scripts() {
   const { data, error, mutate } = useSWR("/api/scripts", fetcher);
@@ -156,7 +157,9 @@ function Tr(props) {
         </div>
       </td>
       <td className="hidden md:table-cell px-6 py-3 whitespace-nowrap text-sm text-gray-500 text-right">
-        {props.item.schedule ? props.item.schedule.last_run : "Never"}
+        {props.item.schedule
+          ? moment(props.item.schedule.last_run).fromNow()
+          : "Never"}
       </td>
       <td className="pr-6">
         <div className="relative flex justify-end items-center">
