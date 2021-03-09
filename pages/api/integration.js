@@ -1,9 +1,6 @@
 import request from "superagent";
 
 export default async (req, res) => {
-  console.log(process.env.API_URL);
-  console.log(process.env);
-
   if (!req.query.id) return res.status(200).json({});
   try {
     const integration = await request

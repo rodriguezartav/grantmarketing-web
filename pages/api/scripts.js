@@ -1,9 +1,6 @@
 import request from "superagent";
 
 export default async (req, res) => {
-  console.log(process.env.API_URL);
-  console.log(process.env);
-
   try {
     const scripts = await request
       .post(process.env.API_URL + "/api/scripts/getList")
@@ -32,13 +29,11 @@ export default async (req, res) => {
       })
       .filter((script) => {
         if (script.public) return true;
-        const myPrivateScripts = privateScripts.body.results.filter(
-          (myPrivateScript) => {
-            return myPrivateScript.script_id == script.id;
-          }
-        );
-        if (myPrivateScripts.length > 0) return true;
-        return false;
+        let isAssigned = false;
+        privateScripts.body.results.forEach((myPrivateScript) => {
+          if (myPrivateScript.script_id == script.id) isAssigned = true;
+        });
+        return isAssigned;
       });
 
     res.status(200).json(myScripts);
