@@ -8,7 +8,7 @@ import fetcher from "../helpers/fetcher";
 import moment from "moment";
 
 export default function Scripts() {
-  const { data, error, mutate } = useSWR("/api/scripts", fetcher);
+  const { data, error, mutate } = useSWR("/api/marketplace", fetcher);
   const scheduleMutation = useMutate(`/api/schedule_enable`);
   const scheduleDestroy = useMutate(`/api/schedule_disable`);
   const [isConfigurationOpen, setIsConfigurationOpen] = useState(false);
@@ -322,20 +322,11 @@ const NoData = function () {
           <div className="pt-10 pb-12 px-6 sm:pt-16 sm:px-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20">
             <div className="lg:self-center">
               <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-                <span className="block">No Programs?</span>
-                <span className="block">
-                  Programs are custom built for each account.
-                </span>
+                <span className="block">Coming Soon</span>
               </h2>
               <p className="mt-4 text-lg leading-6 text-green-200">
-                Test Drive JD by browsing the JD's Program Markeplace
+                Marketplace Programs are comming soon.
               </p>
-              <a
-                href="/marketplace"
-                className="mt-8 bg-white border border-transparent rounded-md shadow px-5 py-3 inline-flex items-center text-base font-medium text-green-600 hover:bg-green-50"
-              >
-                Go to Program Marketplace
-              </a>
             </div>
           </div>
           <div className="-mt-6 aspect-w-5 aspect-h-3 md:aspect-w-2 md:aspect-h-1">

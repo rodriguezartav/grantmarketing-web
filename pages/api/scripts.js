@@ -28,7 +28,6 @@ export default async (req, res) => {
         return script;
       })
       .filter((script) => {
-        if (script.public) return true;
         let isAssigned = false;
         privateScripts.body.results.forEach((myPrivateScript) => {
           if (myPrivateScript.script_id == script.id) isAssigned = true;

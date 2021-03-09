@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Test from "../components/Test";
-import Integrations from "../components/Integrations";
-import Scripts from "../components/Scripts";
+
+import Marketplace from "../components/Marketplace";
 import Sidebar from "../components/Sidebar";
 import Title from "../components/Title";
 import SearchHeader from "../components/SearchHeader";
@@ -52,8 +52,7 @@ export default function Dashboard() {
             tabIndex={0}
           >
             {/* Pinned projects */}
-            <Integrations />
-            <Scripts />
+            <Marketplace />
           </main>
         </div>
       </div>
