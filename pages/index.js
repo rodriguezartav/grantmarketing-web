@@ -58,7 +58,7 @@ export default function Home() {
                         className="hidden  md:visible sm:inline-flex items-center text-white bg-black rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200"
                       >
                         <span className="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-gradient-to-r from-teal-500 to-green-600 rounded-full">
-                          Made in the Rainforest
+                          Made in the rainforest
                         </span>
                         <span className="ml-4 text-sm">
                           with 100% Clean Energy
@@ -81,7 +81,7 @@ export default function Home() {
                       <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-8 sm:text-4xl lg:mt-6 xl:text-5xl">
                         <span className="">
                           Is your software <br />
-                          stoping your team
+                          preventing your team
                         </span>
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-200 to-cyan-400 block">
                           from executing
@@ -90,7 +90,7 @@ export default function Home() {
                       </h1>
 
                       <p className="mt-4 text-xl tracking-tight font-extrabold text-white sm:mt-8  lg:mt-6 ">
-                        JD = Jungledynamics = Developer as a Service
+                        Developer as a Service
                       </p>
                     </div>
                   </div>
@@ -243,7 +243,7 @@ export default function Home() {
                   </h2>
 
                   <p className="mt-2 max-w-3xl mx-auto text-2xl text-gray-500">
-                    After decades of consulting and succesful products in
+                    After decades of consulting and successful products in
                     silicon valley; architect{" "}
                     <a
                       target="_blank"
@@ -302,7 +302,7 @@ export default function Home() {
                           We use Shopify, Salesforce, Xero, CustomerIO, Facebook
                           and Google for operations, sales and marketing. With
                           JD we choose which platform controls prices and
-                          inventories and we can make pricelists for platforms
+                          inventories and we can make price lists for platforms
                           that don't support them.
                         </p>
                         <p className="mt-6 text-2xl font-medium text-white">
@@ -336,22 +336,22 @@ export default function Home() {
                 </p>
 
                 <p className="mt-3 max-w-3xl mx-auto text-xl text-gray-500">
-                  The Cloud theory is about reducing costs by sharing resources.
-                  The way all these software platforms become so valuable is by
-                  building <b>one</b> common solutions that's shared between all
-                  their customers.{" "}
+                  The Cloud business is about reducing costs by sharing
+                  resources. The way all these software platforms become so
+                  valuable is by building <b>one</b> common solutions that's
+                  shared between all their customers.{" "}
                   <span className="mt-3  max-w-3xl mx-auto text-xl text-red-800">
-                    But companies ofter discover problems when they try to
-                    address their specific needs.
+                    Is normal for those customers to discover problems when they
+                    try to address their specific needs.
                   </span>
                 </p>
 
                 <p className="mt-10 max-w-3xl mx-auto text-2xl text-gray-600">
-                  Jungledynamic solves this problem
+                  Jungledynamic solves this
                   <br /> by having Roberto Rodriguez
                   <br /> write custom programs
                   <br /> specific for each customer
-                  <br /> at a fixed montly rate
+                  <br /> at a fixed monthly rate
                 </p>
 
                 <h2 className="text-base mt-10 font-semibold tracking-wider text-cyan-600 uppercase">
@@ -390,9 +390,9 @@ export default function Home() {
                             The most typical use case. A company has some
                             information on platform A (Salesforce Leads) and
                             other information on Platform B (Shopify Sales) and
-                            they want to have both platforms syncronized with
+                            they want to have both platforms synchronized with
                             specific business rules so that Shopify prices are
-                            set in Saleforce for example.
+                            set in Salesforce for example.
                           </p>
                         </div>
                       </div>
@@ -427,7 +427,7 @@ export default function Home() {
                             Use platforms like Segment, CustomerIO and Google to
                             collect customer data from several points ( website,
                             in-store, ads, emails, phone calls ) then make
-                            realtime desitions and execute actions or alerts
+                            realtime destinations and execute actions or alerts
                             downstream. Send discounts, emails, schedule visits,
                             phone calls, surveys - anything you can think of.
                           </p>
@@ -462,7 +462,7 @@ export default function Home() {
                           </h3>
                           <p className="mt-5 text-base text-gray-500">
                             Go beyond emails & ads, and connect with customers
-                            via voice, sms, whatsapp & messanger. Jungledynamics
+                            via voice, sms, whatsapp & messenger. Jungledynamics
                             + Twilio open the door to simple communications all
                             the way to fully integrated corporate grade call
                             centers.
@@ -500,7 +500,7 @@ export default function Home() {
                             One of the most recurring request is to bring data
                             from different sources and transform it in a way
                             that can be analized using a visual business
-                            inteligence plataform, or even just export it to
+                            intelligence platform, or even just export it to
                             Excel. Add realtime notifications and alerts ( like
                             a feed of all online purchases, or VIP account
                             support requests ) into your teams chat such as
@@ -578,9 +578,9 @@ export default function Home() {
                             Reduce Salesforce and Microsoft Complexities
                           </h3>
                           <p className="mt-5 text-base text-gray-500">
-                            Large platforms are extremly complex, good quality
+                            Large platforms are extremely complex, good quality
                             developers are 5x more expensive and hard to
-                            recruit. After years building highly succesfull
+                            recruit. After years building highly successful
                             salesforce apps, Roberto realized is much more cost
                             effective to use the approach he built into JD.
                           </p>
@@ -638,7 +638,7 @@ export default function Home() {
                   </p>
                   <p className="mt-3 text-lg text-gray-300">
                     After 2 decades in software, building and producing the most
-                    succesfull Salesforce App in Silicon Valley, and speaking in
+                    successful Salesforce App in Silicon Valley, and speaking in
                     conferences worldwide; I took a step back from the "race"
                     and retired to my jungle retreat in Costa Rica.
                   </p>
