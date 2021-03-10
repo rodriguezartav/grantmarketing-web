@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Price() {
   return (
-    <div className="bg-gray-900">
+    <div className="bg-green-700">
       <div className="pt-12 sm:pt-16 lg:pt-24">
         <div className="max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto space-y-2 lg:max-w-none">
@@ -13,15 +13,15 @@ export default function Price() {
               The right price for you, whoever you are
             </p>
             <p className="text-xl text-gray-300">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum
-              sequi unde repudiandae natus.
+              JD is a boutique platform that offers integration services to a
+              handfull of proactive customers
             </p>
           </div>
         </div>
       </div>
       <div className="mt-8 pb-12 bg-gray-50 sm:mt-12 sm:pb-16 lg:mt-16 lg:pb-24">
         <div className="relative">
-          <div className="absolute inset-0 h-3/4 bg-gray-900" />
+          <div className="absolute inset-0 h-3/4 bg-green-700" />
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-md mx-auto space-y-4 lg:max-w-5xl lg:grid lg:grid-cols-2 lg:gap-5 lg:space-y-0">
               <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
@@ -31,17 +31,18 @@ export default function Price() {
                       className="inline-flex px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-indigo-100 text-indigo-600"
                       id="tier-standard"
                     >
-                      Standard
+                      Pay as you go
                     </h3>
                   </div>
                   <div className="mt-4 flex items-baseline text-6xl font-extrabold">
-                    $49
+                    $1000
                     <span className="ml-1 text-2xl font-medium text-gray-500">
-                      /mo
+                      / program
                     </span>
                   </div>
                   <p className="mt-5 text-lg text-gray-500">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    For teams that are very clear on what they want to achieve,
+                    and look for the final implementation
                   </p>
                 </div>
                 <div className="flex-1 flex flex-col justify-between px-6 pt-6 pb-8 bg-gray-50 space-y-6 sm:p-10 sm:pt-6">
@@ -66,7 +67,7 @@ export default function Price() {
                         </svg>
                       </div>
                       <p className="ml-3 text-base text-gray-700">
-                        Pariatur quod similique
+                        Unlimited Platforms and Databases
                       </p>
                     </li>
                     <li className="flex items-start">
@@ -89,7 +90,8 @@ export default function Price() {
                         </svg>
                       </div>
                       <p className="ml-3 text-base text-gray-700">
-                        Sapiente libero doloribus modi nostrum
+                        Unlimited channels ( webpage, email, sms, video,
+                        googleDocs )
                       </p>
                     </li>
                     <li className="flex items-start">
@@ -112,7 +114,7 @@ export default function Price() {
                         </svg>
                       </div>
                       <p className="ml-3 text-base text-gray-700">
-                        Vel ipsa esse repudiandae excepturi
+                        One 3-hour consulting session per month
                       </p>
                     </li>
                     <li className="flex items-start">
@@ -145,7 +147,7 @@ export default function Price() {
                       className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-900"
                       aria-describedby="tier-standard"
                     >
-                      Get started
+                      1-hour zoom interview required
                     </a>
                   </div>
                 </div>
@@ -157,17 +159,18 @@ export default function Price() {
                       className="inline-flex px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-indigo-100 text-indigo-600"
                       id="tier-standard"
                     >
-                      Enterprise
+                      All-Inclusive
                     </h3>
                   </div>
                   <div className="mt-4 flex items-baseline text-6xl font-extrabold">
-                    $79
+                    $2500
                     <span className="ml-1 text-2xl font-medium text-gray-500">
-                      /mo
+                      /month
                     </span>
                   </div>
                   <p className="mt-5 text-lg text-gray-500">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    For organizations looking to turbo-charge their digital
+                    transformation.
                   </p>
                 </div>
                 <div className="flex-1 flex flex-col justify-between px-6 pt-6 pb-8 bg-gray-50 space-y-6 sm:p-10 sm:pt-6">
@@ -192,7 +195,7 @@ export default function Price() {
                         </svg>
                       </div>
                       <p className="ml-3 text-base text-gray-700">
-                        Pariatur quod similique
+                        Unlimited Platforms and Databases
                       </p>
                     </li>
                     <li className="flex items-start">
@@ -215,7 +218,7 @@ export default function Price() {
                         </svg>
                       </div>
                       <p className="ml-3 text-base text-gray-700">
-                        Sapiente libero doloribus modi nostrum
+                        Unlimited program development
                       </p>
                     </li>
                     <li className="flex items-start">
@@ -238,7 +241,8 @@ export default function Price() {
                         </svg>
                       </div>
                       <p className="ml-3 text-base text-gray-700">
-                        Vel ipsa esse repudiandae excepturi
+                        Unlimited channels ( webpage, email, sms, video,
+                        googleDocs )
                       </p>
                     </li>
                     <li className="flex items-start">
@@ -261,7 +265,7 @@ export default function Price() {
                         </svg>
                       </div>
                       <p className="ml-3 text-base text-gray-700">
-                        Itaque cupiditate adipisci quibusdam
+                        One 3-hour consulting session
                       </p>
                     </li>
                   </ul>
@@ -271,7 +275,7 @@ export default function Price() {
                       className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-900"
                       aria-describedby="tier-standard"
                     >
-                      Get started
+                      Capacity for 5 customers, there are 3 spots left.
                     </a>
                   </div>
                 </div>
@@ -279,28 +283,25 @@ export default function Price() {
             </div>
           </div>
         </div>
+
         <div className="mt-4 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:mt-5">
           <div className="max-w-md mx-auto lg:max-w-5xl">
             <div className="rounded-lg bg-gray-100 px-6 py-8 sm:p-10 lg:flex lg:items-center">
               <div className="flex-1">
                 <div>
                   <h3 className="inline-flex px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-white text-gray-800">
-                    Discounted
+                    Monitoring Fee
                   </h3>
                 </div>
                 <div className="mt-4 text-lg text-gray-600">
-                  Get full access to all of standard license features for solo
-                  projects that make less than $20k gross revenue for{" "}
-                  <span className="font-semibold text-gray-900">$29</span>.
+                  For organizations that are on the pay-as-you-go-plan, or those
+                  that canceled their all-inclusive plan but still want their
+                  programs running on JD, there is a{" "}
+                  <span className="font-semibold text-gray-900">
+                    $50/month/program
+                  </span>{" "}
+                  fee.
                 </div>
-              </div>
-              <div className="mt-6 rounded-md shadow lg:mt-0 lg:ml-10 lg:flex-shrink-0">
-                <a
-                  href="#"
-                  className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50"
-                >
-                  Buy Discounted License
-                </a>
               </div>
             </div>
           </div>
