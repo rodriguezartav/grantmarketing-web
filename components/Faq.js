@@ -50,9 +50,9 @@ export default function Faq() {
                         connection.
                       </p>
                       <p className="mt-6 text-2xl font-medium text-white">
-                        This state of mind is represented in our creations, the
-                        way we model operations and the software that runs them,
-                        don't let individualty and disconection keep you from
+                        Our state of mind is proyected into our creations, the
+                        way we model operations and the software that runs them.
+                        Don't let individualty and disconection keep you from
                         enjoying the posibilities of running your business with
                         the best solutions.
                       </p>

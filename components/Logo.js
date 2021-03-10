@@ -11,6 +11,13 @@ export default function Logo() {
   }, []);
 
   return (
-    <img className=" h-6 w-auto sm:h-10" src={`${logo}/logo.png`} alt="" />
+    <a href="/">
+      {" "}
+      <img
+        className=" h-6 w-auto sm:h-10"
+        src={`${logo}/logo.png`}
+        alt="JungleDynamics Logo"
+      />
+    </a>
   );
 }
