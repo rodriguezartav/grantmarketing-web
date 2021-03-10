@@ -114,7 +114,7 @@ export default function Price() {
                         </svg>
                       </div>
                       <p className="ml-3 text-base text-gray-700">
-                        One 3-hour consulting session per month
+                        One 3-hour consulting session per program
                       </p>
                     </li>
                     <li className="flex items-start">
@@ -136,9 +136,6 @@ export default function Price() {
                           />
                         </svg>
                       </div>
-                      <p className="ml-3 text-base text-gray-700">
-                        Itaque cupiditate adipisci quibusdam
-                      </p>
                     </li>
                   </ul>
                   <div className="rounded-md shadow">
@@ -147,7 +144,7 @@ export default function Price() {
                       className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-900"
                       aria-describedby="tier-standard"
                     >
-                      1-hour zoom interview required
+                      1-hour consulting required @ $300
                     </a>
                   </div>
                 </div>

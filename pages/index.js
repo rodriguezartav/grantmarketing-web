@@ -329,25 +329,27 @@ export default function Home() {
             <div className="relative bg-white py-16 sm:py-24 lg:py-32">
               <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
                 <h2 className="text-base font-semibold tracking-wider text-cyan-600 uppercase">
-                  The best of both worlds
+                  Hire me, via my sustainable service at a fixed rate
                 </h2>
                 <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-                  JD is your platform developer as a service
+                  Developer as a service
                 </p>
 
                 <p className="mt-3 max-w-3xl mx-auto text-xl text-gray-500">
                   The Cloud theory is about reducing costs by sharing resources.
-                  Software and how it works is then shared between companies
-                  with different needs. This is the gap.
-                </p>
-                <p className="mt-3  max-w-3xl mx-auto text-xl text-red-400">
-                  Cloud providers hide the gap with propietary code or visual
-                  flow solutions
+                  The way all these software platforms become so valuable is by
+                  building <b>one</b> common solutions that's shared between all
+                  their customers.{" "}
+                  <span className="mt-3  max-w-3xl mx-auto text-xl text-red-800">
+                    But companies ofter discover problems when they try to
+                    address their specific needs.
+                  </span>
                 </p>
 
                 <p className="mt-10 max-w-3xl mx-auto text-2xl text-gray-600">
-                  Roberto Rodriguez codes ideas <br />
-                  into indepent programs
+                  Jungledynamic solves this problem
+                  <br /> by having Roberto Rodriguez
+                  <br /> write custom programs
                   <br /> specific for each customer
                   <br /> at a fixed montly rate
                 </p>
