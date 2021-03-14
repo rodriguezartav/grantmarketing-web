@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import useSWR from "swr";
 import fetcher from "../helpers/fetcher";
 import { useMutate, useFetch } from "../helpers/useFetch";
+import ApiKeys from "./ApiKeys";
 
 export default function Settings(props) {
   const { data, error, mutate } = useSWR("/api/customers", fetcher);
@@ -269,6 +270,9 @@ export default function Settings(props) {
             ></div>
           </div>
         </section>
+
+        <ApiKeys />
+
         {/* Billing history */}
       </div>
     </div>
