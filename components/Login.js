@@ -59,9 +59,7 @@ export default function Login(props) {
 
   function renderPhone() {
     return (
-      <form className="mt-8 space-y-6" action="#" method="POST">
-        <input type="hidden" name="remember" defaultValue="true" />
-
+      <form className="mt-8 space-y-6">
         <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
           <div className="sm:col-span-2">
             <label
@@ -101,7 +99,6 @@ export default function Login(props) {
                 }}
                 id="phone"
                 name="phone"
-                type="number"
                 autoComplete="phone"
                 required
                 className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
