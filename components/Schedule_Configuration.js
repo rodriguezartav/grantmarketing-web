@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useMutate } from "../helpers/useFetch";
 import { options } from "superagent";
+import DateTimePicker from "react-datetime-picker/dist/entry.nostyle";
+import "react-datetime-picker/dist/DateTimePicker.css";
+import "react-calendar/dist/Calendar.css";
+import "react-clock/dist/Clock.css";
 
 export default function Integration_Configuration(props) {
   const [schedule, setSchedule] = useState({ script_options: {} });
@@ -147,9 +151,9 @@ Leaving: "ease-in duration-200"
 
 function Period(props) {
   return (
-    <form className="space-y-8 divide-y divide-gray-200">
+    <form className="space-y-8 divide-y h-96 divide-gray-200">
       <div className="space-y-8 divide-y divide-gray-200">
-        <div className="pt-8">
+        <div className="pt-8 ">
           <div>
             <h3 className="text-lg leading-6 font-medium text-gray-900">
               Script Schedule Configuration
@@ -158,6 +162,29 @@ function Period(props) {
               This script will run once each period measured in minutes.
             </p>
           </div>
+
+          <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+            <div className="sm:col-span-6">
+              <label
+                htmlFor="street_address"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Start At
+              </label>
+              <div className="mt-1">
+                <DateTimePicker
+                  value={props.schedule.start_at}
+                  onChange={(e) => {
+                    props.onChange(
+                      "start_at",
+                      "date"
+                    )({ currentTarget: { value: e } });
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+
           <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
             <div className="sm:col-span-6">
               <label
