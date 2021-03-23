@@ -31,8 +31,7 @@ export default function Integration_Configuration(props) {
 
     props.onSave();
 
-    if (props.provider.type.toLowerCase().indexOf("oauth") > -1)
-      Router.replace(url);
+    Router.replace(url);
   }
 
   return (

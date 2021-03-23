@@ -8,7 +8,7 @@ export default async (req, res) => {
         .put(process.env.API_URL + "/api/integrations/" + req.body.id)
         .set("Accept", "application/json")
         .set("authorization", req.headers.authorization)
-        .send({ ...req.body, expiry_date: moment() });
+        .send({ ...req.body, expiry_date: moment().add(1, "hour") });
     else
       await request
         .post(process.env.API_URL + "/api/integrations/")
@@ -17,7 +17,7 @@ export default async (req, res) => {
         .send({
           data: {
             ...req.body,
-            expiry_date: moment(),
+            expiry_date: moment().add(1, "hour"),
             customer_id: parseInt(req.headers.customer_id),
           },
         });

@@ -92,7 +92,7 @@ function IntegrationItem(props) {
       >
         <div
           className={`flex-shrink-0 flex items-center justify-center w-16 bg-${
-            props.item.integration && props.item.integration.expiry_date
+            props.item.integration && props.item.integration.is_connected
               ? "green"
               : "gray"
           }-600 text-white text-sm font-medium rounded-l-md`}

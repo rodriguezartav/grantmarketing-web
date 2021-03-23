@@ -16,19 +16,17 @@ export default function Connect() {
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         <div>
-          <h2 className="mt-6 text-center text-3xl font-extrabold capitalize text-gray-900">
-            Connect with {providerName}
+          <h2 className="mt-6 mb-6 text-center text-3xl font-extrabold  text-green-700">
+            Connect with <span className="capitalize">{providerName}</span>
           </h2>
-          <p className="mt-2 text-center text-sm text-gray-600">
-            You'll be taking to their website where you will be allowed to login
-            and accept the permissions to share information with us. Once you
-            accept, our integration will be able to send and receive the
-            neccesary information for your integration.
+          <p className="mt-2 mb-6 text-center text-sm text-gray-600">
+            We'll send you to {providerName} website, where you can accept the
+            connection.
           </p>
           <div>
             <a
               href={`${process.env.API_URL}/integrations/${providerName}/${customerId}`}
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+              className="mb-5 group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
             >
               <span className="absolute left-0 inset-y-0 flex items-center pl-3">
                 <svg
@@ -48,7 +46,7 @@ export default function Connect() {
               Connect Now
             </a>
           </div>
-          <p className="mt-2 text-center text-sm text-gray-600">
+          <p className=" text-center text-xs text-gray-600">
             Note that the actual data is not stored in out servers or databases.
             Our job is to get it from A to B. Once that is done, we're out.
           </p>
