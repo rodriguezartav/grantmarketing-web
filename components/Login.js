@@ -7,6 +7,8 @@ export default function Login(props) {
   const [view, setView] = useState("PHONE");
   const [phone, setPhone] = useState("");
   const [code, setCode] = useState("");
+  const [account, setAccount] = useState();
+  const [accounts, setAccounts] = useState([]);
   const [countryCode, setCountryCode] = useState("+1");
   const [localError, setLocalError] = useState(null);
 
@@ -27,6 +29,8 @@ export default function Login(props) {
   useEffect(() => {
     if (!response) return;
 
+    setAccounts(response);
+    setAccount(response[0]);
     setView("CODE");
   }, [response]);
 
@@ -50,7 +54,12 @@ export default function Login(props) {
   }
 
   function onCodeClick() {
-    codeMutate.mutate({ code: code, countryCode: countryCode, phone: phone });
+    codeMutate.mutate({
+      code: code,
+      countryCode: countryCode,
+      phone: phone,
+      customer_id: account.customer_id,
+    });
   }
 
   function onCodeBackClick() {
@@ -151,6 +160,39 @@ export default function Login(props) {
         <p className="mt-2 text-center text-sm text-gray-600">
           Code was sent via SMS to {phone}
         </p>
+
+        <div className="sm:col-span-2">
+          <label
+            htmlFor="first_name"
+            className="block text-sm font-medium text-gray-700"
+          >
+            Account
+          </label>
+          <div className="mt-1">
+            <select
+              value={account.customer_id}
+              onChange={(e) => {
+                setAccount(
+                  accounts.filter((item) => {
+                    const result =
+                      item.customer_id == parseInt(e.currentTarget.value);
+                    return result;
+                  })[0]
+                );
+              }}
+              id="account"
+              name="account"
+              className="focus:ring-indigo-500 focus:border-indigo-500 w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+            >
+              {accounts.map((item) => {
+                return (
+                  <option value={item.customer_id}>{item.customer_name}</option>
+                );
+              })}
+            </select>
+          </div>
+        </div>
+
         <div className="rounded-md shadow-sm -space-y-px">
           <div>
             <label htmlFor="email-address" className="sr-only">

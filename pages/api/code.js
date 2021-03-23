@@ -9,6 +9,7 @@ export default async (req, res) => {
         countryCode: req.body.countryCode,
         code: req.body.code,
         phone: req.body.phone,
+        customer_id: req.body.customer_id,
       })
       .set("Accept", "application/json")
       .auth("LINK", { type: "bearer" });

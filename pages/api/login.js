@@ -8,7 +8,7 @@ export default async (req, res) => {
       .set("Accept", "application/json")
       .auth("LINK", { type: "bearer" });
 
-    if (users.status == 200) return res.status(200).json({});
+    if (users.status == 200) return res.status(200).json(users.body);
     else
       return res.status(404).json({
         message: `An user with phone ${req.body.phone}, please create an account, or contact support. `,
