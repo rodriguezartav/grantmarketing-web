@@ -21,12 +21,6 @@ export default async (req, res) => {
       .set("Accept", "application/json")
       .auth("LINK", { type: "bearer" });
 
-    await request
-      .post(process.env.API_URL + "/api/userLogin/getCode")
-      .send({ country_code: req.body.countryCode, phone: req.body.phone })
-      .set("Accept", "application/json")
-      .auth("LINK", { type: "bearer" });
-
     return res.status(200).json({});
   } catch (e) {
     //console.log(e);

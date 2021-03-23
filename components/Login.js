@@ -19,10 +19,11 @@ export default function Login(props) {
   const codeMutate = useMutate("/api/code", { method: "PUT" });
 
   useEffect(() => {
-    const { phone } = router.query;
-    if (phone && phone.length > 0) {
+    const { phone, country_code } = router.query;
+
+    if (phone && phone.length > 0 && country_code && country_code.length > 0) {
       setPhone(phone);
-      setView("CODE");
+      setCountryCode(country_code.replace(" ", "+"));
     }
   }, []);
 
@@ -128,7 +129,7 @@ export default function Login(props) {
           {loading ? null : (
             <a
               onClick={onLoginClick}
-              className="group cursor-pointer  relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+              className="group cursor-pointer   relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
             >
               <span className="absolute left-0 inset-y-0 flex items-center pl-3">
                 {/* Heroicon name: solid/lock-closed */}
@@ -170,7 +171,7 @@ export default function Login(props) {
           </label>
           <div className="mt-1">
             <select
-              value={account.customer_id}
+              value={account && account.customer_id}
               onChange={(e) => {
                 setAccount(
                   accounts.filter((item) => {
@@ -237,7 +238,7 @@ export default function Login(props) {
                 />
               </svg>
             </span>
-            Send Code
+            Login
           </a>
           <a
             onClick={onCodeBackClick}

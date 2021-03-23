@@ -29,7 +29,7 @@ export default function CreateAccount() {
     else setError("");
 
     await createAccount.mutate({ phone, name, company, countryCode });
-    Router.replace("/login?phone=" + phone);
+    Router.replace(`/login?phone=${phone}&country_code=${countryCode}`);
   }
 
   return (
@@ -135,10 +135,12 @@ export default function CreateAccount() {
                 </div>
               </div>
 
+              <p className="text-md p-4 text-red-700">{error}</p>
+
               <div>
                 <a
                   onClick={onCreateAccount}
-                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+                  className="w-full cursor-pointer flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
                 >
                   Create Account
                 </a>
