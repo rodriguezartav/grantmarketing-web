@@ -85,7 +85,7 @@ export default function Home() {
                         </span>
                       </h1>
 
-                      <p className="mt-4 text-xl uppercase tracking-tight  text-white sm:mt-8  lg:mt-6 ">
+                      <p className="mt-4 text-xl  tracking-tight  text-white sm:mt-8  lg:mt-6 ">
                         Custom built for individual customers or white-labeled
                         for trusted partners
                         <br />
