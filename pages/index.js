@@ -86,7 +86,8 @@ export default function Home() {
                       </h1>
 
                       <p className="mt-4 text-xl uppercase tracking-tight  text-white sm:mt-8  lg:mt-6 ">
-                        for my dear customers
+                        Custom built for my dear customers or white-labeled for
+                        trusted partners
                         <br />
                       </p>
                     </div>
