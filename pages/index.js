@@ -80,15 +80,14 @@ export default function Home() {
                       </a>
                       <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-8 sm:text-4xl lg:mt-6 xl:text-5xl">
                         <span className="">The Customer Data Platform</span>
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-200 to-cyan-400 block">
+                        <span className="bg-clip-text text-2xl text-transparent bg-gradient-to-r from-teal-200 to-cyan-400 block">
                           by Roberto Rodriguez
                         </span>
                       </h1>
 
                       <p className="mt-4 text-xl  tracking-tight  text-white sm:mt-8  lg:mt-6 ">
-                        Custom built for individual customers or white-labeled
-                        for trusted partners
-                        <br />
+                        Custom build for each customer or white-labeled for
+                        trusted partners
                       </p>
                     </div>
                   </div>
@@ -242,9 +241,8 @@ export default function Home() {
 
                   <p className="mt-10 max-w-4xl mx-auto text-2xl font-light text-gray-500">
                     The best and largest self-service CDP is{" "}
-                    <a href="segment.io">Segment</a>.<br /> It's got an
-                    impressive catalog of connections to business innovation
-                    apps{" "}
+                    <a href="segment.io">Segment</a>. It's got an impressive
+                    catalog of connections to business innovation apps{" "}
                     <span className="text-green-600">
                       but their customers need a high level of tech expertise,
                       and lot's of time to research, learn to use, and configure
