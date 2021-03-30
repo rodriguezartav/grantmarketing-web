@@ -48,10 +48,10 @@ export default function Home() {
         <div className="relative overflow-hidden">
           <Header />
           <main>
-            <div className="pt-10 bg-green-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
+            <div className="pt-10 bg-green-800 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
               <div className="mx-auto max-w-7xl lg:px-8">
-                <div className="lg:grid lg:grid-cols-2 lg:gap-8">
-                  <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
+                <div className="lg:flex lg:gap-8">
+                  <div className="mx-auto flex-1 max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
                     <div className="lg:py-24 ">
                       <a
                         href="#"
@@ -79,22 +79,19 @@ export default function Home() {
                         </svg>
                       </a>
                       <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-8 sm:text-4xl lg:mt-6 xl:text-5xl">
-                        <span className="">
-                          Is your software <br />
-                          preventing your team
-                        </span>
+                        <span className="">The Customer Data Platform</span>
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-200 to-cyan-400 block">
-                          from executing
-                          <br /> their best ideas?
+                          by Roberto Rodriguez
                         </span>
                       </h1>
 
-                      <p className="mt-4 text-xl tracking-tight font-extrabold text-white sm:mt-8  lg:mt-6 ">
-                        Developer as a Service
+                      <p className="mt-4 text-xl uppercase tracking-tight  text-white sm:mt-8  lg:mt-6 ">
+                        for my dear customers
+                        <br />
                       </p>
                     </div>
                   </div>
-                  <div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
+                  <div className="mt-12 flex-1 sm:max-w-xs -mb-16 sm:-mb-48 lg:m-0 lg:relative">
                     <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
                       {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                       <img
@@ -113,27 +110,28 @@ export default function Home() {
               <div className="mx-auto max-w-md px-4 text-center sm:px-6 sm:max-w-3xl lg:px-8 lg:max-w-7xl">
                 <div>
                   <p className="mt-5 max-w-3xl mx-auto text-3xl text-gray-500">
-                    Today, the best ROI% on software is achieved by running your
-                    business on cloud platforms like Salesforce, Google &
-                    Microsoft - while connecting those with an ever increasing
-                    catalog of dedicated software services
-                    <br />
-                    <small className="text-sm">
-                      {" "}
-                      #sales #finance #marketing #billing #payroll #inventory
-                      #ecommerce #analytics #comms
-                    </small>
+                    Long gone are the days where{" "}
+                    <span className="text-green-500 text-4xl">one</span>{" "}
+                    software package runs the whole business. Modern operations
+                    are made up of software "blocks" that connect with each
+                    other, like Lego.
+                  </p>
+
+                  <p className="mt-10 max-w-3xl mx-auto text-2xl font-light text-gray-500">
+                    Each company picks the specific blocks they need, and the
+                    Customer Data Platform (CDP) is the brain that pushes and
+                    pulls data between each block.
                   </p>
 
                   <div className="mt-10 sm:mt-20">
-                    <ul className="mt-3 opacity-50 sm:opacity-30 grid grid-cols-4 gap-3 sm:gap-6 sm:grid-cols-4 lg:grid-cols-10">
+                    <ul className="mt-3 opacity-90 sm:opacity-90 grid grid-cols-4 gap-3 sm:gap-6 sm:grid-cols-4 lg:grid-cols-10">
                       <li className="col-span-1 flex shadow-sm rounded-md">
                         <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
                           <div className="flex-1 px-4 py-2 text-sm truncate">
                             <Image
                               src="/jd/intercom.png"
                               alt="intercom"
-                              width={135}
+                              width={205}
                               height={50}
                             />
                           </div>
@@ -157,7 +155,7 @@ export default function Home() {
                             <Image
                               src="/jd/google.png"
                               alt="google"
-                              width={135}
+                              width={205}
                               height={50}
                             />
                           </div>
@@ -169,7 +167,7 @@ export default function Home() {
                             <Image
                               src="/jd/s3.png"
                               alt="s3"
-                              width={135}
+                              width={205}
                               height={50}
                             />
                           </div>
@@ -181,7 +179,7 @@ export default function Home() {
                             <Image
                               src="/jd/salesforce.png"
                               alt="salesforce"
-                              width={135}
+                              width={80}
                               height={50}
                             />
                           </div>
@@ -217,7 +215,7 @@ export default function Home() {
                             <Image
                               src="/jd/tablue.png"
                               alt="tablue"
-                              width={135}
+                              width={200}
                               height={50}
                             />
                           </div>
@@ -236,39 +234,192 @@ export default function Home() {
                         </div>
                       </li>
                     </ul>
+                    <p className=" text-green-700 mt-3 text-sm align-middle">
+                      and 500+ more
+                    </p>
                   </div>
 
-                  <h2 className="text-xl max-w-3xl mx-auto mt-14 font-semibold tracking-wider text-cyan-600 uppercase">
-                    Platforms alone won't execute your best ideas
-                  </h2>
+                  <p className="mt-10 max-w-4xl mx-auto text-2xl font-light text-gray-500">
+                    The best and largest self-service CDP is{" "}
+                    <a href="segment.io">Segment</a>.<br /> It's got an
+                    impressive catalog of connections to business innovation
+                    apps{" "}
+                    <span className="text-green-600">
+                      but their customers need a high level of tech expertise,
+                      and lot's of time to research, learn to use, and configure
+                      such a complex architecture.
+                    </span>
+                  </p>
 
-                  <p className="mt-2 max-w-3xl mx-auto text-2xl text-gray-500">
-                    After decades of consulting and successful products in
-                    silicon valley; architect{" "}
-                    <a
-                      target="_blank"
-                      href="https://www.linkedin.com/in/rodriguezartav/"
-                    >
-                      Roberto Rodriguez
-                    </a>{" "}
-                    identified a gap in the cloud preventing companies from
-                    benefiting from their cloud software services
+                  <p className="mt-10 mb-20 max-w-4xl mx-auto text-2xl font-light text-gray-500">
+                    JungleDynamics, instead, is a boutique CDP that is
+                    personally serviced by me, so that my customers can take
+                    advantage of modern software without dedicated tech
+                    resources
                   </p>
                 </div>
+              </div>
 
-                <div className="mt-12 -mb-10 sm:-mb-24 lg:-mb-80">
-                  <img
-                    className="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5"
-                    src="screenshoot1.png"
-                    alt=""
-                  />
+              <div className="relative pt-16 pb-32 overflow-hidden">
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-gray-100"
+                />
+                <div className="relative">
+                  <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+                    <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
+                      <div>
+                        <div>
+                          <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-green-600 to-green-600">
+                            {/* Heroicon name: outline/inbox */}
+                            <svg
+                              className="h-6 w-6 text-white"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              aria-hidden="true"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"
+                              />
+                            </svg>
+                          </span>
+                        </div>
+                        <div className="mt-6">
+                          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                            The current state of the market
+                          </h2>
+                          <p className="mt-10 max-w-3xl mx-auto text-xl text-gray-500">
+                            Modern software is a self-service business model,
+                            where the infrastructure and human resources are
+                            shared between millions of customers.
+                            <span className="text-green-600">
+                              This model dramatically reduced prices and gave
+                              birth to Uber, AirBnb, Facebook, Amazon, Tesla,
+                              Twilio, Google, Salesforce...{" "}
+                            </span>
+                          </p>
+
+                          <p className="mt-10 max-w-3xl mx-auto text-xl text-gray-500">
+                            The scale this platforms reach and the idea of
+                            selling the same software to millions naturally
+                            forces their customers to adapt their operations to
+                            the platform: A tradeoff with ramifications that
+                            does not cost "only" $49.99 per user.
+                          </p>
+
+                          <p className="mt-10 mb-15 max-w-2xl mx-auto text-xl text-gray-500">
+                            CDP's came to exits as a buffer, giving customers a
+                            workspace to balance this tradeoff, a place to
+                            customize their unique operation. But again, setting
+                            it requires a unique set of skills that reach beyond
+                            software because now you have to adapt to the CDP
+                            without loosing the advantange.
+                          </p>
+                        </div>
+                      </div>
+                      <div className="mt-8 border-t border-gray-200 pt-6">
+                        <blockquote>
+                          <div></div>
+                          <footer className="mt-3">
+                            <div className="flex items-center space-x-3">
+                              <div className="flex-shrink-0">
+                                <img
+                                  className="h-6 w-6 rounded-full"
+                                  src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                                  alt=""
+                                />
+                              </div>
+                              <div className="text-base font-medium text-gray-700">
+                                extract from xcccccccc by Roberto Rodriguez
+                              </div>
+                            </div>
+                          </footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                    <div className="mt-12 sm:mt-16 lg:mt-0">
+                      <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                        <img
+                          className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                          src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg"
+                          alt="Inbox user interface"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-24">
+                  <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+                    <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
+                      <div>
+                        <div>
+                          <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-green-600 to-green-600">
+                            {/* Heroicon name: outline/sparkles */}
+                            <svg
+                              className="h-6 w-6 text-white"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              aria-hidden="true"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                              />
+                            </svg>
+                          </span>
+                        </div>
+                        <div className="mt-6">
+                          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                            My solution to the problem
+                          </h2>
+
+                          <p className="mt-4 text-lg text-gray-500">
+                            As an indie entreprenuer I did not set out to create
+                            a software empire, but instead a well balanced
+                            solution for my customers.
+                          </p>
+
+                          <p className="mt-4 text-lg text-gray-500">
+                            A boutique CDP that reliably pulls and pushes data
+                            between apps for a few customers, and most
+                            importantly to be able to tailor their operations in
+                            code, continuously.
+                          </p>
+
+                          <p className="mt-4 text-lg text-gray-500">
+                            Jungledynamics is in fact is capped by the law of
+                            demand, for each new customer the price increases
+                            10%.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
+                      <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                        <img
+                          className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                          src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg"
+                          alt="Customer profile user interface"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* This example requires Tailwind CSS v2.0+ */}
 
-            {/* Testimonial section */}
+            {/* Testimonial section
             <div className="pb-16 bg-gradient-to-r from-teal-500 to-cyan-600 lg:pb-0 lg:z-10 lg:relative">
               <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-8">
                 <div className="relative lg:-my-8">
@@ -325,7 +476,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Feature section with grid */}
+            
             <div className="relative bg-white py-16 sm:py-24 lg:py-32">
               <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
                 <h2 className="text-base font-semibold tracking-wider text-cyan-600 uppercase">
@@ -365,7 +516,7 @@ export default function Home() {
                         <div className="-mt-6">
                           <div>
                             <span className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-md shadow-lg">
-                              {/* Heroicon name: outline/cloud-upload */}
+                              
                               <svg
                                 className="h-6 w-6 text-white"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -402,7 +553,7 @@ export default function Home() {
                         <div className="-mt-6">
                           <div>
                             <span className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-md shadow-lg">
-                              {/* Heroicon name: outline/lock-closed */}
+                              
                               <svg
                                 className="h-6 w-6 text-white"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -439,7 +590,7 @@ export default function Home() {
                         <div className="-mt-6">
                           <div>
                             <span className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-md shadow-lg">
-                              {/* Heroicon name: outline/refresh */}
+                              
                               <svg
                                 className="h-6 w-6 text-white"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -475,7 +626,7 @@ export default function Home() {
                         <div className="-mt-6">
                           <div>
                             <span className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-md shadow-lg">
-                              {/* Heroicon name: outline/shield-check */}
+                              
                               <svg
                                 className="h-6 w-6 text-white"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -514,7 +665,7 @@ export default function Home() {
                         <div className="-mt-6">
                           <div>
                             <span className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-md shadow-lg">
-                              {/* Heroicon name: outline/cog */}
+                              
                               <svg
                                 className="h-6 w-6 text-white"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -556,7 +707,7 @@ export default function Home() {
                         <div className="-mt-6">
                           <div>
                             <span className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-md shadow-lg">
-                              {/* Heroicon name: outline/server */}
+                              
                               <svg
                                 className="h-6 w-6 text-white"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -592,13 +743,14 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Blog section */}
+            
 
             <Price />
 
             <Faq />
 
-            {/* CTA Section */}
+             */}
+
             <div className="relative bg-gray-900">
               <div className=" hidden md:block overflow-hidden relative h-56 bg-green-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
                 <video

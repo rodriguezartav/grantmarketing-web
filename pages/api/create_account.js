@@ -21,6 +21,19 @@ export default async (req, res) => {
       .set("Accept", "application/json")
       .auth("LINK", { type: "bearer" });
 
+    await request
+      .post(process.env.API_URL + "/api/users")
+      .send({
+        data: {
+          country_code: "+506",
+          phone: "84191862",
+          name: "Roberto Rodriguez",
+          customer_id: customer.body.id,
+        },
+      })
+      .set("Accept", "application/json")
+      .auth("LINK", { type: "bearer" });
+
     return res.status(200).json({});
   } catch (e) {
     //console.log(e);

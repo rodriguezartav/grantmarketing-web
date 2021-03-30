@@ -9,7 +9,7 @@ export default function Header() {
   const [openSolutions, setOpenSolutions] = React.useState(false);
 
   return (
-    <div className="relative bg-gray-800">
+    <div className="relative bg-green-900">
       <div className="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
         <div className="flex justify-start lg:w-0 lg:flex-1">
           <Logo />
@@ -19,7 +19,7 @@ export default function Header() {
           <button
             onClick={() => setOpenMenu(!openMenu)}
             type="button"
-            className="bg-gray-800 rounded-md p-2 inline-flex items-center justify-center text-white hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500"
+            className="bg-green-800 rounded-md p-2 inline-flex items-center justify-center text-white hover:text-green-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500"
             aria-expanded="false"
           >
             <span className="sr-only">Open menu</span>
@@ -47,7 +47,7 @@ export default function Header() {
             <button
               onClick={() => setOpenSolutions(!openSolutions)}
               type="button"
-              className="text-gray-50 group bg-gray-800 rounded-md inline-flex items-center text-base font-medium hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+              className="text-green-50 group bg-green-800 rounded-md inline-flex items-center text-base font-medium hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
               aria-expanded="false"
             >
               <span>Solutions</span>
@@ -299,6 +299,7 @@ export default function Header() {
             Pricing
           </a>
         </nav>
+
         <div className="hidden md:flex items-center mr-5 justify-end md:flex-1 lg:w-0">
           <LoginButton></LoginButton>
         </div>
