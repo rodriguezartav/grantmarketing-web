@@ -46,11 +46,11 @@ export default function Home() {
 
       <Header />
 
-      <div className="bg-white">
+      <div className="bg-white ">
         {/* Split brand panel */}
-        <div className="relative bg-white">
+        <div className="relative bg-white ">
           <div className="absolute inset-0" aria-hidden="true">
-            <div className="absolute inset-y-0 right-0 w-1/2 bg-gradient-to-r from-cyan-600 to-green-800" />
+            <div className="absolute inset-y-10 right-0 w-1/2 bg-gradient-to-r from-cyan-600 to-green-800" />
           </div>
           <div className="relative max-w-7xl mx-auto lg:grid lg:grid-cols-2 lg:px-8">
             <div className="bg-white py-16 px-4 sm:py-24 sm:px-6 lg:px-0 lg:pr-8">
@@ -366,6 +366,133 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-extrabold text-gray-900">
+              White-Labeled and Multi-Org Versions
+            </h2>
+            <p className="mt-4 text-lg text-gray-500">
+              JungleDynamics can spin-off a new platform with a complete white
+              labeled experience for ventures that need an integration platform
+              but don't have the expertise or time to develop one. It's also an
+              an option for large enterprise customers or entrepreneurs with
+              several projects that want to consolidate their operations at a
+              lower cost.
+            </p>
+          </div>
+          <dl className="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-4 lg:gap-x-8">
+            <div className="relative">
+              <dt>
+                {/* Heroicon name: outline/check */}
+                <svg
+                  className="absolute h-6 w-6 text-green-500"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <p className="ml-9 text-lg leading-6 font-medium text-gray-900">
+                  Accounts @ 50% discount
+                </p>
+              </dt>
+              <dd className="mt-2 ml-9 flex text-base text-gray-500 lg:py-0 lg:pb-4">
+                Additional accounts are billed at 50% of the cost of normal
+                accounts, each with unlimited storage and data transfer.
+              </dd>
+            </div>
+            <div className="relative">
+              <dt>
+                {/* Heroicon name: outline/check */}
+                <svg
+                  className="absolute h-6 w-6 text-green-500"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <p className="ml-9 text-lg leading-6 font-medium text-gray-900">
+                  Shared Costs
+                </p>
+              </dt>
+              <dd className="mt-2 ml-9 flex text-base text-gray-500 lg:py-0 lg:pb-4">
+                The owner of the master account has the option to organize their
+                ideas into multi-account requests be billed only once.
+              </dd>
+            </div>
+            <div className="relative">
+              <dt>
+                {/* Heroicon name: outline/check */}
+                <svg
+                  className="absolute h-6 w-6 text-green-500"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <p className="ml-9 text-lg leading-6 font-medium text-gray-900">
+                  Code Sharing
+                </p>
+              </dt>
+              <dd className="mt-2 ml-9 flex text-base text-gray-500 lg:py-0 lg:pb-4">
+                Share code between all accounts, us the JD Dashboard to select
+                which programs should be shared among all accounts and presto.
+              </dd>
+            </div>
+            <div className="relative">
+              <dt>
+                {/* Heroicon name: outline/check */}
+                <svg
+                  className="absolute h-6 w-6 text-green-500"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <p className="ml-9 text-lg leading-6 font-medium text-gray-900">
+                  Multi-Tenant Consulting
+                </p>
+              </dt>
+              <dd className="mt-2 ml-9 flex text-base text-gray-500 lg:py-0 lg:pb-4">
+                Customers that select the Multi-Account version require a
+                different level of training, planning and support.
+              </dd>
+            </div>
+          </dl>
+        </div>
+
         {/* Logo cloud 
         <div className="bg-cyan-100 bg-opacity-25">
           <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">

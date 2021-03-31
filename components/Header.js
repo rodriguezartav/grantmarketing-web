@@ -9,7 +9,7 @@ export default function Header() {
   const [openSolutions, setOpenSolutions] = React.useState(false);
 
   return (
-    <div className="relative bg-green-900">
+    <div className="relative bg-green-800 bottom-1 border-white">
       <div className="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
         <div className="flex justify-start lg:w-0 lg:flex-1">
           <Logo />

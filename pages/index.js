@@ -48,7 +48,7 @@ export default function Home() {
         <div className="relative overflow-hidden">
           <Header />
           <main>
-            <div className="pt-10 bg-green-800 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
+            <div className="pt-10 bg-gradient-to-r from-cyan-600 to-green-800 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
               <div className="mx-auto max-w-7xl lg:px-8">
                 <div className="lg:flex lg:gap-8">
                   <div className="mx-auto flex-1 max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
