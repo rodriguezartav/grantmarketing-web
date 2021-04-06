@@ -22,22 +22,6 @@ export default function Dashboard() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/*
-            This example requires Tailwind CSS v2.0+ 
-            
-            This example requires some changes to your config:
-            
-            ```
-            // tailwind.config.js
-            module.exports = {
-                // ...
-                plugins: [
-            // ...
-            require('@tailwindcss/forms'),
-                ]
-            }
-            ```
-            */}
       <div className="h-screen flex overflow-hidden bg-white">
         {/* Off-canvas menu for mobile, show/hide based on off-canvas menu state. */}
 

@@ -86,7 +86,7 @@ export default function Home() {
                       </h1>
 
                       <p className="mt-4 text-xl  tracking-tight  text-white sm:mt-8  lg:mt-6 ">
-                        Custom build for each customer or white-labeled for
+                        Custom built for each customer or white-labeled for
                         trusted partners
                       </p>
                     </div>
