@@ -32,7 +32,7 @@ export default function Sidebar(props) {
     From: "opacity-100"
     To: "opacity-0"
 */}
-          <div className="fixed inset-0" aria-hidden="true">
+          <div className="fixed opacity-0 inset-0" aria-hidden="true">
             <div className="absolute inset-0 bg-gray-600 opacity-75" />
           </div>
           {/*
@@ -288,149 +288,82 @@ export default function Sidebar(props) {
                 </div>
               </Transition>
             </div>
-            {/* Sidebar Search */}
-            <div className="px-3 mt-5">
-              <label htmlFor="search" className="sr-only">
-                Search
-              </label>
-              <div className="mt-1 relative rounded-md shadow-sm">
-                <div
-                  className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
-                  aria-hidden="true"
-                >
-                  {/* Heroicon name: solid/search */}
-                  <svg
-                    className="mr-3 h-4 w-4 text-gray-400"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </div>
-                <input
-                  type="text"
-                  name="search"
-                  id="search"
-                  className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-9 sm:text-sm border-gray-300 rounded-md"
-                  placeholder="Search"
-                />
-              </div>
-            </div>
+
             {/* Navigation */}
-            <nav className="px-3 mt-6">
-              <div className="space-y-1">
-                {/* Current: "bg-gray-200 text-gray-900", Default: "text-gray-700 hover:text-gray-900 hover:bg-gray-50" */}
-                <a
-                  href="/dashboard"
-                  className={`${
-                    props.current == "dashboard" ? "bg-gray-200" : ""
-                  } text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md`}
-                >
-                  {/* Current: "text-gray-500", Default: "text-gray-400 group-hover:text-gray-500" */}
-                  {/* Heroicon name: outline/home */}
-                  <svg
-                    className="text-gray-500 mr-3 h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                    />
-                  </svg>
-                  Home
-                </a>
-                <a
-                  href="/marketplace"
-                  className={`${
-                    props.current == "settings" ? "bg-gray-200" : ""
-                  } text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md`}
-                >
-                  {/* Heroicon name: outline/view-list */}
-                  <svg
-                    className="text-gray-400 group-hover:text-gray-500 mr-3 h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM14 11a1 1 0 011 1v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1v-1a1 1 0 011-1z" />
-                  </svg>
-                  Marketplace
-                </a>
-
-                <a
-                  href="/settings"
-                  className={`${
-                    props.current == "settings" ? "bg-gray-200" : ""
-                  } text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md`}
-                >
-                  {/* Heroicon name: outline/view-list */}
-                  <svg
-                    className="text-gray-400 group-hover:text-gray-500 mr-3 h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 6h16M4 10h16M4 14h16M4 18h16"
-                    />
-                  </svg>
-                  Settings
-                </a>
-              </div>
-              <div className="mt-8">
-                {/* Secondary navigation */}
-                <h3
-                  className="px-3 text-xs font-semibold text-gray-500 uppercase tracking-wider"
-                  id="teams-headline"
-                >
-                  Scripts
-                </h3>
-                <div
-                  className="mt-1 space-y-1"
-                  role="group"
-                  aria-labelledby="teams-headline"
-                >
+            {!props.private && (
+              <nav className="px-3 mt-6">
+                <div className="space-y-1">
+                  {/* Current: "bg-gray-200 text-gray-900", Default: "text-gray-700 hover:text-gray-900 hover:bg-gray-50" */}
                   <a
-                    href="#"
-                    className="group flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-50"
+                    href="/dashboard"
+                    className={`${
+                      props.current == "dashboard" ? "bg-gray-200" : ""
+                    } text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md`}
                   >
-                    <span
-                      className="w-2.5 h-2.5 mr-4 bg-indigo-500 rounded-full"
+                    {/* Current: "text-gray-500", Default: "text-gray-400 group-hover:text-gray-500" */}
+                    {/* Heroicon name: outline/home */}
+                    <svg
+                      className="text-gray-500 mr-3 h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
                       aria-hidden="true"
-                    />
-                    <span className="truncate">Private</span>
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                      />
+                    </svg>
+                    Home
+                  </a>
+                  <a
+                    href="/marketplace"
+                    className={`${
+                      props.current == "settings" ? "bg-gray-200" : ""
+                    } text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md`}
+                  >
+                    {/* Heroicon name: outline/view-list */}
+                    <svg
+                      className="text-gray-400 group-hover:text-gray-500 mr-3 h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM14 11a1 1 0 011 1v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1v-1a1 1 0 011-1z" />
+                    </svg>
+                    Marketplace
                   </a>
 
                   <a
-                    href="#"
-                    className="group flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-50"
+                    href="/settings"
+                    className={`${
+                      props.current == "settings" ? "bg-gray-200" : ""
+                    } text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md`}
                   >
-                    <span
-                      className="w-2.5 h-2.5 mr-4 bg-yellow-500 rounded-full"
+                    {/* Heroicon name: outline/view-list */}
+                    <svg
+                      className="text-gray-400 group-hover:text-gray-500 mr-3 h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
                       aria-hidden="true"
-                    />
-                    <span className="truncate">Public</span>
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M4 6h16M4 10h16M4 14h16M4 18h16"
+                      />
+                    </svg>
+                    Settings
                   </a>
                 </div>
-              </div>
-            </nav>
+              </nav>
+            )}
           </div>
         </div>
       </div>

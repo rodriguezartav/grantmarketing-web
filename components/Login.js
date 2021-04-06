@@ -45,12 +45,11 @@ export default function Login(props) {
       codeMutate.response.customer_name
     );
     window.localStorage.setItem("token", codeMutate.response.token);
-    Router.replace("/dashboard");
+    Router.replace(props.redirect || "/dashboard");
   }, [codeMutate.response]);
 
   function onLoginClick() {
     setLocalError(null);
-
     mutate({ countryCode: countryCode, phone: phone });
   }
 

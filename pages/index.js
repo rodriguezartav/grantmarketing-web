@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Router from "next/router";
@@ -19,8 +19,7 @@ export default function Home() {
 
     gtag("config", "G-MNTM6MGLXC");
     setLoaded(true);
-    if (window.location.host.indexOf("rodco") > -1) Router.replace("/brand");
-    else if (window.location.host.indexOf("signalon") > -1)
+    if (window.location.host.indexOf("jungledynamics.com") == -1)
       Router.replace("/brand");
   }, []);
 
@@ -364,10 +363,11 @@ export default function Home() {
                     </div>
                     <div className="mt-12 sm:mt-16 lg:mt-0">
                       <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-                        <img
-                          className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                        <Image
+                          width="1048"
+                          height="629"
                           src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg"
-                          alt="Inbox user interface"
+                          className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
                         />
                       </div>
                     </div>
