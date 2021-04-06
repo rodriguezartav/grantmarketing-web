@@ -8,6 +8,9 @@ import Image from "next/image";
 import Price from "../components/Price";
 import Faq from "../components/Faq";
 
+import { NextSeo } from 'next-seo';
+
+
 export default function Home() {
   const [phone, setPhone] = React.useState("");
   const [error, setError] = React.useState("");
@@ -32,10 +35,30 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <>
       <Head>
         <title>JungleDynamics</title>
         <link rel="icon" href="/favicon.ico" />
+ 
+
+        <NextSeo
+          title="Using More of Config"
+          description="This example uses more of the available config options."
+          openGraph={{
+            title="JungleDynamics",
+            description="Customer Data Platform, Custom built by Roberto Rodriguez for each customer or white-labeled for trusted partners",
+            type: "website",
+            locale: "en_US",
+            url: "https://jungledynamics.com/",
+            site_name: "Jungledynamics",
+            images: [
+              {
+                url:
+                  "https://jungledynamics.com/color1_logo_transparent_background.png",
+              },
+            ],
+          }}
+        />
 
         {/* Global site tag (gtag.js) - Google Analytics */}
         <script
@@ -829,6 +852,6 @@ export default function Home() {
           <Footer />{" "}
         </div>
       </div>
-    </div>
+    </>
   );
 }
