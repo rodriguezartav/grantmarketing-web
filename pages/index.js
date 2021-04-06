@@ -5,14 +5,10 @@ import Header from "../components/Header";
 import Router from "next/router";
 import Image from "next/image";
 
-import Price from "../components/Price";
-import Faq from "../components/Faq";
-
 import { NextSeo } from "next-seo";
 
 export default function Home() {
-  const [phone, setPhone] = React.useState("");
-  const [error, setError] = React.useState("");
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     window.dataLayer = window.dataLayer || [];
@@ -22,15 +18,36 @@ export default function Home() {
     gtag("js", new Date());
 
     gtag("config", "G-MNTM6MGLXC");
-
+    setLoaded(true);
     if (window.location.host.indexOf("rodco") > -1) Router.replace("/brand");
     else if (window.location.host.indexOf("signalon") > -1)
       Router.replace("/brand");
   }, []);
 
-  async function onCreateAccount() {
-    if (phone.length < 8) return setError("10 digit phone number is required");
-    Router.replace("/signin?phone=" + phone);
+  function renderVideo() {
+    if (!loaded) return null;
+    return (
+      <video
+        style={{
+          top: "50%",
+          left: "50%",
+          minWidth: "100%",
+          minHeight: "100%",
+          width: "auto",
+          height: "auto",
+          zIndex: "-100",
+        }}
+        autoPlay
+        loop
+        muted
+        id="background"
+      >
+        <source
+          src="https://s3-us-west-2.amazonaws.com/converterpoint-22/encodings/f243965512eb733294bc6ef0356c2dd9.mp4"
+          type="video/mp4"
+        />
+      </video>
+    );
   }
 
   return (
@@ -343,25 +360,7 @@ export default function Home() {
                           </p>
                         </div>
                       </div>
-                      <div className="mt-8 border-t border-gray-200 pt-6">
-                        <blockquote>
-                          <div></div>
-                          <footer className="mt-3">
-                            <div className="flex items-center space-x-3">
-                              <div className="flex-shrink-0">
-                                <img
-                                  className="h-6 w-6 rounded-full"
-                                  src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-                                  alt=""
-                                />
-                              </div>
-                              <div className="text-base font-medium text-gray-700">
-                                extract from xcccccccc by Roberto Rodriguez
-                              </div>
-                            </div>
-                          </footer>
-                        </blockquote>
-                      </div>
+                      <div className="mt-8 border-t border-gray-200 pt-6"></div>
                     </div>
                     <div className="mt-12 sm:mt-16 lg:mt-0">
                       <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
@@ -774,26 +773,7 @@ export default function Home() {
 
             <div className="relative bg-gray-900">
               <div className=" hidden md:block overflow-hidden relative h-56 bg-green-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
-                <video
-                  style={{
-                    top: "50%",
-                    left: "50%",
-                    minWidth: "100%",
-                    minHeight: "100%",
-                    width: "auto",
-                    height: "auto",
-                    zIndex: "-100",
-                  }}
-                  autoPlay
-                  loop
-                  muted
-                  id="background"
-                >
-                  <source
-                    src="https://s3-us-west-2.amazonaws.com/converterpoint-22/encodings/f243965512eb733294bc6ef0356c2dd9.mp4"
-                    type="video/mp4"
-                  />
-                </video>
+                {renderVideo()}
 
                 <div
                   aria-hidden="true"
