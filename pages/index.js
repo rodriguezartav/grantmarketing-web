@@ -19,7 +19,10 @@ export default function Home() {
 
     gtag("config", "G-MNTM6MGLXC");
     setLoaded(true);
-    if (window.location.host.indexOf("jungledynamics.com") == -1)
+    if (
+      window.location.host.indexOf("jungledynamics.com") == -1 &&
+      window.location.host.indexOf("localhost") == -1
+    )
       Router.replace("/brand");
   }, []);
 
