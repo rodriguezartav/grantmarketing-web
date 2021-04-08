@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Transition } from "@headlessui/react";
 import Router from "next/router";
+import Logo from "./Logo";
 
 export default function Sidebar(props) {
   const [username, setUsername] = useState("");
@@ -68,11 +69,7 @@ export default function Sidebar(props) {
               </button>
             </div>
             <div className="flex-shrink-0 flex items-center px-4">
-              <img
-                className="h-32 w-auto"
-                src="/logo-green-text.png"
-                alt="Workflow"
-              />
+              <Logo />
             </div>
             <div className="mt-5 flex-1 h-0 overflow-y-auto">
               <nav className="px-2">
@@ -206,11 +203,7 @@ export default function Sidebar(props) {
       <div className="hidden lg:flex lg:flex-shrink-0">
         <div className="flex flex-col w-64 border-r border-gray-200   pb-4 bg-gray-100">
           <div className="flex bg-green-800 py-3 items-center flex-shrink-0 px-6">
-            <img
-              className="h-10 w-auto"
-              src="white_textlogo_transparent_background.png"
-              alt="Workflow"
-            />
+            <Logo />
           </div>
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="h-0 flex-1 flex flex-col overflow-y-auto">
